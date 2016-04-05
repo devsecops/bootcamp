@@ -19,16 +19,16 @@
 
 # Curriculum
 
-## Pre-work:  
+## Pre-work  
 - Install and configure AWS CLI
 - Install and test Ruby v2.2x  
 
-## Prerequisites:
+## Prerequisites  
 - Basic Linux skills (Bash scripting, start/sop service, create a user, basis sysadmin)
 - Basic Ruby/Rails (install Ruby, Rails, Gems, write basic Ruby scripts)
 - Networking Basics (common network protocols & ports)
 
-## Syllabus Outline (Rough Draft):  
+## Syllabus Outline (Rough Draft)  
 
 ### Week 1  
 _Intro/Overview_  
