@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Curriculum](#curriculum)
+  - [Pre-work:](#pre-work)
+  - [Prerequisites:](#prerequisites)
+  - [Syllabus Outline (Rough Draft):](#syllabus-outline-rough-draft)
+    - [Week 1](#week-1)
+    - [Week 2](#week-2)
+    - [Week3:](#week3)
+    - [Week4:](#week4)
+    - [Week5:](#week5)
+    - [Week6:](#week6)
+    - [Week7:](#week7)
+    - [Week8:](#week8)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Curriculum
 
 ## Pre-work:  
