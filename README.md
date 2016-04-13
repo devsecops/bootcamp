@@ -1,1 +1,4 @@
-# bootcamp
+# Bootcamp
+
+- [Curriculum](CURRICULUM.md)
+
