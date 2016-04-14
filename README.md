@@ -1,3 +1,3 @@
-# DevSecOps Bootcamp
+# Bootcamp
 
 - [Curriculum](CURRICULUM.md)
