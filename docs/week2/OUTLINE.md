@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [WEEK 2 OUTLINE](#week-2-outline)
+  - [OBJECTIVES](#objectives)
+  - [ASSIGNMENTS](#assignments)
+  - [AGENDA](#agenda)
+  - [BONUS LABS](#bonus-labs)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # WEEK 2 OUTLINE
 
 ## OBJECTIVES
