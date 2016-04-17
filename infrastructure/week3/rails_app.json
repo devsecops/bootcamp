@@ -192,7 +192,7 @@
               [
                 "#!/bin/bash -xe\n",
                 "curl -sSL https://rvm.io/mpapis.asc | sudo gpg2 --import -\n",
-                "curl -L https://get.rvm.io | bash -s stable --autolibs=3 --ruby=1.9.3\n",
+                "curl -L https://get.rvm.io | bash -s stable --autolibs=3 --ruby=2.3.0\n",
                 "source /usr/local/rvm/scripts/rvm\n",
                 "cd /opt\n",
                 "yum -y install git mysql mysql-server mysql-libs mysql-devel\n",
