@@ -1,4 +1,3 @@
 # Bootcamp
 
 - [Curriculum](CURRICULUM.md)
-
