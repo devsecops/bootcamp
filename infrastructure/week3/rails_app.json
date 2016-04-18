@@ -196,7 +196,7 @@
                 "source /usr/local/rvm/scripts/rvm\n",
                 "cd /opt\n",
                 "yum -y install git mysql mysql-server mysql-libs mysql-devel\n",
-                "service mysqld start"
+                "service mysqld start\n",
                 "git clone https://github.com/OWASP/railsgoat.git\n",
                 "cd railsgoat\n",
                 "gem install bundler && bundle install\n",
