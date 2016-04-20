@@ -6,7 +6,7 @@ Note: All assignments should be made as a pull request to the upstream (i.e. `de
 Add an item to the FAQ.md
 
 ## Assignment \#1: Basic Scripting
-File location and name: `./source/week1/$USERNAME.md`
+File location and name: `Bootcamp-Labs/source/week1/$USERNAME.md`
 
 Write a basic script in Ruby or Bash to enumerate:
   - List of AWS users
