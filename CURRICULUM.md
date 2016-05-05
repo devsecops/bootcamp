@@ -30,68 +30,70 @@
 
 ## Syllabus Outline (Rough Draft)  
 
-### Week 1  
+### Week 1:
 _Intro/Overview_  
+  - Introduce yourself
+  - Introduce DevSecOps
+  - Set up your workstation
 
-### Week 2
-_Dev - build an app from templates ‘the wrong way’_  
-  - Deploy an existing app in AWS from the ground-up, using deployment automation (will need to prep Cfn, etc for this). Deliberately Naive to security.
-  - Draft some attacks
-  - Develop some Gauntlt checks
-  - AWS (general)
+### Week 2:
+_Dev - build an app_  
   - Ruby
-  - Rails
+  - Rails API
   - Shell Script (Bash)
   - AWS CLI
-  - RailsGoat?
-  - Single instance (frail), keep state on instance
+  - AWS SDK
+  - Deploy on a single instance. Keep the state of the app on one instance.
 
-### Week3:  
+### Week 3:  
 _Sec - attack the vulnerable app_  
-  - Attack the app using drafted attacks, adapt and dev new attacks
-  - Gauntlt
-  - Metasploit
-  - SQLMap
-  - Nmap
-  - Compromise the app
+  - Deploy vulnerable app to AWS.
+  - Attack the app using different techniques (e.g. OWASP Top 10)
+  - Tools of the trade:
+    - Nmap
+    - Metasploit
+    - SQLMap
 
-### Week4:  
-_Ops_  
+### Week 4:  
+_Ops - Detection & Alerting_  
   - Learn tools to detect attacks, instrument app to detect attacks
   - Execute Incident response (contain / burn it down)
   - Keep the app alive (tension of burn-down the compromised one vs service availability)
   - Splunk / Log collection
-  - VPC Flow Logs? (Stretch)
   - Application Logs
   - Instance/OS logs
   - CloudWatch
   - CloudTrail
 
-### Week5:  
-_Advanced Dev_  
-  - This is the right way to deploy the app… refine from lessons learned in weeks 2-4. Get Rugged
+### Week 5:  
+_Rugged Dev_  
+  - Developing for Resilience.
+  - Service Oriented Architecture (SOA).
+  - Stacker
+  - Gauntlt
   - AutoScale
-  - Developing for Resilience
   - Minimum privileges (IAM, OS hardening, run the app as a non-priv user)
   - How to use CloudWatch to be more resilient
   - Abstract state (use RDS)
-  - Stacker?? (Stretch)
-  - Control-Plane pattern? (AWS has a white-paper on this, do we just change the words?)
+  - Control-Plane pattern
 
-### Week6:  
-_Advanced Sec_  
-  - Prove that exploitation is more difficult
+### Week 6:  
+_Rugged Sec_  
   - Privilege escalation
   - Horizontal movement
-  - Account Takeover (compare first version of app to updated version of app)
+  - Account Takeover
   - Bad patterns (VPN, network layer coupling, tight coupling, etc)
 
-### Week7:  
-_Advanced Ops_
+### Week 7:  
+_Rugged Ops_
   - Selfie
   - Splunk Alerts
   - Incident response in AWS, respond faster
 
-### Week8:  
+### Week 8:  
 _Capstone Project_  
   - Hack lab – build an infrastructure from a template, make it better on the fly, keep it alive while others attack it and while attacking others (Capture the Flag).
+
+### Week 9:
+_Final Presentation_
+  - Demos

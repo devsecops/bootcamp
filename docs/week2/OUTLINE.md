@@ -15,7 +15,7 @@
 ## OBJECTIVES
 - Develop a Rails API
 - Deploy app to AWS by hand
-- Develop an app leveraging `AWS-CLI` & `AWS-SDK-Ruby` gem
+- Develop an app leveraging `AWS-CLI` & `AWS-SDK`
 
 ## ASSIGNMENTS
 - Pull-Request the Ruby script used to list S3 bucket
