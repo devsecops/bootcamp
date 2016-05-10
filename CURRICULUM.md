@@ -47,7 +47,7 @@ _Dev - build an app from templates ‘the wrong way’_
   - Single instance (frail), keep state on instance
 
 ### Week3:  
-_Sec - attack the vulnerable app_  
+_Sec - Attack the vulnerable app_  
   - Attack the app using drafted attacks, adapt and dev new attacks
   - Gauntlt
   - Metasploit
