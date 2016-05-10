@@ -3,9 +3,9 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Curriculum](#curriculum)
-  - [Pre-work:](#pre-work)
-  - [Prerequisites:](#prerequisites)
-  - [Syllabus Outline (Rough Draft):](#syllabus-outline-rough-draft)
+  - [Pre-work](#pre-work)
+  - [Prerequisites](#prerequisites)
+  - [Syllabus Outline (Rough Draft)](#syllabus-outline-rough-draft)
     - [Week 1](#week-1)
     - [Week 2](#week-2)
     - [Week 3](#week3)
