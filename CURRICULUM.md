@@ -61,8 +61,8 @@ _Ops_
   - Execute Incident response (contain / burn it down)
   - Keep the app alive (tension of burn-down the compromised one vs service availability)
   - Splunk / Log collection
-  - VPC Flow Logs? (Stretch)
-  - Application Logs
+  - VPC Flow logs? (Stretch)
+  - Application logs
   - Instance/OS logs
   - CloudWatch
   - CloudTrail
