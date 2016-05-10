@@ -6,14 +6,14 @@
   - [Pre-work:](#pre-work)
   - [Prerequisites:](#prerequisites)
   - [Syllabus Outline (Rough Draft):](#syllabus-outline-rough-draft)
-    - [Week 1](#week-1)
-    - [Week 2](#week-2)
-    - [Week3:](#week3)
-    - [Week4:](#week4)
-    - [Week5:](#week5)
-    - [Week6:](#week6)
-    - [Week7:](#week7)
-    - [Week8:](#week8)
+    - [Week 1:](#week-1)
+    - [Week 2:](#week-2)
+    - [Week 3:](#week3)
+    - [Week 4:](#week4)
+    - [Week 5:](#week5)
+    - [Week 6:](#week6)
+    - [Week 7:](#week7)
+    - [Week 8:](#week8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -24,7 +24,7 @@
 - Install and test Ruby v2.2x  
 
 ## Prerequisites  
-- Basic Linux skills (Bash scripting, start/sop service, create a user, basis sysadmin)
+- Basic Linux skills (Bash scripting, start/stop service, create a user, basis sysadmin)
 - Basic Ruby/Rails (install Ruby, Rails, Gems, write basic Ruby scripts)
 - Networking Basics (common network protocols & ports)
 
