@@ -15,12 +15,12 @@ rbenv --version
 
   **Compatibility note:** rbenv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
 
-1. Check if your machine has ruby 2.2.X installed already or follow the procedure to [Install 2.2.X](https://developer.xamarin.com/guides/testcloud/calabash/configuring/osx/updating-ruby-using-rbenv/#Installation):
+2. Check if your machine has ruby 2.2.X installed already or follow the procedure to [Install 2.2.X](https://developer.xamarin.com/guides/testcloud/calabash/configuring/osx/updating-ruby-using-rbenv/#Installation):
 ```
 ruby --version
 ```
 
-1. To install ruby 2.2.2 using rbenv, run:
+3. To install ruby 2.2.2 using rbenv, run:
 ```
 rbenv install 2.2.2
 rbenv rehash
@@ -28,11 +28,14 @@ rbenv global 2.2.2
 rbenv rehash
 ```
 
-1. Install aws-sdk-core gem
+  **Note:** We are going to use Ruby 2.2.2 through out this whole bootcamp.
+
+4. Install aws-sdk-core and pry gem
 ```
 gem update --system
 rbenv rehash
 gem install aws-sdk
+gem install pry
 rbenv rehash
 ```
 
@@ -43,25 +46,26 @@ In your terminal, run:
 aws help
 ```
 If you do not have AWS CLI proceed to install AWS CLI, you need:
+
     1. python
     2. pip
 
-1. Check if your machine has Python installed, or follow the procedure to [Install Python](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-python):
+2. Check if your machine has Python installed, or follow the procedure to [Install Python](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-python):
 ```
 python --version
 ```
 
-1. Check if your machine has Pip installed, or follow the procedure to [Install Pip](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-pip):
+3. Check if your machine has Pip installed, or follow the procedure to [Install Pip](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-pip):
 ```
 pip --help
 ```
 
-1. Install the AWS CLI only for the current user, run:
+4. Install the AWS CLI only for the current user, run:
 ```
 sudo pip install awscli
 ```
 
-1. If you see an error regarding the version of six that came with distutils in El Capitan, use the --ignore-installed option:
+5. If you see an error regarding the version of six that came with distutils in El Capitan, use the --ignore-installed option:
 ```
 sudo pip install awscli --ignore-installed six
 ```
