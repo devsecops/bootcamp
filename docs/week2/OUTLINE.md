@@ -10,12 +10,12 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 2 OUTLINE
+# WEEK 2: Development
 
 ## OBJECTIVES
 - Develop a Rails API
-- Deploy app to AWS by hand
-- Develop an app leveraging `AWS-CLI` & `AWS-SDK-Ruby` gem
+- Manually deploy to AWS
+- Develop an app leveraging `AWS-CLI` & `AWS-SDK`
 
 ## ASSIGNMENTS
 - Pull-Request the Ruby script used to list S3 bucket

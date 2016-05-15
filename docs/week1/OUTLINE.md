@@ -9,7 +9,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 1 OUTLINE
+# WEEK 1: Intro to DevSecOps
 
 ## OBJECTIVES
 - Intros
