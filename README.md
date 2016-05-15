@@ -1,4 +1,4 @@
-![DevSecOps BootCamp](./docs/_images/DevSecOpsBootCamp.png)
+![DevSecOps BootCamp](./_images/DevSecOpsBootCamp.png)
 
 
 
