@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 8 OUTLINE
+# WEEK 8: Hack Lab
 
 ## OBJECTIVES
 - Hack Lab
@@ -26,9 +26,8 @@ TIME | TOPIC
 ## BONUS LABS
 
 ## ASSIGNMENTS
-- [Required] Pick a pain-point/problem you faced in DevSecOps Bootcamp and write a tool/utility to solve it. For example:
-  - A command-line tool to enumerate S3 objects.
-  - A command-line tool to automate cloud deployments.
+- [Required] Pick a pain-point/problem you faced in DevSecOps Bootcamp and solve it. For example:
+  - A command-line tool to further automate cloud deployments.
 
-This assignment is required for next week's presentations/demos.  
-Each participant must present a 3-5 minute video demonstrating the problem, the solution, how the solution works, and possible future improvements.
+This assignment is required for Week 9.  
+Each participant must present a 3-5 minute recorded demo briefly describing the problem, the solution, how the solution works, and any potential iterative improvements to the solution.

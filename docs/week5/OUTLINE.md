@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 5 OUTLINE
+# WEEK 5: Rugged Dev
 
 ## OBJECTIVES
 - Service Oriented Architecture (SOA).

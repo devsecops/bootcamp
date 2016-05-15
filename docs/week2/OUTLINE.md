@@ -10,11 +10,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 2 OUTLINE
+# WEEK 2: Development
 
 ## OBJECTIVES
 - Develop a Rails API
-- Deploy app to AWS by hand
+- Manually deploy to AWS
 - Develop an app leveraging `AWS-CLI` & `AWS-SDK`
 
 ## ASSIGNMENTS

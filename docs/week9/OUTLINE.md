@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 9 OUTLINE
+# WEEK 9: Presentations
 
 ## OBJECTIVES
 - Demos & Presentations

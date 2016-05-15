@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 3 OUTLINE
+# WEEK 3: Security 
 
 ## OBJECTIVES
 - Deploy a vulnerable application on AWS (e.g. `RailsGoat`)

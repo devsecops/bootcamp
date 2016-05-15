@@ -10,10 +10,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 7 OUTLINE
+# WEEK 7: Rugged Ops
 
 ## OBJECTIVES
 - Restacking AWS Accounts
+- Cloud Forensics
 - Incident Response on the cloud
 
 ## AGENDA

@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 6 OUTLINE
+# WEEK 6: Rugged Sec
 
 ## OBJECTIVES
 - Account Takeovers
