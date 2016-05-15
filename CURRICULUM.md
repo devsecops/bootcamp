@@ -3,17 +3,17 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Curriculum](#curriculum)
-  - [Pre-work:](#pre-work)
-  - [Prerequisites:](#prerequisites)
-  - [Syllabus Outline (Rough Draft):](#syllabus-outline-rough-draft)
+  - [Pre-work](#pre-work)
+  - [Prerequisites](#prerequisites)
+  - [Syllabus Outline (Rough Draft)](#syllabus-outline-rough-draft)
     - [Week 1](#week-1)
     - [Week 2](#week-2)
-    - [Week3:](#week3)
-    - [Week4:](#week4)
-    - [Week5:](#week5)
-    - [Week6:](#week6)
-    - [Week7:](#week7)
-    - [Week8:](#week8)
+    - [Week 3](#week3)
+    - [Week 4](#week4)
+    - [Week 5](#week5)
+    - [Week 6](#week6)
+    - [Week 7](#week7)
+    - [Week 8](#week8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -24,7 +24,7 @@
 - Install and test Ruby v2.2x  
 
 ## Prerequisites  
-- Basic Linux skills (Bash scripting, start/sop service, create a user, basis sysadmin)
+- Basic Linux skills (Bash scripting, start/stop service, create a user, basis sysadmin)
 - Basic Ruby/Rails (install Ruby, Rails, Gems, write basic Ruby scripts)
 - Networking Basics (common network protocols & ports)
 
@@ -61,9 +61,6 @@ _Ops - Detection & Alerting_
   - Keep the app alive (tension of burn-down the compromised one vs service availability)
   - Splunk / Log collection
   - Application Logs
-  - Instance/OS logs
-  - CloudWatch
-  - CloudTrail
 
 ### Week 5:  
 _Rugged Dev_  
@@ -72,22 +69,21 @@ _Rugged Dev_
   - Stacker
   - Gauntlt
   - AutoScale
-  - Minimum privileges (IAM, OS hardening, run the app as a non-priv user)
-  - How to use CloudWatch to be more resilient
-  - Abstract state (use RDS)
-  - Control-Plane pattern
+  - Least Privileges (IAM, OS hardening, run the app as a non-priv user)
+  - CloudWatch
+  - Control-Plane Pattern
 
 ### Week 6:  
 _Rugged Sec_  
+  - Account Takeover
   - Privilege escalation
   - Horizontal movement
-  - Account Takeover
   - Bad patterns (VPN, network layer coupling, tight coupling, etc)
 
 ### Week 7:  
 _Rugged Ops_
   - Selfie
-  - Splunk Alerts
+  - Splunk alerts
   - Incident response in AWS, respond faster
 
 ### Week 8:  
