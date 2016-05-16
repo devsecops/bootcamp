@@ -38,3 +38,7 @@ You cannot learn the right things to do until you fail a few times.  The DevSecO
 **Week 8:**  A Capstone Project   
 **Week 9:**  Demos!
 
+
+# Prerequisites 
+* Previous development experience
+* Familiarty with common IT concepts and technologies
