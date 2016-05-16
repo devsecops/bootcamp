@@ -24,6 +24,7 @@ Individuals that attend the DevSecOps bootcamp have demonstrated:
 * Can effectively contribute to the advancement of DevSecOps 
 * Understand how to remove gating processes
 * Can develop some of the automation necessary to support DevSecOps environments
+* Can work with software-defined platforms that support DevOps 
 
 # Curriculum
 You cannot learn the right things to do until you fail a few times.  The DevSecOps Bootcamp is 9 weeks with each week dedicated to a new lesson.  Details: [Curriculum](CURRICULUM.md)
