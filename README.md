@@ -3,7 +3,7 @@
 
 Sometimes the best way to learn a new concept is to get directly involved with it.  The DevSecOps Bootcamp is developed by DevSecOps founders and practitioners, inspired by the idea that everyone is responsible for building rugged software, improving security and operating like a boss.
 
-The DevSecOps Bootcamp is a 36 hour introduction to DevSecOps with the intention of helping the community understand DevOps + Security concepts.  During the bootcamp, we will explore the professional, technical and cultural aspects involved in making security everyone's responsibility.  
+The DevSecOps Bootcamp is a 36 hour introduction to DevSecOps with the intention of helping the community understand DevOps + Security concepts.  During the bootcamp, we will explore the professional, technical and cultural aspects involved in making security everyone's responsibility.  The bootcamp is designed to provide an entry level understanding of common DevSecOps practices, processes and tools.  You will learn how to support the DevSecOps transformation and increase security capabilities without the need for gating processes.
 
 # Curriculum
 You cannot learn the right things to do until you fail a few times.  The DevSecOps Bootcamp is 9 weeks with each week dedicated to a new lesson.  Details: [Curriculum](CURRICULUM.md)
