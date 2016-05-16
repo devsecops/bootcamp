@@ -1,3 +1,6 @@
+# WEEK 2: Build a Weak App (Development)
+Understanding what a bad app looks like is a key ingredient for understanding how to secure it.  Knowing what mistakes can be made and how they get taken advantage of by attackers provides practical understanding. 
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -10,7 +13,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 2: Development
+
 
 ## OBJECTIVES
 - Develop a Rails API
