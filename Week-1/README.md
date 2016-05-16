@@ -35,6 +35,8 @@ DevOps is a team sport and a culture of collaboration.  Getting to know each oth
 
 ## Setup Lab/Dev environment
 
+### Why Ruby?
+
 ## Let's Get Moving!
 
 ## [ASSIGNMENTS](ASSIGNMENTS.md)
