@@ -28,7 +28,7 @@ Individuals that attend the DevSecOps bootcamp have demonstrated:
 # Curriculum
 You cannot learn the right things to do until you fail a few times.  The DevSecOps Bootcamp is 9 weeks with each week dedicated to a new lesson.  Details: [Curriculum](CURRICULUM.md)
 
-* **Week 1:**  Getting Started       
+* **Week 1:**  [Getting Started](/Week-1/README.md)       
 * **Week 2:**  Build a Weak App        
 * **Week 3:**  Attack the Weakling             
 * **Week 4:**  Keeping the Weak alive       
