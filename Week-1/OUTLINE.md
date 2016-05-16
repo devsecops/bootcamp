@@ -23,6 +23,7 @@ TIME | TOPIC
 7:15 PM - 9 PM | <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 ## Introductions
+DevOps is a team sport and a culture of collaboration.  Getting to know each other and how we work is an essential ingredient towards being successful with DevSecOps.  
 
 ## Understand DevSecOps
 
