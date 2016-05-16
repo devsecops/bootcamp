@@ -1,4 +1,5 @@
-# WEEK 1: Intro to DevSecOps
+# WEEK 1: Getting Started
+Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we will spend time getting to know each other and understand how to build a DevSecOps program and skills.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -12,7 +13,12 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## OBJECTIVES
-Welcome to the DevSecOps Bootcamp!  Let's get to know each other, establish an understanding about what DevSecOps is and is not, get our lab/development environment set up.  And let's get moving!
+ During Week 1, we'll accomplish the following objectives:
+ 
+ * Get to know each other
+ * Understand DevOps and intersection with Information Security
+ * Establish an understanding about what DevSecOps is and is not 
+ * Get our lab/development environment set up
 
 ## AGENDA
 TIME | TOPIC
