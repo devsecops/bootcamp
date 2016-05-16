@@ -12,10 +12,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## OBJECTIVES
-- Introductions
-- Understand DEVSECOPS
-- Setup Lab/Dev environment
-- Let's Get Moving!
+Welcome to the DevSecOps Bootcamp!  Let's get to know each other, establish an understanding about what DevSecOps is and is not, get our lab/development environment set up.  And let's get moving!
 
 ## AGENDA
 TIME | TOPIC
