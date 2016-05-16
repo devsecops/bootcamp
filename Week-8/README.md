@@ -1,3 +1,6 @@
+# WEEK 8: The Capstone Project
+Now that we've accomplished two rounds of DevSecOps and improved our skills significantly, it's time to build something that helps solve a problem.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -10,7 +13,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# WEEK 8: Hack Lab
+
 
 ## OBJECTIVES
 - Hack Lab
