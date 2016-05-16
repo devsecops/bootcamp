@@ -1,3 +1,6 @@
+# WEEK 5: Build a Rugged App (Development)
+Now that we've learned what not to do and why, it's time to pick things up and figure out how to build a reliable, resillient and secure application.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -9,8 +12,6 @@
   - [ASSIGNMENTS](#assignments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# WEEK 5: Rugged Dev
 
 ## OBJECTIVES
 - Service Oriented Architecture (SOA).
