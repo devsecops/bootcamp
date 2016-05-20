@@ -56,10 +56,9 @@ Let's get moving!
 <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 
-
-## [ASSIGNMENTS](ASSIGNMENTS.md)
+# [ASSIGNMENTS](ASSIGNMENTS.md)
 - Pull Request an FAQ
 - Basic Scripting
 
-## REFERENCES
+# REFERENCES
 
