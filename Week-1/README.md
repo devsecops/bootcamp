@@ -20,21 +20,26 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Establish an understanding about what DevSecOps is and is not 
  * Get our lab/development environment set up
 
-## AGENDA
-LESSON | TOPIC
----|---
-LESSON 1| <ul><li>Welcome</li><li>Intros</li><li>Logistics</li><li>Expectations/Course Format</li><ul><ul><li>What is DEVSECOPS?</li><li>Q&A</li></ul>
-LESSON 2 | **Lab Guides** <ul><li>Linux<ul><li>File System permissions for secret keys</li></ul></li><li>Git<ul><li>DOs and DONTs</li></ul></li><li>Ruby<ul><li>Ruby Version Manager</li><li>RubyGems</li></ul></li><li>AWS<ul><li>AWS API Keys</li><li>AWS-CLI</li><li>Access to AWS Lab Accounts</li></ul></li></ul>
-LESSON 3 | <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
+## LESSONS
 
-## Introductions
+###LESSON 1: 
+<ul><li>Welcome</li><li>Intros</li><li>Logistics</li><li>Expectations/Course Format</li><ul><ul><li>What is DEVSECOPS?</li><li>Q&A</li></ul>
+####Introductions
 DevOps is a team sport and a culture of collaboration.  Getting to know each other and how we work is an essential ingredient towards being successful with DevSecOps.  
 
-## Understand DevSecOps
+#### What is DevSecOps?
+
+
+###LESSON 2: 
+**Lab Guides** <ul><li>Linux<ul><li>File System permissions for secret keys</li></ul></li><li>Git<ul><li>DOs and DONTs</li></ul></li><li>Ruby<ul><li>Ruby Version Manager</li><li>RubyGems</li></ul></li><li>AWS<ul><li>AWS API Keys</li><li>AWS-CLI</li><li>Access to AWS Lab Accounts</li></ul></li></ul>
 
 ## Setup Lab/Dev environment
 
 ### Why Ruby?
+
+###LESSON 3: 
+<code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
+
 
 ## Let's Get Moving!
 
