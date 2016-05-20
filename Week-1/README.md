@@ -1,17 +1,6 @@
 # WEEK 1: Getting Started
 Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we will spend time getting to know each other and understand how to build a DevSecOps program and skills.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [WEEK 1 OUTLINE](#week-1-outline)
-  - [OBJECTIVES](#objectives)
-  - [ASSIGNMENTS](#assignments)
-  - [AGENDA](#agenda)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # OBJECTIVES
  During Week 1, we'll accomplish the following objectives:
  
