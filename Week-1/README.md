@@ -12,7 +12,7 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## OBJECTIVES
+# OBJECTIVES
  During Week 1, we'll accomplish the following objectives:
  
  * Get to know each other
@@ -20,10 +20,10 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Establish an understanding about what DevSecOps is and is not 
  * Get our lab/development environment set up
 
-## LESSONS
+# LESSONS
 
-###LESSON 1: 
-####Introductions
+##LESSON 1: 
+###Introductions
 DevOps is a team sport and a culture of collaboration.  Getting to know each other and how we work is an essential ingredient towards being successful with DevSecOps.  
 
 Welcome
@@ -31,10 +31,9 @@ Intros
 Logistics
 Expectations/Course Format
 
-#### What is DevSecOps?
+### What is DevSecOps?
 
-
-###LESSON 2: 
+##LESSON 2: 
 **Lab Guides** 
 Linux
 File System permissions for secret keys
@@ -48,15 +47,15 @@ AWS API Keys
 AWS-CLI
 Access to AWS Lab Accounts
 
-##### Setup Lab/Dev environment
+### Setup Lab/Dev environment
 
-###### Why Ruby?
+#### Why Ruby?
 
-###LESSON 3: 
+##LESSON 3: 
+Let's get moving!
 <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 
-## Let's Get Moving!
 
 ## [ASSIGNMENTS](ASSIGNMENTS.md)
 - Pull Request an FAQ
