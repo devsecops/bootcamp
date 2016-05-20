@@ -21,7 +21,7 @@ Expectations/Course Format
 
 ### What is DevSecOps?
 
-##LESSON 2: Lab Guides
+##[LESSON 2: Lab Guides](LESSON-2.md)
 
 Linux
 File System permissions for secret keys
@@ -39,14 +39,11 @@ Access to AWS Lab Accounts
 
 #### Why Ruby?
 
-##LESSON 3: Let's get moving!
+##[LESSON 3: Let's get moving!](LESSON-3.md)
 
 <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 
-# [ASSIGNMENTS](ASSIGNMENTS.md)
-- Pull Request an FAQ
-- Basic Scripting
 
 # REFERENCES
 
