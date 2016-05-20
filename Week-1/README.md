@@ -48,9 +48,9 @@ AWS API Keys
 AWS-CLI
 Access to AWS Lab Accounts
 
-## Setup Lab/Dev environment
+##### Setup Lab/Dev environment
 
-### Why Ruby?
+###### Why Ruby?
 
 ###LESSON 3: 
 <code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
