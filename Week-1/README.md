@@ -20,7 +20,6 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Establish an understanding about what DevSecOps is and is not 
  * Get our lab/development environment set up
 
-# LESSONS
 
 ##LESSON 1: 
 ###Introductions
