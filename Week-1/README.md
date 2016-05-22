@@ -19,25 +19,13 @@ Getting to know each other and how we work is essential towards being successful
 
 ##[LESSON 2: Think like an Attacker](LESSON-2.md)
 
-
-
-
+Monetary incentive to break software abounds.  Attackers achieve gains by the weaknesses that get implemented in software.  But there are ways to get ahead and its important to understand this concept early in the bootcamp so that it is part of your thinking.  After all, security is a design constraint - albeit an inconvenient one.
 
 ##[LESSON 3: Let's get moving!](LESSON-3.md)
 
-<code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
+<code>Students.each { &#124;student&#124; student.exec lab_guide_3 }</code>
 
-Linux
-File System permissions for secret keys
-Git
-DOs and DONTs
-Ruby
-Ruby Version Manager
-RubyGems
-AWS
-AWS API Keys
-AWS-CLI
-Access to AWS Lab Accounts
+Now we need to get some hands-on skills so we can provide value and trust to the software we support.  During this Lesson, we'll focus on understanding the team, the processes and the tools that make it possible to be successful.
 
 
 # RESOURCES
