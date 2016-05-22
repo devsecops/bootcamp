@@ -26,7 +26,7 @@
 
 ```
 
-* Everyone's Responsibility is Security
+* Security is Everyone's Responsibility
 * Open Contribution
 
 ```
