@@ -13,18 +13,19 @@
 ## What is DevSecOps?
 
 ```
+
 * Culture
 * Processes
 * Tools
 
 ```
 
-## Labs
+## Lab #1
 
 ```
 
-* Lab #1: Everyone's Responsibility is Security
-
+* Everyone's Responsibility is Security
+* Open Contribution
 
 ```
 
