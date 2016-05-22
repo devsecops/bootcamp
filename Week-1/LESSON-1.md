@@ -6,7 +6,9 @@
 ## An Industry Ready for Change
 
 
-## Why DevSecOps?
+
+
+## What is DevSecOps?
 
 
 ## Labs
