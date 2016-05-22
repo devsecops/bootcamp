@@ -1,5 +1,34 @@
-# Lesson 2: Lab Guides
+# Lesson 2: Let's Get Set-up
 
-### Setup Lab/Dev environment
+## The Team
 
-#### Why Ruby?
+```
+
+* 
+
+```
+
+## The Processes
+
+```
+
+* 
+
+```
+
+## The Tools
+
+```
+
+* 
+
+```
+
+## Lab #2
+
+```
+
+* Setup Lab/Dev environment
+* Why Ruby?
+
+```
