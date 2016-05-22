@@ -15,7 +15,8 @@
 
 ```
 
-* 
+* Understanding the attack vectors
+* Mapping out all the possibilities
 
 ```
 
