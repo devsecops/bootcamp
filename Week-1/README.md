@@ -17,7 +17,15 @@ DevOps is a team sport and a culture of collaboration.  Security cannot be an af
 Getting to know each other and how we work is essential towards being successful with DevSecOps.  After all, DevSecOps is a team sport. 
 
 
-##[LESSON 2: Let's Get Set-up](LESSON-2.md)
+##[LESSON 2: Think like an Attacker](LESSON-2.md)
+
+
+
+
+
+##[LESSON 3: Let's get moving!](LESSON-3.md)
+
+<code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 Linux
 File System permissions for secret keys
@@ -30,12 +38,6 @@ AWS
 AWS API Keys
 AWS-CLI
 Access to AWS Lab Accounts
-
-
-
-##[LESSON 3: Let's get moving!](LESSON-3.md)
-
-<code>Students.each { &#124;student&#124; student.exec lab_guide }</code>
 
 
 # RESOURCES
