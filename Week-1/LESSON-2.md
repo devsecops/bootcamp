@@ -28,8 +28,9 @@
 
 ```
 
-* Set up for Mac OSX / Linux
-* Set up for Windows
+* Setting up your Environment
+* Using Assumer
+* The Lab Environment
 
 ```
 
