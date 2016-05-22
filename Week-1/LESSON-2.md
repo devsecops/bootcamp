@@ -1,4 +1,4 @@
-# Lesson 2: Let's Get Set-up
+# Lesson 2: Let's Get Moving
 
 
 
