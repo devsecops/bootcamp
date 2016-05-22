@@ -20,7 +20,7 @@
 
 ```
 
-* 
+* Why Ruby?
 
 ```
 
@@ -28,7 +28,7 @@
 
 ```
 
-* Setup Lab/Dev environment
-* Why Ruby?
+* [Set up for Mac OSX / Linux](https://github.com/devsecops/bootcamp/blob/master/Week-1/SetUp-MacOSX-Linux.md)
+* [Set up for Windows]()
 
 ```
