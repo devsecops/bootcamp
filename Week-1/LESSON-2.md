@@ -6,7 +6,8 @@
 
 ```
 
-* 
+* Think like an attacker
+* Attacker motivations
 
 ```
 
