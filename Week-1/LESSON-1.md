@@ -5,6 +5,8 @@
 ```
 
 * Introductions
+* Logistics
+* Expectations/Course Format
 * Goals 
 
 ```
@@ -30,7 +32,6 @@
 * Open Contribution
 
 ```
-
 
 
 
