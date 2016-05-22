@@ -10,7 +10,7 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Get our lab/development environment set up
 
 
-##[LESSON 1: Getting Started with DevSecOps](LESSON-1.md)
+##[LESSON 1: Introductions](LESSON-1.md)
 
 DevOps is a team sport and a culture of collaboration.  Getting to know each other and how we work is an essential ingredient towards being successful with DevSecOps.  
 
@@ -21,7 +21,7 @@ Expectations/Course Format
 DevSecOps Fundamentals
 
 
-##[LESSON 2: Lab Guides](LESSON-2.md)
+##[LESSON 2: Let's Get Set-up](LESSON-2.md)
 
 Linux
 File System permissions for secret keys
@@ -35,9 +35,7 @@ AWS API Keys
 AWS-CLI
 Access to AWS Lab Accounts
 
-### Setup Lab/Dev environment
 
-#### Why Ruby?
 
 ##[LESSON 3: Let's get moving!](LESSON-3.md)
 
