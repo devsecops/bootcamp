@@ -23,7 +23,8 @@
 
 ```
 
-* Lab #1: Getting Set-up
+* Lab #1: Everyone's Responsibility is Security
+
 
 ```
 
