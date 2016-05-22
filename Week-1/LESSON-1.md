@@ -1,4 +1,4 @@
-#Lesson 1: Getting Started with DevSecOps
+#Lesson 1: What is DevSecOps?
 
 ## Introductions & Goals
 
@@ -9,7 +9,7 @@
 
 ```
 
-## What is DevSecOps?
+## Fundamentals
 
 ```
 
