@@ -60,5 +60,5 @@
 * [Ruby](http://ruby-doc.org/), [Ruby Version Manager](https://rvm.io/), [RubyGems](https://rubygems.org/)
 * [More Ruby!](https://www.codeschool.com/courses/try-ruby)
 * [Even more Ruby!](https://rubymonk.com/)
-* AWS, AWS API Keys, AWS-CLI, Access to AWS Lab Accounts
+* [AWS](https://aws.amazon.com/), [AWS API Keys](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/get-aws-keys.html), [AWS-CLI](https://aws.amazon.com/documentation/cli/), [AWS Labs](https://aws.amazon.com/training/self-paced-labs/)
 
