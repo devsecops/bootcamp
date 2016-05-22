@@ -4,9 +4,8 @@
 
 ```
 
-* An Industry Ready for Change
-* History and Trends
-* Reasons for Change
+* Introductions
+* Goals 
 
 ```
 
@@ -14,6 +13,9 @@
 
 ```
 
+* An Industry Ready for Change
+* History and Trends
+* Reasons for Change
 * Culture
 * Processes
 * Tools
