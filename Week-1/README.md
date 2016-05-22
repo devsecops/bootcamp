@@ -41,4 +41,3 @@ Access to AWS Lab Accounts
 # RESOURCES
 
 * [The Phoenix Project](http://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262509/ref=sr_1_1?ie=UTF8&qid=1463706570&sr=8-1&keywords=the+phoenix+project)
-* 
