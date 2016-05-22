@@ -10,15 +10,11 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Get our lab/development environment set up
 
 
-##[LESSON 1: Introductions](LESSON-1.md)
+##[LESSON 1: What is DevSecOps?](LESSON-1.md)
 
-DevOps is a team sport and a culture of collaboration.  Getting to know each other and how we work is an essential ingredient towards being successful with DevSecOps.  
+DevOps is a team sport and a culture of collaboration.  Security cannot be an afterthought because it is a vital ingredient to ensure resillient workloads achieve their peak potential. 
 
-Welcome
-Intros
-Logistics
-Expectations/Course Format
-DevSecOps Fundamentals
+Getting to know each other and how we work is essential towards being successful with DevSecOps.  After all, DevSecOps is a team sport. 
 
 
 ##[LESSON 2: Let's Get Set-up](LESSON-2.md)
