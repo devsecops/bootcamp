@@ -47,4 +47,4 @@
 
 ## Resources
 
-
+* [O'Reilly Excerpt, Anatomy of an Attack: The Five P's](http://www.onjava.com/pub/a/security/excerpt/SnortandIDSTools_chap1/index.html)
