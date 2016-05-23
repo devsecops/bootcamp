@@ -1,13 +1,12 @@
 #Lesson 1: What is DevSecOps?
 
-## Introductions & Goals
+## Introductions & Goals [![slides](../_images/slides-clean.png)](may-DSO-bootcamp-week-one-intros.pdf)
 
 ```
 
+* Welcome
 * Introductions
 * Logistics
-* Expectations/Course Format
-* Goals 
 
 ```
 
@@ -35,5 +34,5 @@
 
 ## Resources
 
-
+* [devsecops.org](devsecops.org)
 
