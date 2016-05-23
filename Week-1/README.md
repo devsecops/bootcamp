@@ -19,7 +19,7 @@ Getting to know each other and how we work is essential towards being successful
 
 ##[LESSON 2: Think like an Attacker](LESSON-2.md)
 
-Monetary incentive to break software abounds.  Attackers achieve gains by the weaknesses that get implemented in software.  But there are ways to get ahead and its important to understand this concept early in the bootcamp so that it is part of your thinking.  After all, security is a design constraint - albeit an inconvenient one.
+Monetary incentive to break software abounds.  Attackers achieve gains via the weaknesses implemented in software.  But there are ways to get ahead and its important to understand this concept early in the bootcamp so that it is part of your thinking.  After all, security is a design constraint - albeit an inconvenient one.
 
 ##[LESSON 3: Let's get moving!](LESSON-3.md)
 
