@@ -24,7 +24,8 @@
 
 ```
 
-* 
+* Collecting data
+* Making the data useful and finding patterns
 
 ```
 
@@ -32,7 +33,9 @@
 
 ```
 
-* 
+* Collect data that would be neccessary to analyze attackers(logs, pcaps, etc)
+* Store the data in a useable and quickly correlatable fashion(Splunk, Snort, IDS)
+* Using the data to set up alerts when attacker/suspicious activity is detected
 
 ```
 
