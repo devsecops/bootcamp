@@ -12,19 +12,22 @@ Our target audience for the DevSecOps bootcamp is:
 * IT Security Professionals looking to transform their skills and remove gatekeeper processes
 * DevOps professionals seeking to understand security
 * IT Professionals seeking to understand the cultural differences of DevOps and Building Security into workloads
+
+# Prerequisites 
+* Previous development experience
+* Familiarty with common IT concepts and technologies
  
 # Bootcamp Objectives
 Individuals that attend the DevSecOps bootcamp have demonstrated:
 
-* Understanding of DevSecOps
-* Knowledge of DevSecOps Principles, Vocabulary, and main Concepts
+* Knowledge of DevSecOps Fundamentals, Principles, Vocabulary, and Concepts
 * Applied hands-on development, security and operational skills
 * Awareness regarding cultural and organizational considerations
-* Know how to apply Lean, Agile and Scrum 
-* Can effectively contribute to the advancement of DevSecOps 
-* Understand how to remove gating processes
-* Can develop some of the automation necessary to support DevSecOps environments
-* Can work with software-defined platforms that support DevOps 
+* Awareness of Lean, Agile, Scrum, DevOps and Rugged (Software, DevOps, etc.)
+* Effectively contribute to the advancement of DevSecOps
+* Understand how to safely remove gating processes
+* Develop automation necessary to support DevSecOps environments
+* Work with software-defined platforms that support DevOps
 
 # Curriculum
 You cannot learn the right things to do until you fail a few times.  The DevSecOps Bootcamp is 9 weeks with each week dedicated to a new lesson.  Details: [Curriculum](CURRICULUM.md)
@@ -40,6 +43,4 @@ You cannot learn the right things to do until you fail a few times.  The DevSecO
 * **Week 9:**  [Demos!](/Week-9/README.md)  
 
 
-# Prerequisites 
-* Previous development experience
-* Familiarty with common IT concepts and technologies
+
