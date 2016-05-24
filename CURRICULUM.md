@@ -1,53 +1,26 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Curriculum](#curriculum)
-  - [Pre-work](#pre-work)
-  - [Prerequisites](#prerequisites)
-  - [Syllabus Outline (Rough Draft)](#syllabus-outline-rough-draft)
-    - [Week 1:](#week-1)
-    - [Week 2:](#week-2)
-    - [Week 3:](#week-3)
-    - [Week 4:](#week-4)
-    - [Week 5:](#week-5)
-    - [Week 6:](#week-6)
-    - [Week 7:](#week-7)
-    - [Week 8:](#week-8)
-    - [Week 9:](#week-9)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Curriculum
-
-## Pre-work  
-- Install and configure AWS CLI
-- Install and test Ruby v2.2x  
+# CURRICULUM
 
 ## Prerequisites  
 - Basic Linux skills (Bash scripting, start/stop service, create a user, basis sysadmin)
 - Basic Ruby/Rails (install Ruby, Rails, Gems, write basic Ruby scripts)
 - Networking Basics (common network protocols & ports)
 
-## Syllabus Outline (Rough Draft)  
+## Syllabus Outline
 
-### Week 1:
-_Intro/Overview_  
-  - Introduce yourself
-  - Introduce DevSecOps
-  - Set up your workstation
+### [Week 1: Getting Started](/Week-1/README.md)
+  - Introductions
+  - What is DevSecOps?
+  - Lab Guides
 
-### Week 2:
-_Dev - build an app_  
+### [Week 2: Build a Weak App](/Week-2/README.md)
   - Ruby
-  - Rails API
-  - Shell Script (Bash)
+  - Rails
+  - Bash Scripting
   - AWS CLI
   - AWS SDK
-  - Deploy on a single instance. Keep the state of the app on one instance.
+  - Basic AWS Deployment
 
-### Week 3:  
-_Sec - attack the vulnerable app_  
+### [Week 3: Attack the Weakling](/Week-3/README.md)
   - Deploy vulnerable app to AWS.
   - Attack the app using different techniques (e.g. OWASP Top 10)
   - Tools of the trade:
@@ -55,16 +28,14 @@ _Sec - attack the vulnerable app_
     - Metasploit
     - SQLMap
 
-### Week 4:  
-_Ops - Detection & Alerting_  
+### [Week 4: Keeping the Weak Alive](/Week-4/README.md)
   - Learn tools to detect attacks, instrument app to detect attacks
   - Execute Incident response (contain / burn it down)
   - Keep the app alive (tension of burn-down the compromised one vs service availability)
   - Splunk / Log collection
   - Application Logs
 
-### Week 5:  
-_Rugged Dev_  
+### [Week 5: Build a Rugged App](/Week-5/README.md)
   - Developing for Resilience.
   - Service Oriented Architecture (SOA).
   - Stacker
@@ -74,23 +45,20 @@ _Rugged Dev_
   - CloudWatch
   - Control-Plane Pattern
 
-### Week 6:  
-_Rugged Sec_  
+### [Week 6: Red FTW!](/Week-6/README.md)
   - Account Takeover
   - Privilege escalation
   - Horizontal movement
   - Bad patterns (VPN, network layer coupling, tight coupling, etc)
 
-### Week 7:  
-_Rugged Ops_
+### [Week 7: Hunt the Attacker](/Week-7/README.md)
   - Selfie
   - Splunk alerts
   - Incident response in AWS, respond faster
 
-### Week 8:  
+### [Week 8: Capstone Project](/Week-8/README.md)
 _Capstone Project_  
   - Hack lab – build an infrastructure from a template, make it better on the fly, keep it alive while others attack it and while attacking others (Capture the Flag).
 
-### Week 9:
-_Final Presentation_
+### [Week 9: Demos!](/Week-9/README.md)
   - Demos
