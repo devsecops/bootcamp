@@ -64,7 +64,11 @@ Vagrant.configure("2") do |config|
   #   v.vmx['memsize'] = '2048'
   #   v.vmx['numvcpus'] = '2'
   # end
-
+  
+  # RSYNC is disabled due to incompatibilty with Windows machines.
+  # If your host machine is running Linux or Mac OS X, feel free to uncomment this line.
+  config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
+  
   config.vm.provision :shell, inline: BASIC_SETUP,  privileged: false
   config.vm.provision :shell, inline: RUBY_SETUP,   privileged: false
   config.vm.provision :shell, inline: AWS_SETUP,    privileged: false
