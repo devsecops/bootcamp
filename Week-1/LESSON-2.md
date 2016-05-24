@@ -2,7 +2,7 @@
 
 
 
-## Anatomy of an Attack
+## Anatomy of an Attack [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ```
 
@@ -11,7 +11,7 @@
 
 ```
 
-## Attack Maps
+## Attack Maps [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ```
 
@@ -20,7 +20,7 @@
 
 ```
 
-## The Intel Highway
+## The Intel Highway [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ```
 
@@ -29,7 +29,7 @@
 
 ```
 
-## Crawl, Walk Run
+## Crawl, Walk Run [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ```
 
@@ -40,7 +40,7 @@
 ```
 
 
-## Lab #2
+## Lab #2 [![slides](../_images/lab-clean.png)]()
 
 ```
 
