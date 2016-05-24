@@ -1,8 +1,9 @@
-#Lesson 1 Intro to Software Defined Environment
+#Lesson 1: Intro to Software Defined Environment
 
 ## Introduction to AWS cloud
 ```
-*
+* AWS overview
+* Why use AWS?
 ```
 
 ## Fundamentals
@@ -19,4 +20,7 @@
 ```
 
 ## Resources
-*
+* [AWS-cli docs](https://aws.amazon.com/documentation/cli/)
+* [AWS management console](https://aws.amazon.com/console/)
+* [AWS-SDK-Ruby gem](https://rubygems.org/gems/aws-sdk/versions/2.3.7)
+* [AWS-SDK-Ruby docs](https://aws.amazon.com/documentation/sdk-for-ruby/)
