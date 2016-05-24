@@ -17,7 +17,7 @@ During this lesson, we'll explore Software Defined Environments.  We'll navigate
 
 
 # [Lesson #3: Build a Rails API & Deploy It](LESSON-3.md)
-During this lesson, we'll build `Rails` API that you will be able to interact with and go through the process of deploying it
+During this lesson, we'll build a `Rails` API that you will be able to interact with and go through the process of deploying it
 
 # Resources
 
