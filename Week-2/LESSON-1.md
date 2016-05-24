@@ -1,12 +1,13 @@
 #Lesson 1: Intro to Software Defined Environment
 
-## Introduction to AWS cloud
+## Introduction to AWS cloud [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 ```
 * AWS overview
 * Why use AWS?
 ```
 
-## Fundamentals
+## Fundamentals [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+
 ```
 * What is the AWS cloud
 * What is the AWS-cli
@@ -14,7 +15,7 @@
 * AWS-SDK-Ruby gem
 ```
 
-## Lab #1
+## Lab #1 [![slides](../_images/lab-clean.png)]()
 ```
 *
 ```
