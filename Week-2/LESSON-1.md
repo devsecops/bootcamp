@@ -13,11 +13,15 @@
 * What is the AWS-cli
 * What is the AWS console
 * AWS-SDK-Ruby gem
+* What is an S3 buckets
 ```
 
 ## Lab #1 [![slides](../_images/lab-clean.png)]()
 ```
-*
+* Navigating the console
+* Download AWS-SDK-Ruby gem
+* Exploring S3 buckets
+* Create Ruby script to list content in S3 bucket
 ```
 
 ## Resources
