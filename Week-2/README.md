@@ -4,13 +4,17 @@ Understanding what a bad app looks like is a key ingredient for understanding ho
 # OBJECTIVES
 During Week 2, we'll accomplish the following objectives:
 
-- Develop a Rails API
-- Manually deploy to AWS
-- Develop an app leveraging `AWS-CLI` & `AWS-SDK`
+- Gain familiarity with Infrastructure as a Service
+- Navigate the AWS Cloud 
+- Develop a Rails API and manually deploy to AWS
  
-# [Lesson #1: Intro to `AWS-CLI` & AWS Console](LESSON-1.md)
+# [Lesson #1: Intro to Software Defined Environments](LESSON-1.md)
 
-# [Lesson #2: `AWS-SDK-Ruby` gem & Ruby app to list S3 bucket](LESSON-2.md)
+During this lesson, we'll explore Software Defined Environments.  We'll navigate the AWS Cloud using `AWS-CLI`, `AWS Console`
+`AWS-SDK-Ruby gem` and build a small Ruby app to list the contents in an S3 bucket.
+
+# [Lesson #2: Intro to Micro Services](LESSON-2.md)
+
 
 # [Lesson #3: Build a Rails API & Deploy It](LESSON-3.md)
 
