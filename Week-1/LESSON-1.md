@@ -1,6 +1,6 @@
 #Lesson 1: What is DevSecOps?
 
-## Introductions & Goals [![slides](../_images/slides-clean.png)](may-DSO-bootcamp-week-one-intros.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-introductions)
+## Introductions & Goals [![slides](../_images/slides-clean.png)](slides/may-DSO-bootcamp-week-one-intros.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-introductions)
 
 ```
 
@@ -10,7 +10,7 @@
 
 ```
 
-## Fundamentals [![slides](../_images/slides-clean.png)](may-DSO-bootcamp-week-one-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-lesson-1)
+## Fundamentals [![slides](../_images/slides-clean.png)](slides/may-DSO-bootcamp-week-one-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-lesson-1)
 
 ```
 
@@ -37,4 +37,3 @@
 * [devsecops.org](devsecops.org)
 * [DevSecOps LinkedIn Group](https://www.linkedin.com/groups/6817408)
 * [Awesome DevSecOps Resources](https://github.com/devsecops/awesome-devsecops)
-

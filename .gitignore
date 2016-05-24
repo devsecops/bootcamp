@@ -10,6 +10,7 @@
 /test/version_tmp/
 /tmp/
 .DS_Store
+.vagrant/
 
 ## Specific to RubyMotion:
 .dat*
