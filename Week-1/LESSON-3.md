@@ -74,4 +74,5 @@
 * [AWS API Keys](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/get-aws-keys.html)
 * [AWS-CLI](https://aws.amazon.com/documentation/cli/) 
 * [AWS Labs](https://aws.amazon.com/training/self-paced-labs/)
+* [AWS MasterClass Series](https://aws.amazon.com/webinars/emea-masterclass/)
 
