@@ -1,8 +1,8 @@
-# Lesson 2: Think like an Attacker
+# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 
 
-## Anatomy of an Attack [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## Anatomy of an Attack 
 
 ```
 
@@ -11,7 +11,7 @@
 
 ```
 
-## Attack Maps [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## Attack Maps 
 
 ```
 
@@ -20,7 +20,7 @@
 
 ```
 
-## The Intel Highway [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## The Intel Highway 
 
 ```
 
@@ -29,7 +29,7 @@
 
 ```
 
-## Crawl, Walk Run [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## Crawl, Walk Run 
 
 ```
 
