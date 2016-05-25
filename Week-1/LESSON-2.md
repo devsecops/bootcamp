@@ -44,10 +44,12 @@
 
 ```
 
-* Raindance
+* Build an Attack Map
+* Build a Crawl - Walk - Run plan to Secure your Workload
 
 ```
 
 ## Resources
 
 * [O'Reilly Excerpt, Anatomy of an Attack: The Five P's](http://www.onjava.com/pub/a/security/excerpt/SnortandIDSTools_chap1/index.html)
+* [Raindance - Attack Maps](https://github.com/devsecops/raindance)
