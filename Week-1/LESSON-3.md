@@ -1,8 +1,8 @@
-# Lesson 3: Let's Get Moving!
+# Lesson 3: Let's Get Moving! [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 
 
-## The Team [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## The Team 
 
 ```
 
@@ -15,7 +15,7 @@
 
 ```
 
-## The Processes [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## The Processes 
 
 ```
 
@@ -27,7 +27,7 @@
 
 ```
 
-## The Tools [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## The Tools 
 
 ```
 
@@ -38,7 +38,7 @@
 
 ```
 
-## The Rules [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## The Rules 
 
 ```
 
