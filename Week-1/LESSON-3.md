@@ -1,4 +1,4 @@
-# Lesson 3: Let's Get Moving! [![slides](../_images/slides-clean.png)](slides/may-DSO-week-one-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/pmbenjamin/devsecops-bootcamp-week-1-lesson-3)
+# Lesson 3: Let's Get Moving! [![slides](../_images/slides-clean.png)](slides/may-DSO-bootcamp-week-one-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/pmbenjamin/devsecops-bootcamp-week-1-lesson-3)
 
 ## The Team
 
