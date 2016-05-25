@@ -1,8 +1,6 @@
 # Lesson 3: Let's Get Moving! [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
-
-
-## The Team 
+## The Team [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ```
 
@@ -54,9 +52,8 @@
 
 ```
 
-* Setting up your Environment 
 * Github & Git
-* Using Assumer
+* Setting up your Environment 
 * The Lab Environment
 
 ```
