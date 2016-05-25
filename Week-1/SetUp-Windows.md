@@ -1,56 +1,72 @@
 # Windows 7 or later
 ---
-## Installing Git Desktop
-Downloading and installing GitHub Desktop
+## Installing Git for Windows
 
-You can install GitHub Desktop on Microsoft Windows 7 or later .
+You can install `git` on Microsoft Windows 7 or later by downloading and installing the `git` Windows binary found on [git-scm](https://git-scm.com/download/win):
+- You should be automatically prompted to download the installer.
+  - If not, select the right installer for your OS architecture (32-bit vs 64-bit)
+- In your computer's **Downloads** folder, double-click `Git-2.8.3-64-bit.exe`
+- Proceed through the prompts with the default options, click **Install**
+- After the program has been installed, you should now be able to use `git` in **cmd.exe**.
+- You will also have a new application called `Git Bash`, which is a wrapper that gives you the same command-line experience as you would on a Linux or Mac OS X terminal.
 
-Visit the [GitHub Desktop download page.](https://desktop.github.com/)
-
-Choose **Download for Windows.**
-
-In your computer's **Downloads** folder, double-click **GitHub Desktop.**
-In the pop-up window, click **Install.**
-After the program has been installed, click **Run.**
-
-On your computer, open the **Git Shell** application.
-Tell Git your name so your commits will be properly labeled.
+## Configuring Git on Windows
+- On your computer, open the **Git Bash** application.
+Set git to use your name and an email address so your git commits will be properly labeled.
 ```
 git config --global user.name "YOUR NAME"
-```
-Tell Git the email address that will be associated with your Git commits. The email you specify should be the same one found in your [email settings.](https://help.github.com/articles/adding-an-email-address-to-your-github-account/) To keep your email address hidden, see ["Keeping your email address private".](https://help.github.com/articles/keeping-your-email-address-private_)
-
-```
 git config --global user.email "YOUR EMAIL ADDRESS"
-
 ```
-
-
-## Installing Ruby
-
-Visit the [Ruby Download page.](http://rubyinstaller.org/downloads/)
-
-Download either Ruby 2.2.4 or Ruby 2.2.4 (x64) depending on your OS architecture.  
-
-Once you've installed Ruby open a command prompt as Administrator and install the AWS SDK. This will take a few minutes per command:
+If you want to keep your email address private, see ["Keeping your email address private".](https://help.github.com/articles/keeping-your-email-address-private_)
+- Generate SSH Keys: `ssh-keygen -t RSA -C your_email@example.com`
+- You'll receive the following prompts:  
+  `Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):` - Press Enter  
+  `Enter passphrase (empty for no passphrase):` - Enter Password  
+  `Enter same passphrase again:` - Confirm Password  
+- You should receive the following confirmation:
 ```
-gem update --system
-gem install aws-sdk
+Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+...
 ```
-When complete close out of your command prompt.
+- Print out the Public SSH Key: `cat ~/.ssh/id_rsa.pub` and copy it
+- Go to your [Github Settings](https://github.com/settings/keys), click **New SSH Key** button, provide a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
 
-## Installing AWS CLI
+---
 
-Go to the [AWS CLI download page](https://aws.amazon.com/cli/) and download the appropriate installation file for your architecture type.
+## Installing VirtualBox
+- Go to [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
+- Download the appropriate installer for your OS (`Windows`) and architecture (32-bit vs 64-bit)
+- In **Downloads** folder, launch the installer and follow the prompts, leaving the default options as-is.
 
-In your computer's **Downloads** folder, double-click **AWSCLI64.MSI**
-In the pop-up window, click **Install.**
+---
+
+## Installing Vagrant
+[Vagrant](https://www.vagrantup.com/) is a DevOps tool that enables developers to stand-up & provision virtual machines with extreme ease. All you need is a `Vagrantfile` that describes the virtual machine (e.g. Guest OS, virtual CPUs, virtual RAM, what packages must be installed when the virtual machine is online ...etc) and `vagrant` will take care of the rest for you.
+- Go to [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
+- Download the Windows installer.
+- In **Downloads** folder, launch the installer and follow the prompts, leaving the default options as-is.
+- In **Git Bash**, you should now have `vagrant` command-line tool available. Type `vagrant` or `vagrant version` to confirm.
+
+## Launching the Vagrant Virtual Machine
+- In **Git Bash**, make a **dso_repos** directory and clone the bootcamp repository into it:
+```
+mkdir dso_repos
+cd dso_repos
+git clone git@github.com:devsecops/bootcamp.git
+```
+- Change directory to the `bootcamp` directory and launch the virtual machine:
+```
+cd bootcamp
+vagrant up
+```
+- Depending on your hardware, this process may take 10 minutes to complete. Once complete, connect to the virtual machine: `vagrant ssh`
 
 ---
 
 ## References:
-GIT: https://help.github.com/articles/set-up-git/#platform-windows
-
-RUBY: http://rubyinstaller.org/downloads/
-
-AWS CLI: https://aws.amazon.com/cli/
+- Git: https://help.github.com/articles/set-up-git/#platform-windows
+- VirtualBox: https://www.virtualbox.org/wiki/Downloads
+- Vagrant: https://www.vagrantup.com/
+- Ruby Environment Manager (`rbenv`): https://github.com/rbenv/rbenv
+- AWS CLI: https://aws.amazon.com/cli/
