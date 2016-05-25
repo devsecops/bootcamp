@@ -1,79 +1,92 @@
 # Mac OS X & Linux
 
-## Do you Git it?
+---
 
-1. Check if your machine has Git installed already or follow the procedure to [Install git](https://help.github.com/articles/set-up-git/#setting-up-git):
+## Homebrew (OS X package manager)
+If you don't have [Homebrew](http://brew.sh/) or any other Mac OS X package manager:
+- Install:
 ```
-git --version
-```
-
-## Do you even Ruby, bro?
-1. Check if your machine has rbenv installed already or follow the procedure to [Install rbenv](https://github.com/rbenv/rbenv#installation):
-```
-rbenv --version
-```
-
-  **Compatibility note:** rbenv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
-
-2. Check if your machine has ruby 2.2.X installed already or follow the procedure to [Install 2.2.X](https://developer.xamarin.com/guides/testcloud/calabash/configuring/osx/updating-ruby-using-rbenv/#Installation):
-```
-ruby --version
-```
-
-3. To install ruby 2.2.2 using rbenv, run:
-```
-rbenv install 2.2.2
-rbenv rehash
-rbenv global 2.2.2
-rbenv rehash
-```
-
-  **Note:** We are going to use Ruby 2.2.2 through out this whole bootcamp.
-
-4. Install aws-sdk-core and pry gem
-```
-gem update --system
-rbenv rehash
-gem install aws-sdk
-gem install pry
-rbenv rehash
-```
-
-## So you use AWS CLI, eh?
-1. Check if your machine has AWS CLI installed already.
-In your terminal, run:
-```
-aws help
-```
-If you do not have AWS CLI proceed to install AWS CLI, you need:
-
-    1. python
-    2. pip
-
-2. Check if your machine has Python installed, or follow the procedure to [Install Python](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-python):
-```
-python --version
-```
-
-3. Check if your machine has Pip installed, or follow the procedure to [Install Pip](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-pip):
-```
-pip --help
-```
-
-4. Install the AWS CLI only for the current user, run:
-```
-sudo pip install awscli
-```
-
-5. If you see an error regarding the version of six that came with distutils in El Capitan, use the --ignore-installed option:
-```
-sudo pip install awscli --ignore-installed six
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 ```
 
 ---
+
+## Git
+If you don't have [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics):
+- [OS X] Install:
+```
+brew update
+brew install git
+```
+- [Debian] Install:
+```
+sudo apt-get update
+sudo apt-get install -y git
+```
+- [RHEL/CENTOS] Install:
+```
+sudo yum update -y
+sudo yum install -y git
+```
+- Configure:
+```
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL"
+```
+- Generate SSH Keys:
+```
+ssh-keygen -t RSA -C YOUR_EMAIL@DOMAIN.COM
+```
+- You'll receive the following prompts:  
+  `Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):` - Press Enter  
+  `Enter passphrase (empty for no passphrase):` - Enter Password  
+  `Enter same passphrase again:` - Confirm Password  
+- You should receive the following confirmation:
+```
+Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+...
+```
+- Print out the Public SSH Key & copy it: 
+```
+cat ~/.ssh/id_rsa.pub
+```
+- Go to your [Github Settings](https://github.com/settings/keys), click **New SSH Key** button, enter a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
+
+---
+
+## Virtualbox
+If you don't have [Virtualbox](https://www.virtualbox.org/wiki/Downloads):
+- Download and install the appropriate binary for your operating system and architecture from [Virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+---
+
+## Vagrant
+[Vagrant](https://www.vagrantup.com/) is a DevOps tool that enables developers to stand-up & provision virtual machines with extreme ease. All you need is a `Vagrantfile` that describes the virtual machine (e.g. Guest OS, virtual CPUs, virtual RAM, what packages must be installed when the virtual machine is online ...etc) and `vagrant` will take care of the rest for you.
+- Download and install the appropriate binary for your operating system and architecture from [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
+- In **Terminal**, you should now have `vagrant` command-line utility available. Type `vagrant` or `vagrant version` to confirm.
+
+## Launching the Vagrant Virtual Machine
+- In **Terminal**, make a **dso_repos** directory and clone the `bootcamp` repository into it:
+```
+mkdir $HOME/dso_repos
+cd $HOME/dso_repos
+git clone git@github.com:devsecops/bootcamp.git
+```
+- Change directory to the `bootcamp` directory and launch the virtual machine:
+```
+cd bootcamp
+vagrant up
+```
+- Depending on your hardware, this process may take 10 minutes to complete. Once complete, connect to the virtual machine: 
+```
+vagrant ssh
+```
+---
+
 ## References:
-GIT: https://help.github.com/articles/set-up-git
-
-RUBY: https://github.com/rbenv/rbenv
-
-AWS CLI: http://docs.aws.amazon.com/cli/latest/userguide/installing.html
+- Git: https://help.github.com/articles/set-up-git/#platform-windows
+- VirtualBox: https://www.virtualbox.org/wiki/Downloads
+- Vagrant: https://www.vagrantup.com/
+- Ruby Environment Manager (`rbenv`): https://github.com/rbenv/rbenv
+- AWS CLI: https://aws.amazon.com/cli/
