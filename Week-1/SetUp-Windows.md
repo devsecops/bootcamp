@@ -67,10 +67,10 @@ vagrant up
   `aws configure`  
 The expected output looks like this:
   ```
-  AWS Access Key ID [none]:
-  AWS Secret Access Key [none]:
-  Default region name [none]:
-  Default output format [none]:
+  AWS Access Key ID [None]:
+  AWS Secret Access Key [None]:
+  Default region name [None]:
+  Default output format [None]:
 
   ```
 
