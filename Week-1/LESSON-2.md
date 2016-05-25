@@ -33,9 +33,9 @@
 
 ```
 
-* Collect data that would be neccessary to analyze attackers(logs, pcaps, etc)
-* Store the data in a useable and quickly correlatable fashion(Splunk, Snort, IDS)
-* Using the data to set up alerts when attacker/suspicious activity is detected
+* Identify important security design constraints and controls that need to get built into your software
+* Prioritize and build security defenses over time to reduce security risks
+* Achieve limited security debt by developing a CWR strategy
 
 ```
 
