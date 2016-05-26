@@ -1,6 +1,6 @@
 # Lab 1
 
-## Setting up Github Account
+## Setting up your Github Account
 
 If you already have a Github account please help the other people on your team to follow the instructions and get their accounts set up.
 
@@ -49,6 +49,8 @@ cat ~/.ssh/id_rsa.pub
 - Go to your [Github Settings](https://github.com/settings/keys), click **New SSH Key** button, enter a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
 
 ## Configuring Git on Windows
+If you don't have git installed on your Windows computer you can install it from https://git-scm.com/download/win
+
 - On your computer, open the **Git Bash** application.
 Set git to use your name and an email address so your git commits will be properly labeled.
 ```
@@ -71,8 +73,6 @@ Your public key has been saved in /c/Users/%username%/.ssh/id_rsa.pub
 - Go to your [Github Settings](https://github.com/settings/keys target="_blank"), click **New SSH Key** button, provide a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
 
 ---
-
-
 
 ## Security is Everyone's Responsibility
 Take 5 minutes to go through the Federal Trade Commission's Start with Security document available here at
