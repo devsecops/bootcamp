@@ -1,4 +1,4 @@
-# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)](slides/may-DSO-bootcamp-week-one-lesson-two.pdf)[![view](../_images/view-clean.png)]()
 
 
 
