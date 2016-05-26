@@ -48,7 +48,7 @@
 ```
 
 
-## Lab #3 [![slides](../_images/lab-clean.png)]()
+## Lab #3 [![slides](../_images/lab-clean.png)](labs/LAB-3.md)
 
 ```
 
