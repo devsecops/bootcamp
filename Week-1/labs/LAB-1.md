@@ -85,4 +85,6 @@ Contribute to the Raindance project using Github.
 
 ## Open Contribution
 
-A huge part of DevSecOps is the Open Contribution model. By opening up the contribution to a project we take advantage of the ability to move faster through collaboration.
+A huge part of DevSecOps is the Open Contribution model. By opening up the contribution to a project we take advantage of the ability to move faster through collaboration. One of the projects we are working hard on getting Open Contribution iterating on is [Raindance] (https://github.com/devsecops/raindance)
+
+Take the issue that you and think about how this issue maps back to the Raindance attack model. Determine the attacker type, attack vector and the service type.
