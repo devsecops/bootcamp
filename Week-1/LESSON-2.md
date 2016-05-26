@@ -45,7 +45,6 @@
 ```
 
 * Build an Attack Map
-* Build a Crawl - Walk - Run plan to Secure your Workload
 
 ```
 
