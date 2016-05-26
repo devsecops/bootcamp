@@ -60,9 +60,6 @@
 
 ## Resources
 
-* [Set up Mac OSX / Linux](https://github.com/devsecops/bootcamp/blob/master/Week-1/SetUp-MacOSX-Linux.md)
-* [Set up Windows]()
-* [Linux File System permissions for secret keys](https://help.ubuntu.com/community/SSH/OpenSSH/Keys) 
 * [Introduction to Git](https://www.codeschool.com/courses/try-git) 
 * [Introduction to Ruby](https://www.codeschool.com/courses/try-ruby)
 * [Ruby](http://ruby-doc.org/), [Ruby Version Manager](https://rvm.io/), [RubyGems](https://rubygems.org/)
