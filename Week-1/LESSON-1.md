@@ -23,7 +23,7 @@
 
 ```
 
-## Lab #1 [![slides](../_images/lab-clean.png)]()
+## Lab #1 [![slides](../_images/lab-clean.png)](labs/LAB-1.md)
 
 ```
 
