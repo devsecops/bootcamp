@@ -180,5 +180,6 @@ The expected output looks like this:
 - Vagrant: https://www.vagrantup.com/
 - Ruby Environment Manager (`rbenv`): https://github.com/rbenv/rbenv
 - AWS CLI: https://aws.amazon.com/cli/
+- [Linux File System permissions for secret keys](https://help.ubuntu.com/community/SSH/OpenSSH/Keys) 
 
 
