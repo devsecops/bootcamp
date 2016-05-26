@@ -4,6 +4,7 @@
 
 - [Mac OS X & Linux Set-up](#mac)
 - [Windows Set-up](#windows)
+- [Resources](#resources)
 
 #Mac OS X & Linux
 
@@ -173,7 +174,7 @@ The expected output looks like this:
 
 ---
 
-## References:
+## Resources:
 - Git: https://help.github.com/articles/set-up-git/#platform-windows
 - VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - Vagrant: https://www.vagrantup.com/
