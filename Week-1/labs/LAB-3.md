@@ -153,9 +153,10 @@ mkdir dso_repos
 cd dso_repos
 git clone git@github.com:devsecops/bootcamp.git
 ```
-- Change directory to the `bootcamp` directory and launch the virtual machine:
+- Change directory to the `bootcamp` directory, install a vagrant plugin, and launch the virtual machine:
 ```
 cd bootcamp
+vagrant plugin install vagrant-vbguest
 vagrant up
 ```
 - Depending on your hardware, this process may take 10 minutes to complete. Once complete, connect to the virtual machine:  
