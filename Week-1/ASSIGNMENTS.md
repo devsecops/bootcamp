@@ -23,7 +23,7 @@ Your AWS CLI should now be able to connect to the AWS API. Verify this by runnin
 ```
 aws ec2 describe-instances --output table --region us-west-2
 ```
-It should return back an empty table. If you got an error then go back through step 2 and three to make sure you have configured the AWS CLI properly.
+It should return back an empty table. If you got an error then go back through steps 2 and 3 to make sure you have configured the AWS CLI properly.
 
 -----
 PS: Your pull request should include:
