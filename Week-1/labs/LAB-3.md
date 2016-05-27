@@ -47,6 +47,18 @@ vagrant up
 ```
 vagrant ssh
 ```
+
+If, after you SSH, you notice that
+```
+aws configure
+```
+has no output, you may need to run
+```
+vagrant provision
+```
+
+This should run all of the extra commands in the Vagrantfile (Installing Ruby, Python, AWS CLI, etc.)
+
 ---
 
 # Windows
