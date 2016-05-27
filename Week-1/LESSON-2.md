@@ -1,4 +1,4 @@
-# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)](slides/may-dso-bootcamp-week-one-lesson-two.pdf)[![view](../_images/view-clean.png)]()
+# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)](slides/may-dso-bootcamp-week-one-lesson-two.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-lesson-2)
 
 
 
