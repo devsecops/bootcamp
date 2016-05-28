@@ -10,3 +10,5 @@ Add your questions and answers here.
     * `git fetch upstream`
     * `git merge upstream\master`
     * More info can be found [here](https://help.github.com/articles/syncing-a-fork/)
+
+* Regarding attack maps best practices, is there an online resource where we could view different types of attack maps?  I'm especially curious on attacks involving a third-party CDN.
