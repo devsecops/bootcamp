@@ -8,12 +8,12 @@ During Week 2, we'll accomplish the following objectives:
 - Understand Micro-Services
 - Develop a Bad Rails app and manually deploy to AWS
  
-# [Lesson #1: Intro to Software Defined Environments & Micro-Services](LESSON-1.md)
+# [Lesson #1: Intro to Full Stack Development](LESSON-1.md)
 
 During this lesson, we'll explore Software Defined Environments.  We'll navigate the AWS Cloud using `AWS-CLI`, `AWS Console`
 `AWS-SDK-Ruby gem` and build a small Ruby app to list the contents in an S3 bucket.
 
-# [Lesson #2: Build a Bad Rails app & Deploy It](LESSON-2.md)
+# [Lesson #2: Build a Weak Rails app & Deploy It](LESSON-2.md)
 During this lesson, we'll build a weakened `Rails` app that you will be able to interact with and go through the process of deploying it to AWS
 
 # Resources
