@@ -1,4 +1,4 @@
-#Lesson 1: Intro to Full Stack Environments [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+#Lesson 1: Intro to Full Stack Development [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
 ## Full Stack Fundamentals 
 
