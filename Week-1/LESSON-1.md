@@ -34,6 +34,6 @@
 
 ## Resources
 
-* [devsecops.org](devsecops.org)
+* [devsecops.org](http://www.devsecops.org)
 * [DevSecOps LinkedIn Group](https://www.linkedin.com/groups/6817408)
 * [Awesome DevSecOps Resources](https://github.com/devsecops/awesome-devsecops)
