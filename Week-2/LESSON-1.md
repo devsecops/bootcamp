@@ -1,15 +1,10 @@
-#Lesson 1: Intro to Software Defined Environment
+#Lesson 1: Intro to Software Defined Environments and Micro-Services [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
-## Introduction to AWS cloud [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## Software Defined Fundamentals 
+
 ```
 * AWS overview
 * Why use AWS?
-```
-
-## Fundamentals [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
-
-```
-* What is the AWS cloud
 * What is the AWS-cli
 * What is the AWS console
 * AWS-SDK-Ruby gem
