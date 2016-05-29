@@ -3,7 +3,7 @@
 Note: All assignments should be made as a pull request to the upstream (i.e. `devsecops`) `bootcamp` repository ([linked here](https://github.com/devsecops/bootcamp), with branch name: `week1-$USERNAME`
 
 ## Assignment \#2: Basic Ruby Scripting
-File location and name: `bootcamp/source/week2/$USERNAME.md`
+File location and name: `bootcamp/source/week2/$USERNAME`
 
 Write a Ruby script, using Assumer to enumerate:
   - List of S3 buckets
