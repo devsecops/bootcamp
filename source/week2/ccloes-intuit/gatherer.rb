@@ -28,19 +28,25 @@ opts = Slop.new(strict: true, help: true) do
   on :b, :bucket, 'get s3 bucket resources'
   on :e, :ec2, 'get ec2 resources'
   on :r, :region=, 'aws region resources are in', optional: false
-  on :a, :account=, 'control plane account number', optional: false
-  on :t, :target=, 'target aws account number', optional: false
-  on :C, :controlrole=, 'control plane role', optional: false
-  on :T, :targetrole=, 'target account role', optional: false
-  on :s, :serial=, 'serial number of mfa', optional: false
+  on :a, :account=, 'control plane account number'
+  on :t, :target=, 'target aws account number'
+  on :C, :controlrole=, 'control plane role'
+  on :T, :targetrole=, 'target account role'
+  on :s, :serial=, 'serial number of mfa'
   on :p, :profile=, 'aws cli profile name', optional: false
+  on :m, :mfa, 'use the assumer functionality with mfa'
 end
 
 opts.parse
 
+if opts.mfa?
+  creds = get_creds(opts[:region], opts[:account], opts[:controlrole], opts[:serial], opts[:profile], opts[:target], opts[:targetrole]).assume_role_credentials
+else
+  creds = Aws::SharedCredentials.new(profile_name: opts[:profile])
+end
+
 if opts.bucket?
-  creds = get_creds(opts[:region], opts[:account], opts[:controlrole], opts[:serial], opts[:profile], opts[:target], opts[:targetrole])
-  s3 = Aws::S3::Client.new(region: opts[:region], credentials: creds.assume_role_credentials)
+  s3 = Aws::S3::Client.new(region: opts[:region], credentials: creds)
   resp = s3.list_buckets
   resp.buckets.each do |b|
     puts b.name
@@ -52,8 +58,7 @@ if opts.bucket?
 end
 
 if opts.ec2?
-  creds = get_creds(opts[:region], opts[:account], opts[:controlrole], opts[:serial], opts[:profile], opts[:target], opts[:targetrole])
-  ec2 = Aws::EC2::Client.new(region: opts[:region], credentials: creds.assume_role_credentials)
+  ec2 = Aws::EC2::Client.new(region: opts[:region], credentials: creds)
   resp = ec2.describe_instances
   resp.reservations.each do |e|
     e.instances.each do |i|
