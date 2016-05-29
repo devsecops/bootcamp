@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 gem 'aws-sdk', '~> 2'
 gem 'rspec', :require => 'spec'
+gem 'slop'
 
