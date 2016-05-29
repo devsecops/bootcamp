@@ -3,31 +3,43 @@ require 'assumer'
 require 'aws-sdk'
 require 'slop'
 
-# First Jump
-control_creds = Assumer::Assumer.new(
-  region: "us-west-2",
-  account: "380482008503",
-  role: "arn:aws:iam::380482008503:role/bootcamp/assumer_control",
-  serial_number: "arn:aws:iam::380482008503:mfa/ccloes", # if you are using MFA, this will be the ARN for the device
-  profile: "personal" # if you don't want to use environment variables or the default credentials in your ~/.aws/credentials file
-)
-# Second jump
-target_creds = Assumer::Assumer.new(
-  region: "us-west-2",
-  account: "380482008503",
-  role: "arn:aws:iam::380482008503:role/bootcamp/assumer_target",
-  credentials: control_creds
-)
+def get_creds(region, account, controlrole, serial, profile, target, targetrole)
+  # First Jump
+  control_creds = Assumer::Assumer.new(
+    region: region,
+    account: account,
+    role: controlrole,
+    serial_number: serial,
+    profile: profile
+  )
+  # Second jump
+  target_creds = Assumer::Assumer.new(
+    region: region,
+    account: target,
+    role: targetrole,
+    credentials: control_creds
+  )
+  return target_creds
+end
 
 opts = Slop.new(strict: true, help: true) do
-  on 'b', 'bucket', 'get s3 bucket resources'
-  on 'e', 'ec2', 'get ec2 resources'
+  banner 'Usage: slop_test.rb [options]'
+  on :b, :bucket, 'get s3 bucket resources'
+  on :e, :ec2, 'get ec2 resources'
+  on :r, :region=, 'aws region resources are in', optional: false
+  on :a, :account=, 'control plane account number', optional: false
+  on :t, :target=, 'target aws account number', optional: false
+  on :C, :controlrole=, 'control plane role', optional: false
+  on :T, :targetrole=, 'target account role', optional: false
+  on :s, :serial=, 'serial number of mfa', optional: false
+  on :p, :profile=, 'aws cli profile name', optional: false
 end
 
 opts.parse
 
 if opts.bucket?
-  s3 = Aws::S3::Client.new(region: "us-west-2", credentials: target_creds.assume_role_credentials)
+  creds = get_creds(opts[:region], opts[:account], opts[:controlrole], opts[:serial], opts[:profile], opts[:target], opts[:targetrole])
+  s3 = Aws::S3::Client.new(region: opts[:region], credentials: creds.assume_role_credentials)
   resp = s3.list_buckets
   resp.buckets.each do |b|
     puts b.name
@@ -39,7 +51,8 @@ if opts.bucket?
 end
 
 if opts.ec2?
-  ec2 = Aws::EC2::Client.new(region: "us-west-2", credentials: target_creds.assume_role_credentials)
+  creds = get_creds(opts[:region], opts[:account], opts[:controlrole], opts[:serial], opts[:profile], opts[:target], opts[:targetrole])
+  ec2 = Aws::EC2::Client.new(region: opts[:region], credentials: creds.assume_role_credentials)
   resp = ec2.describe_instances
   resp.reservations.each do |e|
     e.instances.each do |i|
@@ -61,3 +74,5 @@ if opts.ec2?
     end
   end
 end
+
+
