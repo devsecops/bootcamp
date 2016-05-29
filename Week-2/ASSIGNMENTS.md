@@ -24,4 +24,4 @@ Write a Ruby script, using Assumer to enumerate:
 -----
 PS: Your pull request should include:
 
-1. A new Ruby file: `bootcamp/source/week2/$USERNAME.md`
+1. A new Ruby file: `bootcamp/source/week2/$USERNAME`
