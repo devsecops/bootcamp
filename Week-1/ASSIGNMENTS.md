@@ -1,6 +1,6 @@
 # WEEK 1 ASSIGNMENTS
 
-Note: All assignments should be made as a pull request to the upstream (i.e. `devsecops`) `Bootcamp-Labs` repository, with branch name: `week1-$USERNAME`
+Note: All assignments should be made as a pull request to the upstream (i.e. `devsecops`) `bootcamp` repository ([linked here](https://github.com/devsecops/bootcamp), with branch name: `week1-$USERNAME`
 
 ## Assignment \#1: Add an item in FAQ.md
 Add an item to the FAQ.md
