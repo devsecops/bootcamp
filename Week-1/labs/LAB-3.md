@@ -56,7 +56,7 @@ Windows 7 or later
 ---
 ## Installing Git for Windows
 
-You can install `git` on Microsoft Windows 7 or later by downloading and installing the `git` Windows binary found on [git-scm](https://git-scm.com/download/win target="_blank"):
+You can install `git` on Microsoft Windows 7 or later by downloading and installing the `git` Windows binary found on [git-scm](https://git-scm.com/download/win):
 - You should be automatically prompted to download the installer.
   - If not, select the right installer for your OS architecture (32-bit vs 64-bit)
 - In your computer's **Downloads** folder, double-click `Git-2.8.3-64-bit.exe`
@@ -64,15 +64,15 @@ You can install `git` on Microsoft Windows 7 or later by downloading and install
 - After the program has been installed, you should now be able to use `git` in **cmd.exe**.
 - You will also have a new application called `Git Bash`, which is a wrapper that gives you the same command-line experience as you would on a Linux or Mac OS X terminal.
 ## Installing VirtualBox
-- Go to [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads target="_blank")
+- Go to [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
 - Download the appropriate installer for your OS (`Windows`) and architecture (32-bit vs 64-bit)
 - In **Downloads** folder, launch the installer and follow the prompts, leaving the default options as-is.
 
 ---
 
 ## Installing Vagrant
-[Vagrant](https://www.vagrantup.com/ target="_blank") is a DevOps tool that enables developers to stand-up & provision virtual machines with extreme ease. All you need is a `Vagrantfile` that describes the virtual machine (e.g. Guest OS, virtual CPUs, virtual RAM, what packages must be installed when the virtual machine is online ...etc) and `vagrant` will take care of the rest for you.
-- Go to [Vagrant Downloads](https://www.vagrantup.com/downloads.html target="_blank")
+[Vagrant](https://www.vagrantup.com/) is a DevOps tool that enables developers to stand-up & provision virtual machines with extreme ease. All you need is a `Vagrantfile` that describes the virtual machine (e.g. Guest OS, virtual CPUs, virtual RAM, what packages must be installed when the virtual machine is online ...etc) and `vagrant` will take care of the rest for you.
+- Go to [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
 - Download the Windows installer.
 - In **Downloads** folder, launch the installer and follow the prompts, leaving the default options as-is.
 - The installer will prompt you for a reboot when complete. Click the Reboot now option.
