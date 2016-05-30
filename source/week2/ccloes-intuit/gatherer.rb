@@ -24,7 +24,7 @@ def get_creds(region, account, controlrole, serial, profile, target, targetrole)
 end
 
 opts = Slop.new(strict: true, help: true) do
-  banner 'Usage: slop_test.rb [options]'
+  banner 'Usage: gatherer.rb [options]'
   on :b, :bucket, 'get s3 bucket resources'
   on :e, :ec2, 'get ec2 resources'
   on :r, :region=, 'aws region resources are in', optional: false
