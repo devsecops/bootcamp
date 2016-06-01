@@ -19,20 +19,21 @@ $ vagrant ssh
 
 ## Install
 
-Install and run a local database.
+Install and run a local database:
 
-```$ sudo yum -y install mariadb mariadb-server mariadb-devel
+```
+$ sudo yum -y install mariadb mariadb-server mariadb-devel
 $ sudo systemctl start mariadb.service
 ```
 
-Install dependencies.
+Install dependencies:
 
 ```
 $ sudo yum -y install links
 $ sudo yum -y install nodejs
 ```
 
-Install Rails.
+Install Rails:
 
 ```
 $ gem install rails
@@ -60,7 +61,7 @@ Run our new app. Note: setup port forwarding first.
 $ bundle exec rails server -b 0.0.0.0
 ```
 
-Got to `http://localhost:3000/` on your browser.
+Go to `http://localhost:3000/` on your browser.
 
 Use ctrl-c to quit rails. Now add scaffolding. 
 
@@ -72,7 +73,7 @@ $ bundle exec rake db:migrate
 Add a default route to `config/routes.rb`
 
 ```
-root 'bootcamp#index'
+root 'bootcamps#index'
 ```
 
 Run the app.
@@ -81,7 +82,7 @@ Run the app.
 $ bundle exec rails server -b 0.0.0.0
 ```
 
-Got to `http://localhost:3000/` on your browser.
+Go to `http://localhost:3000/` on your browser.
 
 Now edit `app/views/bootcamps/show.html.erb` and make the description field a `raw` field. It should look like so:
 
@@ -100,7 +101,7 @@ Now run the app, and create a new bootcamp entry. What can you do in the descrip
 
 ## Push Code to Github
 
-Greate a new project in your githuhb account and push the code, e.g.,:
+Create a new project in your githuhb account and push the code, e.g.,:
 
 ```
 echo "# myapp" >> README.md
