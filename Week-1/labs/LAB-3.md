@@ -21,15 +21,27 @@ If you don't have [Homebrew](http://brew.sh/) or any other Mac OS X package mana
 ---
 
 ## Virtualbox
-If you don't have [Virtualbox](https://www.virtualbox.org/wiki/Downloads):
-- Download and install the appropriate binary for your operating system and architecture from [Virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
+If you don't have [Virtualbox](https://www.virtualbox.org/wiki/Downloads) it can be installed using Homebrew
+- Open **Terminal** and execute:
+```
+brew cask install virtualbox
+```
+However, if you don't like Homebrew, download and install the appropriate binary for your operating system and architecture from [Virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
 
 ---
 
 ## Vagrant
 [Vagrant](https://www.vagrantup.com/) is a DevOps tool that enables developers to stand-up & provision virtual machines with extreme ease. All you need is a `Vagrantfile` that describes the virtual machine (e.g. Guest OS, virtual CPUs, virtual RAM, what packages must be installed when the virtual machine is online ...etc) and `vagrant` will take care of the rest for you.
-- Download and install the appropriate binary for your operating system and architecture from [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
+
+Vagrant installation can be done with Homebrew
+- Open **Terminal** and execute:
+```
+brew cask install vagrant
+```
+Again, if you don't like Homebrew you can download and install the appropriate binary for your operating system and architecture from [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
+
 - In **Terminal**, you should now have `vagrant` command-line utility available. Type `vagrant` or `vagrant version` to confirm.
+
 
 ## Launching the Vagrant Virtual Machine
 - In **Terminal**, make a **dso_repos** directory and clone the `bootcamp` repository into it:
@@ -47,6 +59,17 @@ vagrant up
 ```
 vagrant ssh
 ```
+
+If, after you SSH, you notice that
+```
+aws configure
+```
+has no output, you may need to run
+```
+vagrant provision
+```
+
+This should run all of the extra commands in the Vagrantfile (Installing Ruby, Python, AWS CLI, etc.)
 ---
 
 # Windows

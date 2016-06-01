@@ -1,24 +1,21 @@
-#Lesson 1: Intro to Software Defined Environment
+#Lesson 1: Intro to Full Stack Development [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
 
-## Introduction to AWS cloud [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
-```
-* AWS overview
-* Why use AWS?
-```
-
-## Fundamentals [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+## Full Stack Fundamentals 
 
 ```
-* What is the AWS cloud
-* What is the AWS-cli
-* What is the AWS console
-* AWS-SDK-Ruby gem
-* What is an S3 buckets
+* Software Defined Environment Overview
+* Common Characteristics of SDEs
+* Benefits of an SDE
+* Skills required to use an SDE
+* Microservice Overview
+* The Monolith on an SDE
+
 ```
 
 ## Lab #1 [![slides](../_images/lab-clean.png)]()
 ```
 * Navigating the console
+* AWS CLI
 * Download AWS-SDK-Ruby gem
 * Exploring S3 buckets
 * Create Ruby script to list content in S3 bucket

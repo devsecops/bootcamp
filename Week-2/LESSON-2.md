@@ -1,1 +1,1 @@
-# Lesson 2
+# Lesson 2: Build a Weak Rails app & Deploy It
