@@ -12,7 +12,7 @@
 
 ```
 
-## Lab #1 [![slides](../_images/lab-clean.png)](LAB-1.md)
+## Lab #1 [![slides](../_images/lab-clean.png)](/labs/LAB-1.md)
 ```
 * Navigating the console
 * AWS CLI
