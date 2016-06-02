@@ -25,7 +25,9 @@ aws ec2 describe-instances --output table --region us-west-2
 ```
 It should return back an empty table. If you got an error then go back through steps 2 and 3 to make sure you have configured the AWS CLI properly.
 
-If you receive and error regarding lack of permissions, you can add permissions to your user by entering IAM. Then, select "users" in the sidebar. Select the desired user, click the permissions tab and then "Attach Policy". Attach the desired policy. Then try to run the command again.
+If you receive an error regarding lack of permissions, you can add permissions to your user by entering IAM. Then, select "users" in the sidebar. Select the desired user, click the permissions tab and then "Attach Policy". In order to run the command above, you can attach the `AmazonEC2FullAccess` policy. It will take a few seconds to take effect, and then you can run the command again.  
+
+If you'd like to apply more limited permissions or a more restricted policy, you can see a list, and simulate the policies at https://policysim.aws.amazon.com/home/index.jsp.
 
 -----
 PS: Your pull request should include:
