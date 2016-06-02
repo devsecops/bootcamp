@@ -9,7 +9,7 @@
 
 ```
 
-## Lab #2 [![slides](../_images/lab-clean.png)]()
+## Lab #2 [![slides](../_images/lab-clean.png)](/labs/LAB-2.md)
 ```
 * Trusting the User
 * Not Validating Input
