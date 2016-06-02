@@ -6,6 +6,7 @@
 * Hardcoded Secrets
 * Lack of Input Validation
 * Dynamic SQL
+* Trust
 * 
 
 ```
@@ -14,7 +15,7 @@
 ```
 * Hardcoding
 * Trusting the User
-* 
+* Borrowing Code
 
 ```
 
