@@ -18,3 +18,5 @@ Add your questions and answers here.
 ##### How do you balance operational needs and secuirty?
 
 ##### What are flaws of traditional auditing that can be easily solved with devsecops?
+
+##### How do you get buy-in from traditional business units so that the practices taught by DevSecOps can be implemented?
