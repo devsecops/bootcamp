@@ -15,4 +15,6 @@ Add your questions and answers here.
 
 ##### What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
 
-#### What are common flaws that traditional auditing overlook but are easily solved with devsecops? 
+##### How do you balance operational needs and secuirty?
+
+##### What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
