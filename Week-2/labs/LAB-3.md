@@ -5,6 +5,11 @@
 - [Signup for AWS](##signup-for-aws)
 - [Setup MFA for the Root User](##setup-mfa-for-the-root-user)
 - [Create an IAM User](##create-an-iam-user)
+- [Generate an SSH Key](##generate-an-ssh-key)
+- [Create a Security Group](create-a-security-group)
+- [Launch an Instance](##launch-an-instance)
+- [Deploy your App](##deploy-your-app)
+- [Connect](##connect)
 
 # Deploy your App on AWS
 
