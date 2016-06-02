@@ -5,16 +5,14 @@
 ```
 * Hardcoded Secrets
 * Lack of Input Validation
-* Dynamic SQL
-* Trust
-* 
+* Code Injection 
 
 ```
 
 ## Lab #2 [![slides](../_images/lab-clean.png)]()
 ```
-* Hardcoding
 * Trusting the User
+* Not Validating Input
 * Borrowing Code
 
 ```
