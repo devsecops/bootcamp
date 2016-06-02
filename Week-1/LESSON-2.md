@@ -1,4 +1,4 @@
-# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)]()[![view](../_images/view-clean.png)]()
+# Lesson 2: Think like an Attacker [![slides](../_images/slides-clean.png)](slides/may-dso-bootcamp-week-one-lesson-two.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-lesson-2)
 
 
 
@@ -40,7 +40,7 @@
 ```
 
 
-## Lab #2 [![slides](../_images/lab-clean.png)]()
+## Lab #2 [![slides](../_images/lab-clean.png)](labs/LAB-2.md)
 
 ```
 
@@ -52,3 +52,4 @@
 
 * [O'Reilly Excerpt, Anatomy of an Attack: The Five P's](http://www.onjava.com/pub/a/security/excerpt/SnortandIDSTools_chap1/index.html)
 * [Raindance - Attack Maps](https://github.com/devsecops/raindance)
+* [Github Integrations](https://github.com/integrations)

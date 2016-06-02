@@ -74,4 +74,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline: RUBY_SETUP,   privileged: false
   config.vm.provision :shell, inline: AWS_SETUP,    privileged: false
 
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+
 end
