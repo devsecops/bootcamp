@@ -21,7 +21,11 @@ $ vagrant ssh
 
 ---
 
-## Basic CommandsDownload a word list, move it into, its own directory, decompress the word list and count the words.
+## Basic CommandsWhich Linux distro are we using?
+
+```
+$ cat /etc/centos-release
+```Fun with words: Download a word list, move it into its own directory, decompress the word list and count the words.
 ```
 $ wget http://download.openwall.net/pub/wordlists/all.gz
 $ mkdir words
