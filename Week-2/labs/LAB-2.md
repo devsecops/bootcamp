@@ -97,7 +97,20 @@ Now edit `app/views/bootcamps/show.html.erb` and make the description field a `r
 
 Now run the app, and create a new bootcamp entry. What can you do in the description field? What are the security implications of using the `raw` method.
 
+## Add Your Own Functionality
 
+Do one of the following:
+
+1. Capability to upload and display an image when creating/showing a bootcamp entry
+2. Integrate Devise to authenticate users
+3. Implement access controls for the bootcamp model
+
+**Challenge:** do all 3.
+
+**Resources:**
+
+* Rails Form Helpers: [http://guides.rubyonrails.org/form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
+* Devise: [https://github.com/plataformatec/devise](https://github.com/plataformatec/devise)
 
 ## Push Code to Github
 
