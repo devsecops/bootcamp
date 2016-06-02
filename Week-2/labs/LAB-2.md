@@ -63,7 +63,7 @@ $ bundle exec rails server -b 0.0.0.0
 
 Go to `http://localhost:3000/` on your browser.
 
-Use ctrl-c to quit rails. Now add scaffolding. 
+Use ctrl-c to quit rails. Now add scaffolding.
 
 ```
 $ bundle exec rails generate scaffold Bootcamp name:string description:text dates:string
@@ -96,6 +96,42 @@ Now edit `app/views/bootcamps/show.html.erb` and make the description field a `r
 ```
 
 Now run the app, and create a new bootcamp entry. What can you do in the description field? What are the security implications of using the `raw` method.
+
+## Adding Search Functionality
+`rails generate scaffold User first_name:string last_name:string title:string`
+`rake db:migrate`
+`rails s -b 0.0.0.0`
+Go to http://localhost:3000/users
+Add a couple of users
+
+Let's implement the Search feature.
+In `app/controllers/users_controller.rb`, we'll add the following logic to the `index` method (aka action):
+```
+def index
+  @users = User.all
+  if params[:search].to_s != ''
+    @users = User.where("first_name LIKE '#{params[:search]}'")
+  else
+    @users = User.all
+  end
+end
+```
+If there is a `search` query parameter passed to the server from the client, then search for users where the user first name is like the query parameter
+
+In `app/views/users/index.html.erb`, we'll modify the view to the following code:
+```
+<h1>Search</h1>
+<%= form_tag(users_path, method: "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+  <%= submit_tag %>
+<% end %>
+
+<h1>Listing Users</h1>
+...
+```
+That's it.
+
+Go to http://localhost:3000/users and try to search for users by first name.
 
 ## Add Your Own Functionality
 
