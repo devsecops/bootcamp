@@ -14,11 +14,12 @@
 
 ## Lab #1 [![slides](../_images/lab-clean.png)](/labs/LAB-1.md)
 ```
-* Navigating the console
-* AWS CLI
-* Download AWS-SDK-Ruby gem
-* Exploring S3 buckets
-* Create Ruby script to list content in S3 bucket
+* Quick intro to Linux 
+* Basic Commands
+* The Filesystem
+* Users and sudo
+* Yum Package Management
+* The Network
 ```
 
 ## Resources
