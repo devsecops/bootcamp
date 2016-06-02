@@ -111,6 +111,8 @@ Do one of the following:
 
 * Rails Form Helpers: [http://guides.rubyonrails.org/form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
 * Devise: [https://github.com/plataformatec/devise](https://github.com/plataformatec/devise)
+* Devise Wiki: [https://github.com/plataformatec/devise/wiki](https://github.com/plataformatec/devise/wiki)
+* MyApp: [https://github.com/godinezj/myapp](https://github.com/godinezj/myapp)
 
 ## Push Code to Github
 
