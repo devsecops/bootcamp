@@ -17,3 +17,6 @@ Add your questions and answers here.
 
 
 ##### How do you balance operational needs and secuirty?
+
+
+##### What is a common mistake programmers make in their applications that make their software insecure?
