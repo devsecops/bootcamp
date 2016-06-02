@@ -18,3 +18,5 @@ Add your questions and answers here.
 ##### How do you balance operational needs and secuirty?
 
 ##### What are flaws of traditional auditing that can be easily solved with devsecops?
+
+##### What are common mistakes programmers make that make their applications less secure?
