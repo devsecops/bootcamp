@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
   # end
   
   # If you want to sync the bootcamp directory between the host and guest VM, you need to install a plugin: "vagrant plugin install vagrant-vbguest"
-  config.vm.synced_folder ".", "/home/vagrant/bootcamp", type: "virtualbox" 
+  config.vm.synced_folder ".", "/home/vagrant/sync", type: "virtualbox" 
   
   config.vm.provision :shell, inline: BASIC_SETUP,  privileged: false
   config.vm.provision :shell, inline: RUBY_SETUP,   privileged: false
