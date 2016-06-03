@@ -30,7 +30,7 @@ git config --global user.email "YOUR EMAIL"
 ```
 - Generate SSH Keys:
 ```
-ssh-keygen -t RSA -C YOUR_EMAIL@DOMAIN.COM
+ssh-keygen -t rsa -C YOUR_EMAIL@DOMAIN.COM
 ```
 - You'll receive the following prompts:  
   `Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):` - Press Enter  
