@@ -15,6 +15,9 @@ Add your questions and answers here.
 
 ##### What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
 
-##### How do you balance operational needs and secuirty?
+##### How do you balance operational needs and security?
 
 ##### What are flaws of traditional auditing that can be easily solved with devsecops?
+
+##### What is the 'rugged' software movement?
+At its core, the rugged software movement is about writing software in such a way that it is robust to being used in unanticipated ways.  See https://www.ruggedsoftware.org.  Obviously, secure software is rugged software.
