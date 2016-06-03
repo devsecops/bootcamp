@@ -7,7 +7,10 @@
 - [Create a New App](##create-a-new-app)
 - [Push Code to Github](##push-code-to-github)
 
-# Building an App from the Ground Up
+# Building a Weak App from the Ground Up
+
+---
+**DISCLAIMER:** This is intended to be an example of a weak/vulnerable web application built with Rails. Please do not use this in production environments
 
 ---
 ## Prereq
@@ -99,56 +102,37 @@ Now run the app, and create a new bootcamp entry. What can you do in the descrip
 ## Adding Search Functionality
 In this section, we'll create a search functionality for our app.
 
-First, let's generate a `users` table using the Rails `scaffold` generator:
-```
-rails generate scaffold User first_name:string last_name:string title:string
-```
-
-Any time we create new tables, we need to run migrations:
-```
-rake db:migrate
-```
-
-Start the rails server:
-```
-rails s -b 0.0.0.0
-```
-
-Go to http://localhost:3000/users and try adding a couple of users
-
-Now, let's actually implement the Search feature.
-
-In `app/controllers/users_controller.rb`, we'll add the following logic to the `index` method (aka action):
+In `app/controllers/bootcamps_controller.rb`, we'll add the following logic to the `index` method (aka action):
 ```
 ...
 def index
-  @users = User.all
+  @bootcamps = Bootcamp.all
   if params[:search].to_s != ''
-    @users = User.where("first_name LIKE '#{params[:search]}'")
+    @bootcamps = Bootcamp.where("name LIKE '%#{params[:search]}%'")
   else
-    @users = User.all
+    @bootcamps = Bootcamp.all
   end
 end
 ...
 ```
-Basically, if there is a `search` query parameter passed to the server from the browser, then we'll search for users where the user first name is like the query parameter.
+Basically, if there is a `search` query parameter passed to the server from the browser, then we'll search for bootcamps where the name is like the query parameter.
 
-In `app/views/users/index.html.erb`, we'll add the search field:
+In `app/views/bootcamps/index.html.erb`, we'll add the search field:
 ```
 <h1>Search</h1>
-<%= form_tag(users_path, method: "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
-  <%= submit_tag %>
+<%= form_tag(bootcamps_path, method: "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Bootcamps" %>
+  <%= submit_tag "Search Bootcamps"%>
 <% end %>
 
-<h1>Listing Users</h1>
+<h1>Listing Bootcamps</h1>
 ...
 ```
 That's it.
 
-Go to http://localhost:3000/users and try to search for users by first name.
+Go to http://localhost:3000/users and try to search for bootcamps by name.
 
-What can you do in the search field? What are the security implications of our "search" code?
+What can you do in the search field? What are the security implications of our "search" implementations?
 
 ## Add Your Own Functionality
 
