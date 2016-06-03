@@ -30,7 +30,7 @@ git config --global user.email "YOUR EMAIL"
 ```
 - Generate SSH Keys:
 ```
-ssh-keygen -t RSA -C YOUR_EMAIL@DOMAIN.COM
+ssh-keygen -t rsa -C YOUR_EMAIL@DOMAIN.COM
 ```
 - You'll receive the following prompts:  
   `Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):` - Press Enter  
@@ -57,7 +57,7 @@ Set git to use your name and an email address so your git commits will be proper
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR EMAIL ADDRESS"
 ```
-If you want to keep your email address private, see ["Keeping your email address private".](https://help.github.com/articles/keeping-your-email-address-private_ target="_blank")
+If you want to keep your email address private, see ["Keeping your email address private".](https://help.github.com/articles/keeping-your-email-address-private")
 - Generate SSH Keys: `ssh-keygen -t RSA -C your_email@example.com`
 - You'll receive the following prompts:  
   `Enter file in which to save the key (/c/Users/%username%/.ssh/id_rsa):` - Press Enter  
@@ -70,7 +70,7 @@ Your public key has been saved in /c/Users/%username%/.ssh/id_rsa.pub
 ...
 ```
 - Print out the Public SSH Key: `cat ~/.ssh/id_rsa.pub` and copy it
-- Go to your [Github Settings](https://github.com/settings/keys target="_blank"), click **New SSH Key** button, provide a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
+- Go to your [Github Settings](https://github.com/settings/keys"), click **New SSH Key** button, provide a **Title** and paste in the public SSH Key, then click **Add SSH Key**.
 
 ---
 
