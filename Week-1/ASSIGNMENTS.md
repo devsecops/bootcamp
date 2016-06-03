@@ -1,6 +1,6 @@
 # WEEK 1 ASSIGNMENTS
 
-Note: All assignments should be made as a pull request to the upstream (i.e. `devsecops`) `Bootcamp-Labs` repository, with branch name: `week1-$USERNAME`
+Note: All assignments should be made as a pull request to the upstream (i.e. `devsecops`) `bootcamp` repository, with branch name: `week1-$USERNAME`
 
 ## Assignment \#1: Add an item in FAQ.md
 Add an item to the FAQ.md
@@ -24,6 +24,8 @@ Your AWS CLI should now be able to connect to the AWS API. Verify this by runnin
 aws ec2 describe-instances --output table --region us-west-2
 ```
 It should return back an empty table. If you got an error then go back through steps 2 and 3 to make sure you have configured the AWS CLI properly.
+
+If you receive and error regarding lack of permissions, you can add permissions to your user by entering IAM. Then, select "users" in the sidebar. Select the desired user, click the permissions tab and then "Attach Policy". Attach the desired policy. Then try to run the command again.
 
 -----
 PS: Your pull request should include:
