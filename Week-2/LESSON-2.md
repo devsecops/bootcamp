@@ -17,5 +17,11 @@
 
 ```
 
+## Lab #3 [![slides](../_images/lab-clean.png)](labs/LAB-3.md)
+```
+* Set-up and deploy in AWS
+
+```
+
 ## Resources
 
