@@ -167,8 +167,8 @@ Install Ruby:
 $ rbenv install -v 2.3.1
 $ rbenv global 2.3.1
 $ ruby -v
-$ gem install bundler
-$ gem install rails
+$ gem install bundler --no-ri --no-rdoc
+$ gem install rails --no-ri --no-rdoc
 
 ```
 
