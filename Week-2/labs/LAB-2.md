@@ -102,7 +102,7 @@ Now run the app, and create a new bootcamp entry. What can you do in the descrip
 ## Adding Search Functionality
 In this section, we'll create a search functionality for our app.
 
-In `app/controllers/bootcamps_controller.rb`, we'll add the following logic to the `index` method (aka action):
+In `app/controllers/bootcamps_controller.rb`, we'll add the following logic to the `index` method (a.k.a. action):
 ```
 ...
 def index
