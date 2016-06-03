@@ -79,8 +79,7 @@ Vagrant.configure("2") do |config|
   #   v.vmx['numvcpus'] = '2'
   # end
   
-  # RSYNC is disabled due to incompatibilty with Windows machines.
-  # If your host machine is running Linux or Mac OS X, feel free to uncomment this line.
+  # If you want to sync the bootcamp directory between the host and guest VM, you need to install a plugin: "vagrant plugin install vagrant-vbguest"
   config.vm.synced_folder ".", "/home/vagrant/bootcamp", type: "virtualbox" 
   
   config.vm.provision :shell, inline: BASIC_SETUP,  privileged: false
