@@ -57,18 +57,6 @@ $ cd myapp
 $ bundle exec rake db:create
 $ bundle exec rake db:migrate
 ```
-Setup port forwarding
-```
-Launch VirtualBox
-Select settings for your instance
-Under the Network tab, click Port Forwarding
-Add the following:
- Name: Rails
- Protocol: TCP
- Host IP: 127.0.0.1
- Host Port: 3000
- Guest Port: 3000
-```
 
 Run our new app.
 
