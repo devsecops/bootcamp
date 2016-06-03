@@ -21,3 +21,8 @@ Add your questions and answers here.
 
 ##### What is the 'rugged' software movement?
 At its core, the rugged software movement is about writing software in such a way that it is robust to being used in unanticipated ways.  See https://www.ruggedsoftware.org.  Obviously, secure software is rugged software.
+
+##### What is a starting resource for learning more about the types of attacks and vulnerables web-accessible application need to worry about?
+While there are a lot of various resources, both on and offline, one very good starting point is the [OWASP](https://www.owasp.org) wiki run by the Open Web Application Security Project.
+OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails-based applications as the [Ruby on Rails Cheatsheet](https://www.owasp.org/index.php/Ruby_on_Rails_Cheatsheet)
+
