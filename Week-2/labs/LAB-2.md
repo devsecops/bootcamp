@@ -130,7 +130,7 @@ In `app/views/bootcamps/index.html.erb`, we'll add the search field:
 ```
 That's it.
 
-Go to http://localhost:3000/users and try to search for bootcamps by name.
+Go to [http://localhost:3000](http://localhost:3000) and try to search for bootcamps by name.
 
 What can you do in the search field? What are the security implications of our "search" implementations?
 
