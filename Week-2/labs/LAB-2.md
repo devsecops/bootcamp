@@ -7,7 +7,7 @@
 - [Create a New App](##create-a-new-app)
 - [Push Code to Github](##push-code-to-github)
 
-# Building a Weak App from the Ground Up
+# Building an App the Naive Way
 
 ---
 **DISCLAIMER:** This is intended to be an example of a weak/vulnerable web application built with Rails. Please do not use this in production environments
