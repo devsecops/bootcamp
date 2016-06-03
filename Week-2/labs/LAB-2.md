@@ -70,7 +70,7 @@ Host Port: 3000
 Guest Port: 3000
 ```
 
-Run our new app. Note: setup port forwarding first.
+Run our new app.
 
 ```
 $ bundle exec rails server -b 0.0.0.0
