@@ -30,3 +30,9 @@ OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails
 
 ##### What is a common mistake programmers make in their applications that make their software insecure?
 
+##### If I already have an AWS account, can I use it or should I create a new one ?
+* If you have data and services you don't mind loosing, feel free to reuse it. 
+* Ideally, you would create a [separate account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-tasks.html) to minimize the "blast radius".
+
+
+
