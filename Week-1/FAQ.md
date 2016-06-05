@@ -28,5 +28,5 @@ OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails
 
 ##### Some precautions are obvious to security professionals, but not to an expected user. What approach would you reccommend when approaching InfoSec problems in the shoes of a typical user, rather than someone who has expertise in cybersecurity and making certain nothing is overlooked?
 
-
+##### What is a common mistake programmers make in their applications that make their software insecure?
 
