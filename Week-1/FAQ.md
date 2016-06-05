@@ -34,5 +34,4 @@ OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails
 * If you have data and services you don't mind loosing, feel free to reuse it. 
 * Ideally, you would create a [separate account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-tasks.html) to minimize the "blast radius".
 
-
-
+##### How do you get buy-in from traditional business units so that the practices taught by DevSecOps can be implemented?
