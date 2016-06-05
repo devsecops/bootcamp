@@ -17,6 +17,7 @@ I'm especially curious on attacks involving a third-party CDN.
 ## Q: What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
 
 ## Q: How do you balance operational needs and security?
+Security is a balance for creation and maintainance.  Making tradeoffs is part of all decisions that need to be made.  This essentially starts with identifying your workload and understanding its dimensions plus their importance.  Do you need to support usability? trust? In other words, understanding what is important can help with the priority of requirements and how to balance needs.  With relationship to Security, Operations comes from supporting a workload and its security requirements.  Controls must get built into a workload as part of its general constraints along with operational constraints.  Treating the workload for survivability is typically the way to balance these two disciplines.  Security issues happen more frequently than is discussed in the industry.  If you can imagine security as a frailty consideration then it may be easier to consider. As an Operations engineer it would be useful to know how often you are seeing security exploits being attempted and whether the workload is susceptible.  Remember too, there are ways to test for common security problems without ever signaling the operations team or their monitoring.  
 
 ## Q: What are flaws of traditional auditing that can be easily solved with devsecops?
 
