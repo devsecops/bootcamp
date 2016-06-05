@@ -15,7 +15,7 @@ Add your questions and answers here.
 
 ##### What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
 
-##### How do you balance operational needs and secuirty?
+##### How do you balance operational needs and security?
 
 ##### What are flaws of traditional auditing that can be easily solved with devsecops?
 
@@ -25,4 +25,8 @@ At its core, the rugged software movement is about writing software in such a wa
 ##### What is a starting resource for learning more about the types of attacks and vulnerables web-accessible application need to worry about?
 While there are a lot of various resources, both on and offline, one very good starting point is the [OWASP](https://www.owasp.org) wiki run by the Open Web Application Security Project.
 OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails-based applications as the [Ruby on Rails Cheatsheet](https://www.owasp.org/index.php/Ruby_on_Rails_Cheatsheet)
+
+##### Some precautions are obvious to security professionals, but not to an expected user. What approach would you reccommend when approaching InfoSec problems in the shoes of a typical user, rather than someone who has expertise in cybersecurity and making certain nothing is overlooked?
+
+
 
