@@ -28,6 +28,7 @@ While there are a lot of various resources, both on and offline, one very good s
 OWASP even includes a Ruby on Rails-specific listing of common pitfalls of Rails-based applications as the [Ruby on Rails Cheatsheet](https://www.owasp.org/index.php/Ruby_on_Rails_Cheatsheet)
 
 ## Q: Some precautions are obvious to security professionals, but not to an expected user. What approach would you reccommend when approaching InfoSec problems in the shoes of a typical user, rather than someone who has expertise in cybersecurity and making certain nothing is overlooked?
+Security is hard.  There are known vulnerabilities, weaknesses and mistakes that need to be checked.  And then there is the unknown.  It takes years to get experience and truthfully there will always be creative ways to break something that you haven't anticipated.  The best approach for users is to get the "easy" stuff right.  Checking known issues and making sure they dont become low-hanging fruit for an attacker is always good practice.  Also - there are a variety of tools that you can use to make things better.  Getting basic knowledge about how to test your code and check for common problems goes a long way.
 
 ## Q: What is a common mistake programmers make in their applications that make their software insecure?
 
