@@ -16,6 +16,13 @@
 
  AWS Console URL: [https://ldcp-iis-my-ctrl-app-lrn.signin.aws.amazon.com/console](https://ldcp-iis-my-ctrl-app-lrn.signin.aws.amazon.com/console)
 
+ Passwords must have:
+
+ - 11 characters
+ - Mixed case letters
+ - At least 1 number
+ - At least 1 special character
+
 2. Setup MFA for your new IAM user: select `Services` > `IAM`, select `Users`, select your user name, select `Security Credentials` > `Manage MFA Device`. Select `A virtual MFA device` click `Next Step`. Enter in two consecutive MFA codes (1st in `Authentication Code 1` and second in `Authentication Code 2`) and click `Activate Virtual MFA`.
 
 ## Generate API Access Keys
@@ -37,15 +44,20 @@ Default output format [None]: json
 
 ## Assume Deployment Admin in Target Account
 
-Use AWS STS to assume as deployment-admin into the target account.
+Use AWS STS to assume as deployment-admin into the target account. First set your AWS_USERNAME environment variable.
 
-1. Use STS to assume the control account role.
+```
+echo "export AWS_USERNAME=INSERT_YOUR_USERNAME_HERE" >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+1. Use STS to assume the control account role. This command will return JSON formatted text which contains credential to be used in the next step.
 
  ```
 aws sts assume-role \
 --role-arn arn:aws:iam::100352119871:role/dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
---role-session-name student1-$$ --profile dso \
---serial-number arn:aws:iam::100352119871:mfa/student1 \
+--role-session-name $AWS_USERNAME-$$ --profile dso \
+--serial-number arn:aws:iam::100352119871:mfa/$AWS_USERNAME \
 --token-code 123456
  ```
 
@@ -62,7 +74,7 @@ $ export AWS_SESSION_TOKEN=...
  ```
 aws sts assume-role \
 --role-arn arn:aws:iam::717986480831:role/human/dso/TGT-dso-DeploymentAdmin \
---role-session-name student1-$$
+--role-session-name $AWS_USERNAME-$$
  ```
 
  2. Export target STS credentials.
@@ -100,9 +112,6 @@ aws sts assume-role \
   login_url = signin_url + '?Action=login' + signin_token_param + issuer_param + destination_param
 
   puts "\n\nCopy and paste this URL into your browser:\n#{login_url}"
-
-  `open \"#{login_url}\"`
-
    ```
 
 ## Automate Role Assumption
@@ -111,4 +120,4 @@ aws sts assume-role \
 
 * Using your favorite programming/scripting language, automate assuming role into the target account and opening the AWS Console UI.
 * Use the assumer gem to open the AWS Console: [https://github.com/devsecops/assumer](https://github.com/devsecops/assumer)
- * `assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin -p dso -g -u student1`
+ * `assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin -p dso -g -u $AWS_USERNAME`
