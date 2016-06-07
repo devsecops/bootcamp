@@ -17,4 +17,7 @@ During this lesson, we'll explore Software Defined Environments.  We'll navigate
 During this lesson, we'll build a weakened `Rails` app that you will be able to interact with and go through the process of deploying it to AWS
 
 # Resources
-
+- The best [Rails Tutorial Book](https://www.railstutorial.org/book) available for free online!
+- [Ruby on Rails Guides](http://guides.rubyonrails.org/index.html)
+- [Rails Screencasts](https://gorails.com/episodes)
+- Some more free [Rails Casts](http://railscasts.com/)
