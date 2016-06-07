@@ -75,7 +75,7 @@ aws sts assume-role \
 
 5. Open AWS console with temporary credentials.
 
- You can use the following ruby script to do this:
+ You can use the following ruby script (`console.rb`) to do this:
 
   ```
   require 'json'
@@ -107,4 +107,8 @@ aws sts assume-role \
 
 ## Automate Role Assumption
 
-**Homework/Challenge:** Using your favorite programming/scripting language, automate assuming role into the target account and opening the AWS Console UI.
+**Homework/Challenges:**
+
+* Using your favorite programming/scripting language, automate assuming role into the target account and opening the AWS Console UI.
+* Use the assumer gem to open the AWS Console: [https://github.com/devsecops/assumer](https://github.com/devsecops/assumer)
+ * `assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin -p dso -g -u student1`
