@@ -3,6 +3,7 @@ Thinking like an attacker is the crux of DevSecOps. During this session, we will
 
 ## OBJECTIVES
 During Week 3, we'll accomplish the following objectives:
+- Understand AWS multi-tiered cloud architecture
 - Deploy a vulnerable application (e.g. `RailsGoat`) on AWS
 - Understand some hacking techniques, such as SQL Injection, Command Injection, Authentication Bypass ...etc.
 
@@ -17,3 +18,4 @@ During Week 3, we'll accomplish the following objectives:
 - [Metasploit Tutorial](https://jonathansblog.co.uk/metasploit-tutorial-for-beginners)
 - [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)
 - [Security Tube](http://www.securitytube.net/)
+- [Rails Goat](https://github.com/OWASP/railsgoat)
