@@ -42,9 +42,11 @@ Default region name [None]: us-west-2
 Default output format [None]: json
  ```
 
-## Assume Deployment Admin in Target Account
+## Assume a Role in Target Account
 
-Use AWS STS to assume as deployment-admin into the target account. First set your AWS_USERNAME environment variable.
+Use AWS STS to assume the role of DeploymentAdmin (DA) into the target account.
+
+First set your AWS_USERNAME environment variable.
 
 ```
 echo "export AWS_USERNAME=INSERT_YOUR_USERNAME_HERE" >> ~/.bash_profile
@@ -69,7 +71,7 @@ $ export AWS_SECRET_ACCESS_KEY=...
 $ export AWS_SESSION_TOKEN=...
  ```
 
-3. Assume STS to assume the target account role (Deployment Admin).
+3. Use AWS STS to assume the target account role (DeploymentAdmin).
 
  ```
 aws sts assume-role \
@@ -113,11 +115,3 @@ aws sts assume-role \
 
   puts "\n\nCopy and paste this URL into your browser:\n#{login_url}"
    ```
-
-## Automate Role Assumption
-
-**Homework/Challenges:**
-
-* Using your favorite programming/scripting language, automate assuming role into the target account and opening the AWS Console UI.
-* Use the assumer gem to open the AWS Console: [https://github.com/devsecops/assumer](https://github.com/devsecops/assumer)
- * `assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin -p dso -g -u $AWS_USERNAME`
