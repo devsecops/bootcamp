@@ -54,7 +54,7 @@ $ ssh -i ~/Downloads/student1.pem ec2-user@54.x.x.x
 1. Install/configure dependencies, download and install Splunk.
 
  ```
-$ timedatectl set-timezone UTC
+$ sudo timedatectl set-timezone UTC
 $ sudo yum -y install wget
 $ wget -O splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=6.4.1&product=universalforwarder&filename=splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm&wget=true'
 $ sudo rpm -ivh splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm
