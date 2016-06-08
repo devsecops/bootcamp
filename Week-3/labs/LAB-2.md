@@ -140,7 +140,7 @@ $ gem install bundler --no-ri --no-rdoc
 $ cd ~
 $ git clone https://github.com/OWASP/railsgoat.git
 $ cd railsgoat
-$ touch log/
+$ touch log/mysql.log
 $ export RAILS_ENV=mysql
 $ bundle install
 $ bundle exec rake db:create
@@ -152,7 +152,7 @@ $ bundle exec rake db:migrate
 1. Run the app.
 
   ```
-  bundle exec rails server -b 0.0.0.0
+  bundle exec rails server -b 0.0.0.0 -p 8080
   ```
 
   Load `http://VM_IP_ADDRESS:3000` on your browser. You may need to run `ifconfig` to find out your VM's IP address.
