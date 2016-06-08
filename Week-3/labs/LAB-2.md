@@ -113,8 +113,6 @@ $ sudo systemctl start mariadb.service
 
 2. Install Ruby.
 
- Install by RPM:
-
  ```
 $ cd
 $ git clone git://github.com/sstephenson/rbenv.git .rbenv
