@@ -19,7 +19,7 @@ Log into your AWS instance and run Rails Goat. This should be a continuation fro
 $ bundle exec rails server -b 0.0.0.0 -p 8080
 ```
 
-Load `http://PUBLIC_IP_ADDRESS:3000` on your browser.
+Load `http://PUBLIC_IP_ADDRESS:8080` on your browser.
 
 ## Exercise 1
 

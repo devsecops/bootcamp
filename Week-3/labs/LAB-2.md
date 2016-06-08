@@ -29,7 +29,7 @@ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 2. Create a Security Group
 
- Select `Security Groups` from the AWS Console. Click `Create Security Group`, enter "STUDENT_ID-web-ports" for `Security group name` and "Web Ports for App" for `Description`. Under security group rules, click `Add Rule` and add a rule for SSH, another for TCP/3000. Under source, select `My IP`.
+ Select `Security Groups` from the AWS Console. Click `Create Security Group`, enter "STUDENT_ID-web-ports" for `Security group name` and "Web Ports for App" for `Description`. Under security group rules, click `Add Rule` and add a rule for SSH, another for TCP/8080. Under source, select `My IP`.
 
  Note: never use `0.0.0.0/0` or `Anywhere` for the source setting.
 
@@ -155,4 +155,4 @@ $ bundle exec rake db:migrate
   bundle exec rails server -b 0.0.0.0 -p 8080
   ```
 
-  Load `http://VM_IP_ADDRESS:3000` on your browser. You may need to run `ifconfig` to find out your VM's IP address.
+  Load `http://VM_IP_ADDRESS:8080` on your browser. You may need to run `ifconfig` to find out your VM's IP address.
