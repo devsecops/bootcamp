@@ -22,7 +22,7 @@ E.g.,
 ```
 assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
   -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
-  -p dso -g -u student1
+  -o dso -g -u $AWS_USERNAME
 ```
 
 1. Generate an SSH Key
