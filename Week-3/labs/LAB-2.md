@@ -37,7 +37,7 @@ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 3. Launch an Instance
 
- Using the AWS Web Console launch a t1.micro RHEL instance. Use the Oregon region (us-west-2), you can do this by selecting the region from the upper right section of the console.
+ Using the AWS Web Console launch a m3.medium RHEL instance. Use the Oregon region (us-west-2), you can do this by selecting the region from the upper right section of the console.
 
  From the AWS Console, select `Services` > `EC2`. Click `Launch Instance`. Select `Red Hat Enterprise Linux 7.2 (HVM)`, select `m3.medium` > click `Next: Configure Instance Details` (Select a **Public** subnet and set `Auto-assign Public IP` to `Enable`) > `Next: Add Storage` > `Next: Tag Instance` (tag it with your student username) > `Next: Configure Security Group`. Select existing security group, choose the security group you created above. Click Review and Launch, click Launch, select the key pair you created above and click `Launch Instance`.
 
