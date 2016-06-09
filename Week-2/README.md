@@ -13,8 +13,11 @@ During Week 2, we'll accomplish the following objectives:
 During this lesson, we'll explore Software Defined Environments.  We'll navigate the AWS Cloud using `AWS-CLI`, `AWS Console`
 `AWS-SDK-Ruby gem` and build a small Ruby app to list the contents in an S3 bucket.
 
-# [Lesson #2: Build a Weak Rails app & Deploy It](LESSON-2.md)
+# [Lesson #2: Build a Weak Rails app](LESSON-2.md)
 During this lesson, we'll build a weakened `Rails` app that you will be able to interact with and go through the process of deploying it to AWS
 
 # Resources
-
+- The best [Rails Tutorial Book](https://www.railstutorial.org/book) available for free online!
+- [Ruby on Rails Guides](http://guides.rubyonrails.org/index.html)
+- [Rails Screencasts](https://gorails.com/episodes)
+- Some more free [Rails Casts](http://railscasts.com/)
