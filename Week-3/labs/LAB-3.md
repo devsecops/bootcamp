@@ -50,3 +50,7 @@ Do exercise A1: [SQL Injection Concatentation](https://github.com/OWASP/railsgoa
 ## Exercise 2
 
 Do exercise A1: [Command Injection](https://github.com/OWASP/railsgoat/wiki/A1-Command-Injection)
+
+## Challenge
+
+Do 7 of the 14 exercises at [https://github.com/OWASP/railsgoat/wiki](https://github.com/OWASP/railsgoat/wiki)
