@@ -9,6 +9,8 @@
 
 # Manually Deploy a Vulnerable App
 
+On this lab we will deploy Rails Goat (our vulnerable app) to AWS.
+
 ---
 
 ## Setup AWS Environment

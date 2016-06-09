@@ -8,6 +8,8 @@
 
 # Control Plane Basics
 
+On this lab we will use the AWS CLI to assume a role and open the AWS Console.
+
 ---
 
 ## Setup MFA for your IAM User
@@ -35,6 +37,7 @@ Generate API access keys and configure them into your AWS CLI.
 
  E.g.,
  ```
+$ vagrant ssh
 $ aws configure --profile dso
 AWS Access Key ID [None]: AKIA...
 AWS Secret Access Key [None]: ...
@@ -60,7 +63,7 @@ aws sts assume-role \
 --role-arn arn:aws:iam::100352119871:role/dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
 --role-session-name $AWS_USERNAME-$$ --profile dso \
 --serial-number arn:aws:iam::100352119871:mfa/$AWS_USERNAME \
---token-code 123456
+--token-code <MFA_TOKEN_CODE_HERE>
  ```
 
 2. Export control STS credentials.
