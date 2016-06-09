@@ -9,6 +9,8 @@
 
 # Attack a Vulnerable App
 
+On this lab we will attack Rails Goat (our vulnerable app).
+
 ---
 
 ## Run Rails Goat
@@ -16,6 +18,8 @@
 1. Log into your AWS instance and run Rails Goat. This should be a continuation from the previous lab.
 
  ```
+$ vagrant ssh
+$ export RAILS_ENV=mysql
 $ bundle exec rails server -b 0.0.0.0 -p 8080
  ```
 
