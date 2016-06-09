@@ -155,4 +155,4 @@ $ bundle exec rake db:migrate
   bundle exec rails server -b 0.0.0.0 -p 8080
   ```
 
-  Load `http://VM_IP_ADDRESS:8080` on your browser. You may need to run `ifconfig` to find out your VM's IP address.
+  Load `http://Public_IP_ADDRESS:8080` on your browser. This is the same 'Public IP' you used in step 4. 
