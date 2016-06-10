@@ -15,14 +15,15 @@ On this lab we will deploy Rails Goat (our vulnerable app) to AWS.
 
 ## Setup AWS Environment
 
-Using the script developed during the last lab, open the AWS Console.
+Using the script developed during the last lab, open the AWS Console. Alternatively, install [assumer](https://github.com/devsecops/assumer) and use it to assume the target role.
 
 E.g.,
 
 ```
-assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
-  -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
-  -o dso -g -u $AWS_USERNAME
+$ unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID
+$ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
+    -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
+    -o dso -g -u $AWS_USERNAME
 ```
 
 1. Generate an SSH Key
@@ -33,7 +34,7 @@ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
  Select `Security Groups` from the AWS Console. Click `Create Security Group`, enter "STUDENT_ID-web-ports" for `Security group name` and "Web Ports for App" for `Description`. Under security group rules, click `Add Rule` and add a rule for SSH, another for TCP/8080. Under source, select `My IP`.
 
- Note: never use `0.0.0.0/0` or `Anywhere` for the source setting.
+ Note: **never** use `0.0.0.0/0` or `Anywhere` for the source setting.
 
 3. Launch an Instance
 
