@@ -95,6 +95,8 @@ aws sts assume-role \
  You can use the following ruby script (`console.rb`) to do this:
 
   ```
+  #!/usr/bin/env ruby
+
   require 'json'
   require 'cgi'
   require 'net/http'
