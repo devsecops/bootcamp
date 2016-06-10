@@ -8,7 +8,7 @@
 
 # Control Plane Basics
 
-On this lab we will use the AWS CLI to assume a role and open the AWS Console.
+On this lab we will use the AWS CLI to assume a role and open the AWS Console. The instructor will provide you with credentials for this and the following lab.
 
 ---
 
