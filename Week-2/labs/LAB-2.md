@@ -153,7 +153,7 @@ Do one of the following:
 
 ## Push Code to Github
 
-Create a new project in your githuhb account and push the code, e.g.,:
+Create a new project in your github account and push the code, e.g.,:
 
 ```
 echo "# myapp" >> README.md
