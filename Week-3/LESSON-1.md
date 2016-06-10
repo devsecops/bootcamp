@@ -1,4 +1,4 @@
-#Lesson 1: Intro to AWS and the Control Plane [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-three-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-3-lesson-1)
+#Lesson 1: Intro to AWS & Control Plane [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-three-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-3-lesson-1)
 
 ## AWS Basics 
 
