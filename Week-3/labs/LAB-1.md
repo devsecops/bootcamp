@@ -32,17 +32,18 @@ On this lab we will use the AWS CLI to assume a role and open the AWS Console.
 Generate API access keys and configure them into your AWS CLI.
 
 1. Under your user's `Security Credentials` click `Create Access Keys` > `Download Credentials` (save the file) > `Close`.
+  - This will download a **credentials.csv** file that contains your _User Name_, _AWS\_ACCESS\_KEY\_ID_, and _AWS\_SECRET\_ACCESS\_KEY_
 
 2. On your command line, use `aws configure` to configure the credentials you just downloaded.
 
  E.g.,
  ```
-$ vagrant ssh
-$ aws configure --profile dso
-AWS Access Key ID [None]: AKIA...
-AWS Secret Access Key [None]: ...
-Default region name [None]: us-west-2
-Default output format [None]: json
+ vagrant ssh
+ $ aws configure --profile dso
+  AWS Access Key ID [None]: <YOUR_AWS_ACCESS_KEY_ID>
+  AWS Secret Access Key [None]: <YOUR_AWS_SECRET_ACCESS_KEY>
+  Default region name [None]: us-west-2
+  Default output format [None]: json
  ```
 
 ## Assume a Role in Target Account
@@ -52,26 +53,26 @@ Use AWS STS to assume the role of DeploymentAdmin (DA) into the target account.
 First set your AWS_USERNAME environment variable.
 
 ```
-echo "export AWS_USERNAME=INSERT_YOUR_USERNAME_HERE" >> ~/.bash_profile
+echo "export AWS_USERNAME=<YOUR_USERNAME>" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-1. Use STS to assume the control account role. This command will return JSON formatted text which contains credential to be used in the next step.
-
+1. Use STS to assume the control account role:
  ```
 aws sts assume-role \
 --role-arn arn:aws:iam::100352119871:role/dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
 --role-session-name $AWS_USERNAME-$$ --profile dso \
 --serial-number arn:aws:iam::100352119871:mfa/$AWS_USERNAME \
---token-code <MFA_TOKEN_CODE_HERE>
+--token-code <MFA_TOKEN_CODE>
  ```
+ - This will return JSON formatted text which contains your temporary credentials (e.g. _AWS\_ACCESS\_KEY\_ID_, _AWS\_SECRET\_ACCESS\_KEY_, and _AWS\_SESSION\_TOKEN_) to be used in the next step.
 
-2. Export control STS credentials.
+2. Export control STS credentials:
 
  ```
-$ export AWS_ACCESS_KEY_ID=ASI...
-$ export AWS_SECRET_ACCESS_KEY=...
-$ export AWS_SESSION_TOKEN=...
+export AWS_ACCESS_KEY_ID=<TEMPORARY_AWS_ACCESS_KEY_ID>
+export AWS_SECRET_ACCESS_KEY=<TEMPORARY_AWS_SECRET_ACCESS_KEY>
+export AWS_SESSION_TOKEN=<TEMPORARY_AWS_SESSION_TOKEN>
  ```
 
 3. Use AWS STS to assume the target account role (DeploymentAdmin).
@@ -84,37 +85,37 @@ aws sts assume-role \
 
  2. Export target STS credentials.
 
-  ```
- $ export AWS_ACCESS_KEY_ID=ASI...
- $ export AWS_SECRET_ACCESS_KEY=...
- $ export AWS_SESSION_TOKEN=...
-  ```
+ ```
+ export AWS_ACCESS_KEY_ID=A<TEMPORARY_AWS_ACCESS_KEY_ID>
+ export AWS_SECRET_ACCESS_KEY=<TEMPORARY_AWS_SECRET_ACCESS_KEY>
+ export AWS_SESSION_TOKEN=<TEMPORARY_AWS_SESSION_TOKEN>
+ ```
 
 5. Open AWS console with temporary credentials.
 
  You can use the following ruby script (`console.rb`) to do this:
 
-  ```
-  require 'json'
-  require 'cgi'
-  require 'net/http'
+ ```
+ require 'json'
+ require 'cgi'
+ require 'net/http'
 
-  issuer_url = 'gui.rb'
-  console_url = 'https://console.aws.amazon.com/'
-  signin_url = 'https://signin.aws.amazon.com/federation'
+ issuer_url = 'gui.rb'
+ console_url = 'https://console.aws.amazon.com/'
+ signin_url = 'https://signin.aws.amazon.com/federation'
 
-  session_json = { sessionId: ENV['AWS_ACCESS_KEY_ID'],
+ session_json = { sessionId: ENV['AWS_ACCESS_KEY_ID'],
                    sessionKey: ENV['AWS_SECRET_ACCESS_KEY'],
                    sessionToken: ENV['AWS_SESSION_TOKEN'] }.to_json
-  get_signin_token_url = signin_url + '?Action=getSigninToken' + '&SessionType=json&Session=' + CGI.escape(session_json)
-  returned_content = Net::HTTP.get(URI.parse(get_signin_token_url))
+ get_signin_token_url = signin_url + '?Action=getSigninToken' + '&SessionType=json&Session=' + CGI.escape(session_json)
+ returned_content = Net::HTTP.get(URI.parse(get_signin_token_url))
 
-  signin_token = JSON.parse(returned_content)['SigninToken']
-  signin_token_param = '&SigninToken=' + CGI.escape(signin_token)
+ signin_token = JSON.parse(returned_content)['SigninToken']
+ signin_token_param = '&SigninToken=' + CGI.escape(signin_token)
 
-  issuer_param = '&Issuer=' + CGI.escape(issuer_url)
-  destination_param = '&Destination=' + CGI.escape(console_url)
-  login_url = signin_url + '?Action=login' + signin_token_param + issuer_param + destination_param
+ issuer_param = '&Issuer=' + CGI.escape(issuer_url)
+ destination_param = '&Destination=' + CGI.escape(console_url)
+ login_url = signin_url + '?Action=login' + signin_token_param + issuer_param + destination_param
 
-  puts "\n\nCopy and paste this URL into your browser:\n#{login_url}"
-   ```
+ puts "\n\nCopy and paste this URL into your browser:\n#{login_url}"
+ ```
