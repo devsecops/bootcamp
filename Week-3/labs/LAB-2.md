@@ -146,8 +146,7 @@ $ cd railsgoat
 $ touch log/mysql.log
 $ export RAILS_ENV=mysql
 $ bundle install
-$ bundle exec rake db:create
-$ bundle exec rake db:migrate
+$ bundle exec rake db:setup
  ```
 
 ## Run Rails Goat
