@@ -25,10 +25,6 @@ $ bundle exec rails server -b 0.0.0.0 -p 8080
 
 2. Load `http://PUBLIC_IP_ADDRESS:8080` on your browser.
 
-3. Create an Admin user by clicking `Signup`. Use `admin@metacorp.com` and `admin1234` for the `Email` and `Password` respectively.
-
-4. Create another user using `student@metacorp.com` for the `Email`.
-
 ## Install Burp
 
 We use Burp Proxy to intercept our browser's requests before they are sent to the Web application. This gives us the chance to modify the HTTP request before it is submitted.
