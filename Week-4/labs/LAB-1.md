@@ -52,6 +52,6 @@ Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2
 
 2. Adjust the time to `all time`, how many events you get?
 
-3. Find your host logs. First lookup your instance hostname in the AWS console by selecting your instance (denoted by your username). Note your `Private hostname`  (e.g., `ip-10.0.0.4.us-west-2.internal`). Then enter `index=main host=<Private hostname>` in the search input box, e.g., `index=main host=ip-10.0.0.4.us-west-2.internal`.
+3. Find your host logs. First lookup your instance's DNS name in the AWS console by selecting your instance (denoted by your username). Note the `Private DNS`  (e.g., `ip-10.0.0.4.us-west-2.compute.internal`). Then enter `index=main host=<Private DNS>` in the search input box, e.g., `index=main host=ip-10.0.0.4.us-west-2.internal`.
 
 4. Familiarize your self with the `source` and `sourcetype` fields on the left pane. Also take a look at the `Interesting Fields`.
