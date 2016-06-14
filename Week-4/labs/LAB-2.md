@@ -1,4 +1,4 @@
-# Lab 1
+# Lab 2
 
 **Table of Contents**
 
@@ -9,7 +9,7 @@
 
 # Splunk Extractions and Alerts
 
-In this lab we will be...
+In this lab we will be searching for invalid SSH login attempts, extracting fields of interest and creating an alert.
 
 ---
 
@@ -17,9 +17,7 @@ In this lab we will be...
 
 Search for invalid SSH login attempts made against your instance.
 
-1. Login to Splunk by opening the Splunk Console with your browser.
-
-Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F](https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F)
+1. Login to Splunk by opening the Splunk Console with your browser. Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F](https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F)
 
 2. Search for your instance's logs. Click `Search & Reporting` and enter `index=main host=<Private DNS>` in the search input box. Select `Last 4 hours` from the time chooser pull-down and hit search.
 
