@@ -2,46 +2,57 @@
 
 **Table of Contents**
 
-- [Search for Invalid SSH Login Attempts](##search-for-invalid-ssh-Login-attempts)
-- [Create a Dashboard](##create-a-ashboard)
+- [Reporting Security Events](##reporting-security-events)
+- [Create a Splunk Alert](##create-a-splunk-alert)
 - [Dashboard Challenge](##dashboard-challenge)
 
 
 # Advanced Splunk Search and Dashboards
 
-In this lab we will be performing more complex searches and building a security dashboard.
+In this lab we will be performing more complex searches and adding to our security dashboard.
 
 ---
 
-## Search for Invalid SSH Login Attempts
+## Reporting Security Events
 
-Create a search query that contains both valid and invalid login attempts.
+Create a report showing when Rails Goat file upload mechanism is abused to perform command injection.
 
 1. Login to Splunk by opening the Splunk Console with your browser. Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F](https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F)
 
-2. Modify the search query from the previous lab to also extract  characters preceding invalid usernames into a field. It should look something like: `index=main host=<Private DNS> sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
+2. Click on `Search & Reporting` and search for your instance's Rails Goat logs, these should be under the `main` index. E.g., `index=main host=<Private DNS> source="/home/ec2-user/railsgoat/log/mysql.log"`. Select `All time` from the time range picker and click `Search`.
 
-3. Count the invalid SSH login attempts. You can use `stats` and `eval` functions to count the number of times `ssh_message` is equal to `"Invalid user "`. Name the resulting column `invalid`. Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
+3. Search for evens containing `filename`. Do you see any events? If not, go back to Week 3 Lab 3 and do Exercise 2.
 
-4. In the same search query also count the number of valid SSH logins. You can do this by first extracting `Accepted publickey for ` into the `ssh_message` field, e.g., your regular expression (which is passed to rex) could look something like `"(?<ssh_message>Accepted publickey for |Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)"`. Second you need to add another `count` to the `stats` command. This second `count` should count the number of times `ssh_message` is equal to `Accepted publickey for `.
+4. Use `rex` to extract the injected command into a new field named `cmd`. E.g., if my event returns something like `...filename=\"test.rtf;+mkdir+pwn\"\r\nContent-Type:...` I am interested in capturing everything between the first plus-sign and the following back-slash, i.e., `mkdir+pwn`.
 
-5. Use `transpose` to turn the resulting rows into columns.
+5. Pipe the search results to `rex` extracting on the `cmd` field and use it in `sed` mode to substitute the plus-sign with a space (hint: `"s/\+/ /g"`).
 
-## Create a Dashboard
+6. Use the `stats` command to display the `values` of `cmd` by `host`.
 
-1. Select `Visualization` from the tabs below the search box. In the charts pull-down select `Pie Chart`.
+7. Save the search as a report. Click `Save As` > `Report` and enter `<STUDENT ID> - Cmd Injection` as the report title and click `Save`. Click `Add to Dashboard`, select `Existing` and select the dashboard you created during the last lab. Click `Save` and click `View Dashboard`.
 
-2. Select `Save As` and create a new dashboard with a `Dashboard Title` of your student ID. Click `Save` > `View Dashboard`
+Resources:
+* [http://regexr.com/](http://regexr.com/)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex)
+
+
+## Create a Splunk Alert
+
+Create a Splunk alert that will trigger when Rails Goat file upload mechanism is abused to perform command injection.
+
+1. Go to reports, open the report you just created. Select `Edit` > `Open in Search`
+
+1. Modify the timeframe for the current search from `All time` to `Last 60 minutes`. You can do this by selecting time range picker, choose `Last 60 minutes` and click `search`.
+
+2. From the upper-right select `Save As` > `Alert`. Use these values for the following fields: `Title:` `<STUDENT ID> - Cmd Injection`, `Schedule:` `Run every hour`, select your favorite number from 0, 15, 30, 45 for the `minutes past the hour` selector. Click `+ Add Actions` > `Add to Triggered Alerts` and select `High` for the `Severity`. Click `Save` and close the dialog by clicking `x` on the upper-right.
 
 ## Dashboard Challenge
 
-Using knowledge gained during previous labs, add three additional panels to your new dashboard as per the following specification:
+Using knowledge gained during previous labs, add two additional panels to your new dashboard as per the following specification:
 
-1. A panel showing injected commands. This panel should show unix commands that appear in the logs when Rails Goat's file upload mechanism is abused to execute system commands on your instance.
+1. HTTP Codes. A pie chart displaying the distribution of HTTP codes returned by Rails Goat.
 
-2. HTTP Codes. A pie chart displaying the distribution of HTTP codes returned by Rails Goat.
-
-3. A panel showing SQL injections / SQL errors. This is a report which extracts SQL related errors in Rails Goat.
+2. A panel showing SQL injections / SQL errors. This is a report which extracts SQL related errors in Rails Goat.
 
 See:
 
