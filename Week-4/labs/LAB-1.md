@@ -25,10 +25,12 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
     -o dso -g -u $AWS_USERNAME
  ```
 
-2. Lookup the public IP address for your instance under EC2, then SSH into your instance and run rails goat.
+2. Lookup the public IP address for your instance under EC2, then SSH into your instance, start Splunk and MariaDB and run rails goat.
 
  ```
 $ ssh -i student1.pem ec2-user@54.x.x.x
+$ sudo /opt/splunkforwarder/bin/splunk start
+$ sudo systemctl start mariadb.service
 $ cd ~/railsgoat
 $ export RAILS_ENV=mysql
 $ bundle exec rails server -b 0.0.0.0 -p 8080
