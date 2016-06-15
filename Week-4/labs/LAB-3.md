@@ -15,6 +15,8 @@ In this lab we will be performing more complex searches and adding to our securi
 
 ## Reporting Security Events
 
+Create a report showing when Rails Goat file upload mechanism is abused to perform command injection.
+
 1. Login to Splunk by opening the Splunk Console with your browser. Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F](https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F)
 
 2. Click on `Search & Reporting` and search for your instance's Rails Goat logs, these should be under the `main` index. E.g., `index=main host=<Private DNS> source="/home/ec2-user/railsgoat/log/mysql.log"`. Select `All time` from the time range picker and click `Search`.
@@ -36,6 +38,8 @@ Resources:
 
 ## Create a Splunk Alert
 
+Create a Splunk alert that will trigger when Rails Goat file upload mechanism is abused to perform command injection.
+
 1. Go to reports, open the report you just created. Select `Edit` > `Open in Search`
 
 1. Modify the timeframe for the current search from `All time` to `Last 60 minutes`. You can do this by selecting time range picker, choose `Last 60 minutes` and click `search`.
@@ -44,7 +48,7 @@ Resources:
 
 ## Dashboard Challenge
 
-Using knowledge gained during previous labs, add three additional panels to your new dashboard as per the following specification:
+Using knowledge gained during previous labs, add two additional panels to your new dashboard as per the following specification:
 
 1. HTTP Codes. A pie chart displaying the distribution of HTTP codes returned by Rails Goat.
 

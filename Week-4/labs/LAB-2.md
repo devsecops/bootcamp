@@ -46,6 +46,8 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 
 ## Splunk Statistics
 
+Run statistics on valid vs invalid SSH login attempts.
+
 1. Modify the search query to also extract  characters preceding invalid usernames into a field. It should look something like: `index=main host=<Private DNS> sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
 
 2. Count the invalid SSH login attempts. You can use `stats` and `eval` functions to count the number of times `ssh_message` is equal to `"Invalid user "`. Name the resulting column `invalid`. Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
@@ -55,6 +57,8 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 4. Use `transpose` to turn the resulting rows into columns.
 
 ## Create a Dashboard
+
+Create a dashboard displaying valid vs invalid SSH login attempts.
 
 1. Select `Visualization` from the tabs below the search box. In the charts pull-down select `Pie Chart`.
 
