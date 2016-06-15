@@ -50,11 +50,19 @@ Run statistics on valid vs invalid SSH login attempts.
 
 1. Modify the search query to also extract  characters preceding invalid usernames into a field. It should look something like: `index=main host=<Private DNS> sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
 
-2. Count the invalid SSH login attempts. You can use `stats` and `eval` functions to count the number of times `ssh_message` is equal to `"Invalid user "`. Name the resulting column `invalid`. Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
+2. Count the invalid SSH login attempts.
 
-3. In the same search query also count the number of valid SSH logins. You can do this by first extracting `Accepted publickey for ` into the `ssh_message` field, e.g., your regular expression (which is passed to rex) could look something like `"(?<ssh_message>Accepted publickey for |Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)"`. Second you need to add another `count` to the `stats` command. This second `count` should count the number of times `ssh_message` is equal to `Accepted publickey for `.
+  Use `stats` and `eval` functions to count the number of times `ssh_message` is equal to `"Invalid user "`, name the resulting column `invalid`.
 
-4. Use `transpose` to turn the resulting rows into columns.
+  Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
+
+3. In the same search query modify the regular expression to instead count the number of valid SSH logins.
+
+  You can do this by first extracting `Accepted publickey for ` into the `ssh_message` field by appending to the regular expression used above (which is passed to rex). This should look something like `"(?<ssh_message>Accepted publickey for |Invalid user )(?P<username>[^ ]+) from (?P<remote_host>.+)"`.
+
+  You now need to add another `count` to the `stats` command. This second `count` should count the number of times `ssh_message` is equal to `Accepted publickey for `. The first count command can serve as an template for your second command.
+
+4. Pipe the results to `transpose` to turn the resulting rows into columns.
 
 ## Create a Dashboard
 
