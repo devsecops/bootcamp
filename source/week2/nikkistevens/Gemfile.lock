@@ -1,0 +1,43 @@
+GIT
+  remote: https://github.com/devsecops/assumer.git
+  revision: e72c4b322a714accbaae02347cee2f4b9801087e
+  specs:
+    assumer (0.4.0)
+      aws-sdk-core (~> 2.1, >= 2.1.1)
+      pry (~> 0)
+      trollop (= 2.1.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-sdk (2.3.11)
+      aws-sdk-resources (= 2.3.11)
+    aws-sdk-core (2.3.11)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.3.11)
+      aws-sdk-core (= 2.3.11)
+    coderay (1.1.1)
+    commander (4.4.0)
+      highline (~> 1.7.2)
+    highline (1.7.8)
+    jmespath (1.2.4)
+      json_pure (>= 1.8.1)
+    json_pure (1.8.3)
+    method_source (0.8.2)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    slop (3.6.0)
+    trollop (2.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  assumer!
+  aws-sdk
+  commander
+
+BUNDLED WITH
+   1.12.5
