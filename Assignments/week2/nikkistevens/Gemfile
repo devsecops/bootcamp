@@ -1,6 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'assumer', :git => 'https://github.com/devsecops/assumer.git'
-# command line power.
-gem 'commander'
-gem 'aws-sdk'
