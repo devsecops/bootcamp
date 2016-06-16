@@ -53,9 +53,9 @@ Create a Splunk alert that will trigger when Rails Goat file upload mechanism is
 
 1. Go to reports, open the report you just created. Select `Edit` > `Open in Search`
 
-1. Modify the timeframe for the current search from `All time` to `Last 60 minutes`. You can do this by selecting time range picker, choose `Last 60 minutes` and click `search`.
+2. Modify the timeframe for the current search from `All time` to `Last 60 minutes`. You can do this by selecting time range picker, choose `Last 60 minutes` and click `search`.
 
-2. From the upper-right select `Save As` > `Alert`. Use these values for the following fields: `Title:` `<STUDENT ID> - Cmd Injection`, `Schedule:` `Run every hour`, select your favorite number from 0, 15, 30, 45 for the `minutes past the hour` selector. Click `+ Add Actions` > `Add to Triggered Alerts` and select `High` for the `Severity`. Click `Save` and close the dialog by clicking `x` on the upper-right.
+3. From the upper-right select `Save As` > `Alert`. Use these values for the following fields: `Title:` `<STUDENT ID> - Cmd Injection`, `Schedule:` `Run every hour`, select the next closest interval to the current time from 0, 15, 30, 45 for the `minutes past the hour` selector. Click `+ Add Actions` > `Add to Triggered Alerts` and select `High` for the `Severity`. Click `Save` and close the dialog by clicking `x` on the upper-right.
 
 ## Dashboard Challenge
 
