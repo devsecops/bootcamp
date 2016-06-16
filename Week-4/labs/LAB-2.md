@@ -64,7 +64,7 @@ Run statistics on valid vs invalid SSH login attempts.
 
   Use `stats` and `eval` functions to count the number of times `ssh_message` is equal to `"Invalid user "`, name the resulting column `invalid`.
 
-  Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
+  Your new query should looks *something* like: `index=main host=ip-10-0-0-0.us-west-2.compute.internal sourcetype="linux_secure"| rex "(?<ssh_message>Invalid user )(?P<username>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
 
 3. In the same search query modify the regular expression passed to the `rex` command to also extract valid SSH logins into the `ssh_message` field.
 
