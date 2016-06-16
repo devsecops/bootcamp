@@ -11,6 +11,15 @@
 
 In this lab we will be performing more complex searches and adding to our security dashboard.
 
+**Resources:**
+
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Search](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Search)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex)
+* [http://regexr.com/](http://regexr.com/)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Stats](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Stats)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Eval](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Eval)
+
+
 ---
 
 ## Reporting Security Events
@@ -23,17 +32,19 @@ Create a report showing when Rails Goat file upload mechanism is abused to perfo
 
 3. Search for evens containing `filename`. Do you see any events? If not, go back to Week 3 Lab 3 and do Exercise 2.
 
-4. Use `rex` to extract the injected command into a new field named `cmd`. E.g., if my event returns something like `...filename=\"test.rtf;+mkdir+pwn\"\r\nContent-Type:...` I am interested in capturing everything between the first plus-sign and the following back-slash, i.e., `mkdir+pwn`.
+4. Pipe the current search results to `rex` to extract the injected command into a new field named `cmd`. Do NOT use the field extractor UI (`+ Extract New Fields`) for this exercise.
 
-5. Pipe the search results to `rex` extracting on the `cmd` field and use it in `sed` mode to substitute the plus-sign with a space (hint: `"s/\+/ /g"`).
+  Example: if my event returns something like `...filename=\"test.rtf;+mkdir+pwn\"\r\nContent-Type:...` I am interested in capturing everything between the first plus-sign and the following back-slash, i.e., `mkdir+pwn`.
+
+  Hint 1: `| rex " filename=(?<cmd>.*) .*"`. Hint 2: escaping back-slashes within `rex` is special, you need 3 back-slashes to escape one back-slash.
+
+5. Pipe the results to another `rex` command to substitute the plus-signs (`+`) with spaces (` `).
+
+  To do this you will need to 1) filter on the `cmd` field (`| rex field=cmd`), 2) put `rex` in `sed` mode (see resources above) and 3) substitute the plus-sign with a space using a `sed` style regular expression, e.g., `"s/\+/ /g"`.
 
 6. Use the `stats` command to display the `values` of `cmd` by `host`.
 
 7. Save the search as a report. Click `Save As` > `Report` and enter `<STUDENT ID> - Cmd Injection` as the report title and click `Save`. Click `Add to Dashboard`, select `Existing` and select the dashboard you created during the last lab. Click `Save` and click `View Dashboard`.
-
-Resources:
-* [http://regexr.com/](http://regexr.com/)
-* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex)
 
 
 ## Create a Splunk Alert

@@ -12,6 +12,14 @@
 
 In this lab we will be searching for invalid SSH login attempts, extracting fields of interest and creating a dashboard.
 
+**Resources:**
+
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Search](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Search)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex)
+* [http://regexr.com/](http://regexr.com/)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Stats](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Stats)
+* [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Eval](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Eval)
+
 ---
 
 ## Search for Invalid SSH Login Attempts
@@ -40,7 +48,7 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 
 5. If you clicked `Finish` before copying the extraction regular or you simply want to lookup what you just did, select `Settings` > `Fields` > `Field extractions`. Put your username in the search box in the upper right and hit `Enter`. Copy the regular expression under ` 	Extraction/Transform`.
 
-6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=<Private DNS>` (same as step 3 from last section). Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Rex).
+6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=<Private DNS>` (same as step 3 from last section). Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See resources above.
 
 7. List events containing only invalid users. You can do this by piping the results from `rex` to `search` and passing `invalid_username=*` to `search`.
 
