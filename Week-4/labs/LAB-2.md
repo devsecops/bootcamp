@@ -32,7 +32,7 @@ Search for invalid SSH login attempts made against your instance.
 
 3. Narrow your search by adding the `sourcetype` of `linux_secure` or the `source` of `/var/log/secure`. What is the difference between these?
 
-4. Add `"Invalid user " AND " from "` to the search string, hit `Enter`.
+4. Add `"Invalid user " AND " from "` to the search string, hit `Enter`. If you do not get any results, attempt to SSH into your instance with an invalid username/password.
 
 ## Splunk Field Extraction
 
@@ -48,7 +48,7 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 
 5. If you clicked `Finish` before copying the extraction regular or you simply want to lookup what you just did, select `Settings` > `Fields` > `Field extractions`. Put your username in the search box in the upper right and hit `Enter`. Copy the regular expression under ` 	Extraction/Transform`.
 
-6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=ip-10-0-0-0.us-west-2.compute.internal` (same as step 3 from last section). Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See resources above.
+6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=<Private DNS> sourcetype="linux_secure"`. Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See resources above.
 
 7. List events containing only invalid users. You can do this by piping the results from `rex` to `search` and passing `invalid_username=*` to `search`.
 
@@ -58,7 +58,7 @@ Run statistics on valid vs invalid SSH login attempts.
 
 1. Modify the search query to also extract characters preceding invalid usernames into a field.
 
-  Your search query should look something like: `index=main host=ip-10-0-0-0.us-west-2.compute.internal sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
+  Your search query should look *something* like: `index=main host=ip-10-0-0-0.us-west-2.compute.internal sourcetype="linux_secure" | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
 
 2. Count the invalid SSH login attempts.
 
