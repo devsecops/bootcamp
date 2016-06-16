@@ -28,7 +28,7 @@ Search for invalid SSH login attempts made against your instance.
 
 1. Login to Splunk by opening the Splunk Console with your browser. Splunk Console: [https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F](https://54.186.140.211/en-US/account/login?return_to=%2Fen-US%2F)
 
-2. Search for your instance's logs. Click `Search & Reporting` and enter `index=main host=<Private DNS>` in the search input box. Select `Last 4 hours` from the time chooser pull-down and hit search.
+2. Search for your instance's logs. Click `Search & Reporting` and enter `index=main host=ip-10-0-0-0.us-west-2.compute.internal` in the search input box. Select `Last 4 hours` from the time chooser pull-down and hit search.
 
 3. Narrow your search by adding the `sourcetype` of `linux_secure` or the `source` of `/var/log/secure`. What is the difference between these?
 
@@ -48,7 +48,7 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 
 5. If you clicked `Finish` before copying the extraction regular or you simply want to lookup what you just did, select `Settings` > `Fields` > `Field extractions`. Put your username in the search box in the upper right and hit `Enter`. Copy the regular expression under ` 	Extraction/Transform`.
 
-6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=<Private DNS>` (same as step 3 from last section). Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See resources above.
+6. Go to `Search & Reporting` by selecting it under `Apps`. Enter `index=main host=ip-10-0-0-0.us-west-2.compute.internal` (same as step 3 from last section). Pipe the results to the `rex` command, passing to `rex` the regular expression we just built. Note that `rex` takes a regular expression surrounded by double-quotes. See resources above.
 
 7. List events containing only invalid users. You can do this by piping the results from `rex` to `search` and passing `invalid_username=*` to `search`.
 
@@ -56,7 +56,9 @@ Extract interesting fields (`invalid_username` & `remote_host`) from our search 
 
 Run statistics on valid vs invalid SSH login attempts.
 
-1. Modify the search query to also extract  characters preceding invalid usernames into a field. It should look something like: `index=main host=<Private DNS> sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
+1. Modify the search query to also extract characters preceding invalid usernames into a field.
+
+  Your search query should look something like: `index=main host=ip-10-0-0-0.us-west-2.compute.internal sourcetype=linux_secure | rex "(?<ssh_message>Invalid user )(?P<invalid_username>[^ ]+) from (?P<remote_host>.+)" | search ssh_message=*`. Also select `All time` from the time range picket.
 
 2. Count the invalid SSH login attempts.
 
@@ -64,18 +66,20 @@ Run statistics on valid vs invalid SSH login attempts.
 
   Your new query should looks *something* like: `index=main sourcetype=linux_secure host=ip-10-0-0-0.us-west-2.compute.internal | rex "(?<ssh_message>Invalid user )(?P<ssh_message>[^ ]+) from (?P<remote_host>.+)" | stats count(eval(ssh_message="Invalid user ")) as invalid`
 
-3. In the same search query modify the regular expression to instead count the number of valid SSH logins.
+3. In the same search query modify the regular expression passed to the `rex` command to also extract valid SSH logins into the `ssh_message` field.
 
-  You can do this by first extracting `Accepted publickey for ` into the `ssh_message` field by appending to the regular expression used above (which is passed to rex). This should look something like `"(?<ssh_message>Accepted publickey for |Invalid user )(?P<username>[^ ]+) from (?P<remote_host>.+)"`.
+  Extract `Accepted publickey for ` into the `ssh_message` field by appending to the regular expression used above. This should look something like `"(?<ssh_message>Accepted publickey for |Invalid user )(?P<username>[^ ]+) from (?P<remote_host>.+)"`.
 
-  You now need to add another `count` to the `stats` command. This second `count` should count the number of times `ssh_message` is equal to `Accepted publickey for `. The first count command can serve as an template for your second command.
+4. Now using the `stats` command extract a new field which keeps count of `valid` SSH logins.
 
-4. Pipe the results to `transpose` to turn the resulting rows into columns.
+  Add another `count` section to the `stats` command. This second `count` should count the number of times `ssh_message` is equal to `Accepted publickey for `. The first count command can serve as an template for your second command.
 
 ## Create a Dashboard
 
 Create a dashboard displaying valid vs invalid SSH login attempts.
 
-1. Select `Visualization` from the tabs below the search box. In the charts pull-down select `Pie Chart`.
+1. Pipe the results to `transpose` to turn the resulting rows into columns.
 
-2. Select `Save As` and create a new dashboard with a `Dashboard Title` of your student ID. Click `Save` > `View Dashboard`
+2. Select `Visualization` from the tabs below the search box. In the charts pull-down select `Pie Chart`.
+
+3. Select `Save As` and create a new dashboard with a `Dashboard Title` of your student ID. Click `Save` > `View Dashboard`
