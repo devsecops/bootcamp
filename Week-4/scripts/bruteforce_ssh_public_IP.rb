@@ -11,7 +11,7 @@ ARGV.each do |hostname|
     password = passwords[index]
     cmd = 'uname -a'
     begin
-      ssh = Net::SSH.start(hostname, username, password: password)
+      ssh = Net::SSH.start(hostname, username, password: password, :timeout => 10)
       res = ssh.exec!(cmd)
       ssh.close
       puts "SUCCESS: SSH connected to #{hostname} using #{username}/#{password}"
