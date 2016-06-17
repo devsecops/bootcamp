@@ -33,6 +33,7 @@ $ sudo /opt/splunkforwarder/bin/splunk start
 $ sudo systemctl start mariadb.service
 $ cd ~/railsgoat
 $ export RAILS_ENV=mysql
+$ bundle exec rake db:setup
 $ bundle exec rails server -b 0.0.0.0 -p 8080
  ```
 
