@@ -17,6 +17,7 @@ Enabling reporting and dashboards for the blue team to help discover an attacker
 
 ## Resources
 * [The 7 -ilities of Software](http://codesqueeze.com/the-7-software-ilities-you-need-to-know/)
+* [Threat Intel via Critical Stack](https://intel.criticalstack.com)
 
 ## BONUS LABS
 - AWS CloudTrail
