@@ -30,7 +30,7 @@ Create a report showing when Rails Goat file upload mechanism is abused to perfo
 
 2. Click on `Search & Reporting` and search for your instance's Rails Goat logs, these should be under the `main` index. E.g., `index=main host=<Private DNS> source="/home/ec2-user/railsgoat/log/mysql.log"`. Select `All time` from the time range picker and click `Search`.
 
-3. Search for evens containing `filename`. Do you see any events? If not, go back to Week 3 Lab 3 and do Exercise 2.
+3. Search for events containing `filename`. Do you see any events? If not, go back to Week 3 Lab 3 and do Exercise 2.
 
 4. Pipe the current search results to `rex` to extract the injected command into a new field named `cmd`. Do NOT use the field extractor UI (`+ Extract New Fields`) for this exercise.
 
