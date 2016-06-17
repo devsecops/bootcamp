@@ -12,9 +12,8 @@ During this lesson, we'll begin to understand basic logging and evaluate how an 
 ## [Create and test alerts](LESSON-2.md)
 Creating and testing alerts can help you to identify when attacks are happening.  This can help to aid in the strength of protective controls or allow for risks to be evaluated.
 
-## Creating reports and dashboards
-
-## Lessons Learned for Enterprise Deployments
+## [Creating reports and dashboards](LESSON-3.md)
+Enabling reporting and dashboards for the blue team to help discover an attacker quickly can make or break an app that depends on quick detection and response.
 
 ## Resources
 * [The 7 -ilities of Software](http://codesqueeze.com/the-7-software-ilities-you-need-to-know/)
