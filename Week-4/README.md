@@ -7,8 +7,11 @@ During Week 4, we'll understand the basics of keeping technology available, hunt
 - Detection & Alerting
 
 ## Getting to know your data
+
 ## Create and testing alerts
+
 ## Creating reports and dashboards
+
 ## Lessons Learned for Enterprise Deployments
 
 ## Resources
