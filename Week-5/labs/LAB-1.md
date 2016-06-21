@@ -19,6 +19,7 @@ On this lab we will convert our infrastructure into code by using CloudFormation
 - [http://www.tutorialspoint.com/json/json_data_types.htm](http://www.tutorialspoint.com/json/json_data_types.htm)
 - [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)
 - [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)
+
 ---
 
 ## Top-Level Structure
@@ -58,7 +59,7 @@ It should look something like:
 
 Parameters in CloudFormation are also JSON arrays, these take a `Type` and a `Description`. Fill in the parameters section to your CloudFormation template.
 
-1. Fill in the parameters section with StudentId, KeyName, SubnetId, InstanceType, AmiId, and WebAppSecurityGroup.
+1. Fill in the parameters section with `StudentId`, `KeyName`, `SubnetId`, `InstanceType`, `AmiId`, and `WebAppSecurityGroup`.
 
 It should look something like:
 
