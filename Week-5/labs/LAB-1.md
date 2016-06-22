@@ -209,7 +209,7 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 8. Load `http://PUBLIC_IP_ADDRESS:8080` on your browser. Is your application up and running?
 
-** The resulting template should look something like [../scripts/lab-1.json](lab-1.json).
+** The resulting template should look something like [lab-1.json](../scripts/lab-1.json).
 
 ## Outputs
 
