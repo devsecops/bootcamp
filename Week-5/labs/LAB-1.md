@@ -26,7 +26,7 @@ On this lab we will convert our infrastructure into code by using CloudFormation
 
 Create a CloudFormation template.
 
-CloudFormation makes use of JSON to define parameters, resources and outputs. The high-level CloudFormation data structure is an array; in JSON, arrays are associative-arrays, i.e., a JSON array associates keys with values.
+CloudFormation makes use of JSON to define parameters, resources and outputs. The high-level CloudFormation data structure is an Object; in JSON, Object are associative-arrays, i.e., a JSON Object associates keys with values.
 
 1. Create a new plain-text JSON file with the following sections. These are the minimum requirements for defining a CloudFormation template.
 
@@ -205,12 +205,12 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 6. Enter your student ID under `Stack name`. Using the information collected from step 2, fill in the rest of the form fields. Click `Next`, click `Next`, click `Create`.
 
-7. Go back to `EC2`, look up your new instance, note the public IP address and ssh into the instance. Keep an eye in `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
+7. Go back to `EC2`, look up your new instance, note the public IP address and ssh into the instance. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
 
 8. Load `http://PUBLIC_IP_ADDRESS:8080` on your browser. Is your application up and running?
 
-** The resulting template should look something like [lab-1.json](lab-1.json).
+** The resulting template should look something like [../scripts/lab-1.json](lab-1.json).
 
 ## Outputs
 
-**Challenge:** Using your awesome skills and the resources above fill in the Outputs section to expose/print your application's URL.
+**Challenge:** Using your awesome skills and the resources above fill in the Outputs section to expose/print your application's URL. Destroy your stack, make the changes and reload it. Under the Outputs tab in the CloudFormation console, make sure that your application URL is displayed.
