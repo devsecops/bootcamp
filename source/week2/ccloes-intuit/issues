@@ -1,5 +1,0 @@
-1) Setting up the roles correctly was difficult
-2) assumer should be uploaded to rubygems so it can be installed via bundler
-3) The "path" should not be "required", this caused issues for using assumer
-4) There are a bunch of warnings from assumer when you run it
-

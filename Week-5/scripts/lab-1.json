@@ -1,0 +1,99 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "DevSecOps Bootcamp CloudFormation Template: Creates a vulnerable application running on a single instance.",
+  "Parameters": {
+    "StudentId": {
+      "Type": "String",
+      "Description": "Your student id, e.g., student1"
+    },
+    "KeyName": {
+      "Type": "AWS::EC2::KeyPair::KeyName",
+      "Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance"
+    },
+    "SubnetId": {
+      "Type": "AWS::EC2::Subnet::Id",
+      "Description": "A subnet ID where the app will run"
+    },
+    "VpcId": {
+      "Type": "AWS::EC2::VPC::Id",
+      "Description": "A VPC ID where the app will run"
+    },
+    "InstanceType": {
+      "Description": "WebServer EC2 instance type",
+      "Type": "String",
+      "Default": "m3.medium"
+    },
+    "AmiId": {
+      "Description": "The AMI (Amazon Machine Image) ID",
+      "Type": "AWS::EC2::Image::Id"
+    },
+    "AppSecurityGroup": {
+      "Description": "The Web application security group ID",
+      "Type": "AWS::EC2::SecurityGroup::Id"
+    }
+  },
+  "Resources": {
+    "WebServerInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": "true",
+            "DeviceIndex": "0",
+            "GroupSet": [
+              {
+                "Ref": "AppSecurityGroup"
+              }
+            ],
+            "SubnetId": {
+              "Ref": "SubnetId"
+            }
+          }
+        ],
+        "ImageId": {
+          "Ref": "AmiId"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "KeyName": {
+          "Ref": "KeyName"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Ref": "StudentId"
+            }
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash -xe\n",
+                "rpm -ivh https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm\n",
+                "yum -y install git git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel\n",
+                "yum -y install nodejs mariadb mariadb-server mariadb-devel\n",
+                "systemctl enable mariadb.service\n",
+                "systemctl start mariadb.service\n",
+                "rpm -ivh https://s3-us-west-2.amazonaws.com/dso-public-bucket/ruby-2.3.1-1.el7.x86_64.rpm\n",
+                "cd /home/ec2-user\n",
+                "echo \"export GEM_HOME=~/.gem\" >> .bash_profile\n",
+                "echo \"export GEM_PATH=~/.gem\" >> .bash_profile\n",
+                "echo \"export RAILS_ENV=mysql\" >> .bash_profile\n",
+                "echo \"export PATH=~/.gem/bin:$PATH\" >> .bash_profile\n",
+                "su -l -c \"git clone https://github.com/OWASP/railsgoat.git\" ec2-user\n",
+                "su -l -c \"gem install bundler\" ec2-user\n",
+                "su -l -c \"cd railsgoat && bundle install && bundle exec rake db:setup\" ec2-user\n",
+                "su -l -c \"cd railsgoat && bundle exec rails server -b 0.0.0.0 -p 8080 &\" ec2-user\n",
+                "\n"
+              ]
+            ]
+          }
+        }
+      }
+    }
+  }
+}

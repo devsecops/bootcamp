@@ -1,38 +1,24 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [WEEK 3 OUTLINE](#week-3-outline)
-  - [OBJECTIVES](#objectives)
-  - [AGENDA](#agenda)
-  - [BONUS LABS](#bonus-labs)
-  - [ASSIGNMENTS](#assignments)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# WEEK 3: Security 
+# WEEK 3: Attack the Weakling 
+Thinking like an attacker is the crux of DevSecOps. During this session, we will put on our hoodies and go after vulnerabilities in our web application.
 
 ## OBJECTIVES
-- Deploy a vulnerable application on AWS (e.g. `RailsGoat`)
-- Attack the application using different techniques (OWASP TOP 10):
-  - Command Injection
-  - SQLi
-  - XSS
-  - Auth Bypass
+During Week 3, we'll accomplish the following objectives:
+- Understand AWS multi-tiered cloud architecture
+- Deploy a vulnerable application (e.g. `RailsGoat`) on AWS
+- Understand some hacking techniques, such as SQL Injection, Command Injection, Authentication Bypass ...etc.
 
-## AGENDA
-TIME | TOPIC
----|---
-5 PM - 5:50 PM | Intro to Security Tools and simple AWS Deployment
-6 PM - 6:45 PM | LAB: Deploy `RailsGoat` via CloudFormation & attack
-7 PM - 7:50 PM | LAB: Attack `RailsGoat`... continued
-8 PM - 9 PM | LAB: AWS Account Takeover
+## [LESSON 1: Basics for AWS](LESSON-1.md)
+Knowing how to use AWS will help you with today's labs because it is where we will study the security defects of our weak app.  This lesson is a quick introduction to some of the basics to set the stage for this week's labs.
 
-## BONUS LABS
-- Write custom Account Takeover script/utility
-- Write custom NMAP script
-- Write custom Metasploit Module
+## [LESSON 2: Intro to AWS Deployments](LESSON-2.md)
+Now that we know a few basics, it's time to put our hands-on deploying an application to AWS for our lab work.  In this lesson we will work on understanding control plan and assumer concepts to make it possible for you to set up user access separate from resources used in an account.
 
-## ASSIGNMENTS
-- `RailsGoat` Lessons
-- Metasploit Unleashed
+## [LESSON 3: Attack the Weakling](LESSON-3.md)
+During Lesson 3, we will use Rails goat to exploit web application defects.  The labs for this session will help you to get familiar with Burp Suite and some fuzzing techniques.
+
+## RESOURCES
+- [OWASP TOP 10](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet)
+- [Metasploit Tutorial](https://jonathansblog.co.uk/metasploit-tutorial-for-beginners)
+- [Metasploit Unleashed](https://www.offensive-security.com/metasploit-unleashed/)
+- [Security Tube](http://www.securitytube.net/)
+- [Rails Goat](https://github.com/OWASP/railsgoat)

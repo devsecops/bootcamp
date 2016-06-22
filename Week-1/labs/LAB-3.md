@@ -17,8 +17,6 @@ If you don't have [Homebrew](http://brew.sh/) or any other Mac OS X package mana
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 ```
-
----
 ---
 
 ## Virtualbox
@@ -54,6 +52,7 @@ git clone git@github.com:devsecops/bootcamp.git
 - Change directory to the `bootcamp` directory and launch the virtual machine:
 ```
 cd bootcamp
+vagrant plugin install vagrant-vbguest
 vagrant up
 ```
 - Depending on your hardware, this process may take 10 minutes to complete. Once complete, connect to the virtual machine:

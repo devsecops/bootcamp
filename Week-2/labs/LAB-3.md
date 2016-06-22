@@ -155,7 +155,7 @@ $ source ~/.bash_profile
 Install dependencies:
 
 ```
-$ rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm
+$ sudo rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm
 $ sudo yum -y install nodejs
 $ sudo yum -y install mariadb mariadb-server mariadb-devel
 $ sudo systemctl start mariadb.service
@@ -167,8 +167,8 @@ Install Ruby:
 $ rbenv install -v 2.3.1
 $ rbenv global 2.3.1
 $ ruby -v
-$ gem install bundler
-$ gem install rails
+$ gem install bundler --no-ri --no-rdoc
+$ gem install rails --no-ri --no-rdoc
 
 ```
 

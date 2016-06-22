@@ -1,0 +1,176 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "DevSecOps Bootcamp CloudFormation Template: Creates a rescilient infrastructure to host a vulnerable application.",
+  "Parameters": {
+    "StudentId": {
+"Default": "student1",
+      "Type": "String",
+      "Description": "Your student id, e.g., student1"
+    },
+    "KeyName": {
+"Default" : "jg",
+      "Type": "AWS::EC2::KeyPair::KeyName",
+      "Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance"
+    },
+    "AppSubnetId": {
+"Default" : "subnet-ca05a3bc",
+      "Type": "AWS::EC2::Subnet::Id",
+      "Description": "A subnet ID where the app will run"
+    },
+    "ElbSubnetId": {
+"Default" : "subnet-c905a3bf",
+      "Type": "AWS::EC2::Subnet::Id",
+      "Description": "A subnet ID where the app will run"
+    },
+    "VpcId": {
+"Default" : "vpc-a8b03ccc",
+      "Type": "AWS::EC2::VPC::Id",
+      "Description": "A VPC ID where the app will run"
+    },
+    "InstanceType": {
+      "Description": "WebServer EC2 instance type",
+      "Type": "String",
+      "Default": "m3.medium"
+    },
+    "AmiId": {
+"Default" : "ami-775e4f16",
+      "Description": "The AMI (Amazon Machine Image) ID",
+      "Type": "AWS::EC2::Image::Id"
+    },
+    "AppSecurityGroup": {
+"Default" : "sg-d469d7b2",
+      "Description": "The Web application security group ID",
+      "Type": "AWS::EC2::SecurityGroup::Id"
+    },
+    "ElbSecurityGroups": {
+"Default": "sg-2167d947",
+      "Description": "The ELB security group ID",
+      "Type": "AWS::EC2::SecurityGroup::Id"
+    }
+  },
+  "Resources": {
+    "ScalingGroup": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "VPCZoneIdentifier": [
+          {
+            "Ref": "AppSubnetId"
+          }
+        ],
+        "LaunchConfigurationName": {
+          "Ref": "WebServerInstance"
+        },
+        "LoadBalancerNames": [
+          {
+            "Ref": "StudentId"
+          }
+        ],
+        "MinSize": "1",
+        "DesiredCapacity": "1",
+        "MaxSize": "1",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Ref": "StudentId"
+            },
+            "PropagateAtLaunch": "true"
+          }
+        ]
+      }
+    },
+    "WebServerInstance": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "SecurityGroups": [
+          {
+            "Ref": "AppSecurityGroup"
+          }
+        ],
+        "ImageId": {
+          "Ref": "AmiId"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "KeyName": {
+          "Ref": "KeyName"
+        },
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash -xe\n",
+                "export http_proxy=http://proxy:3128\n",
+                "export https_proxy=http://proxy:3128\n",
+                "rpm -ivh https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm\n",
+                "yum -y install git git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel\n",
+                "yum -y install nodejs mariadb mariadb-server mariadb-devel\n",
+                "systemctl enable mariadb.service\n",
+                "systemctl start mariadb.service\n",
+                "rpm -ivh https://s3-us-west-2.amazonaws.com/dso-public-bucket/ruby-2.3.1-1.el7.x86_64.rpm\n",
+                "cd /home/ec2-user\n",
+                "echo \"export GEM_HOME=~/.gem\" >> .bash_profile\n",
+                "echo \"export GEM_PATH=~/.gem\" >> .bash_profile\n",
+                "echo \"export RAILS_ENV=mysql\" >> .bash_profile\n",
+                "echo \"export PATH=~/.gem/bin:$PATH\" >> .bash_profile\n",
+                "echo \"export http_proxy=http://proxy:3128\" >> .bash_profile\n",
+                "echo \"export https_proxy=http://proxy:3128\" >> .bash_profile\n",
+                "echo \"export no_proxy=localhost,127.0.0.1,254.169.254.169\" >> .bash_profile\n",
+                "echo \"[http]\n    proxy = $http_proxy\" >> .gitconfig\n",
+                "chown ec2-user: .gitconfig\n",
+                "su -l -c \"git clone https://github.com/OWASP/railsgoat.git\" ec2-user\n",
+                "su -l -c \"gem install bundler\" ec2-user\n",
+                "su -l -c \"cd railsgoat && bundle install && bundle exec rake db:setup\" ec2-user\n",
+                "su -l -c \"cd railsgoat && bundle exec rails server -b 0.0.0.0 -p 8080 &\" ec2-user\n",
+                "\n"
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "ServiceLoadBalancer": {
+      "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+      "Properties": {
+        "LoadBalancerName": {
+          "Ref": "StudentId"
+        },
+        "CrossZone": "true",
+        "HealthCheck": {
+          "HealthyThreshold": "3",
+          "Interval": "30",
+          "Target": "TCP:8080",
+          "Timeout": "5",
+          "UnhealthyThreshold": "5"
+        },
+        "Listeners": [
+          {
+            "InstancePort": "8080",
+            "InstanceProtocol": "TCP",
+            "LoadBalancerPort": "80",
+            "Protocol": "TCP"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "SecurityGroups": [{
+          "Ref": "ElbSecurityGroups"
+        }],
+        "Subnets": [
+          {
+            "Ref": "ElbSubnetId"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Ref": "StudentId"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
