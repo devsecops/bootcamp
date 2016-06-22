@@ -177,6 +177,8 @@ It should look something like:
 }
 ```
 
+** The resulting template should look something like [lab-1.json](../scripts/lab-1.json).
+
 ## Launch your stack
 
 1. Log into the DSO target account.
@@ -208,9 +210,6 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 7. Go back to `EC2`, look up your new instance, note the public IP address and ssh into the instance. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
 
 8. Load `http://PUBLIC_IP_ADDRESS:8080` on your browser. Is your application up and running?
-
-** The resulting template should look something like [lab-1.json](../scripts/lab-1.json).
-
 ## Outputs
 
 **Challenge:** Using your awesome skills and the resources above fill in the Outputs section to expose/print your application's URL. Destroy your stack, make the changes and reload it. Under the Outputs tab in the CloudFormation console, make sure that your application URL is displayed.
