@@ -19,24 +19,41 @@ On this lab we will use AWS CloudFormation to stand up a resilient stack.
 
 Create two new security groups and update the CloudFormation template parameters to support tiered infrastructure.
 
-1. Create a new security group named `<STUDENT ID>-app`. This security group should allow connections from `10.0.0.0/21` to TCP ports `8080` and `22`. Note the security group ID.
+1. Log into the DSO target account.
 
-2. Create a new security group named `<STUDENT ID>-elb`. This security group should allow connection from your IP address to TCP port `80`. Note the security group ID.
+  E.g.,
 
-3. Copy the CloudFormation template into a new file named `<STUDENT ID>_lab_2.json`.
+  ```
+$ unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID
+$ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
+    -A 100352119871 -R dso/ctrl/my-app/CTL-my-app-DeploymentAdmin \
+    -o dso -g -u $AWS_USERNAME
+  ```
 
-4. Update the CloudFormation template adding an ELB subnet parameter.
+2. Create a new security group named `<STUDENT ID>-app`. This security group should allow connections from `10.0.0.0/21` to TCP ports `8080` and `22`. Note the security group ID.
+
+3. Create a new security group named `<STUDENT ID>-elb`. This security group should allow connection from your IP address to TCP port `80`. Note the security group ID.
+
+4. Copy the CloudFormation template into a new file named `<STUDENT ID>_lab_2.json`.
+
+5. Update the CloudFormation template adding an ELB subnet parameter.
 
   Change the `SubnetId` parameter name to `AppSubnetId` and create a new parameter named `ElbSubnetId` of type `AWS::EC2::Subnet::Id`.
 
-5. Update the CloudFormation template adding an ELB security group parameter.
+6. Update the CloudFormation template adding an ELB security group parameter.
 
   Create a new parameter named `ElbSecurityGroups` of type `AWS::EC2::SecurityGroup::Id`.
 
 ## Add Auto Scaling
 
-Create a new resource named `ScalingGroup` of type `AWS::AutoScaling::AutoScalingGroup`.
+Create a new resource named `ScalingGroup` of type `AWS::AutoScaling::AutoScalingGroup`, See [AWS::AutoScaling::AutoScalingGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html).
 
+*Requirements:*
+
+* Min, Max, and Desired capacity of 1.
+  * What is the effect of this?
+* Load balancer name matches your student name
+* Subnet should be a passed parameter
 
 It should look something like:
 
@@ -59,21 +76,14 @@ It should look something like:
     ],
     "MinSize": "1",
     "DesiredCapacity": "1",
-    "MaxSize": "1",
-    "Tags": [
-      {
-        "Key": "Name",
-        "Value": {
-          "Ref": "StudentId"
-        },
-        "PropagateAtLaunch": "true"
-      }
-    ]
+    "MaxSize": "1"
   }
 }
 ```
 
 ## Add a Launch Configuration
+
+Convert the instance resource to a launch configuration (`AWS::AutoScaling::LaunchConfiguration`) resource, see [AWS::AutoScaling::LaunchConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html).
 
 1. Change the `WebServerInstance` type from an `AWS::EC2::Instance` to an `AWS::AutoScaling::LaunchConfiguration`.
 
@@ -158,6 +168,12 @@ It should look something like:
 
 Add an Elastic Load Balancer (ELB) resource to the CloudFormation template.
 
+Requirements:
+
+* load balancer name is same as student ID
+* health check is a TCP connect check to port `8080`
+* listener routes traffic from `80` to `8080`
+* is internet-facing
 
 It should look something like:
 
