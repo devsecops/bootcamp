@@ -6,10 +6,10 @@
       "Type": "String",
       "Description": "You, the stack creator, e.g., student1"
     },
-      "TimeStamp": {
-        "Type": "String",
-        "Description": "Timestamp overwritten by restacker"
-      },
+    "TimeStamp": {
+      "Type": "String",
+      "Description": "Timestamp overwritten by restacker"
+    },
     "StudentId": {
       "Type": "String",
       "Description": "Your student id, e.g., student1"
@@ -113,7 +113,7 @@
                 "cd /home/ec2-user\n",
                 "echo \"export GEM_HOME=~/.gem\" >> .bash_profile\n",
                 "echo \"export GEM_PATH=~/.gem\" >> .bash_profile\n",
-                "echo \"export RAILS_ENV=mysql\" >> .bash_profile\n",
+                "echo \"export RAILS_ENV=rds\" >> .bash_profile\n",
                 "echo \"export PATH=~/.gem/bin:$PATH\" >> .bash_profile\n",
                 "echo \"export http_proxy=http://proxy:3128\" >> .bash_profile\n",
                 "echo \"export https_proxy=http://proxy:3128\" >> .bash_profile\n",
@@ -121,8 +121,7 @@
                 "echo \"[http]\n    proxy = $http_proxy\" >> .gitconfig\n",
                 "chown ec2-user: .gitconfig\n",
                 "su -l -c \"git clone https://github.com/OWASP/railsgoat.git\" ec2-user\n",
-                "su -l -c \"cd railsgoat && gem install bundler\" ec2-user\n",
-                "su -l -c \"cd railsgoat && bundle install && bundle exec rake db:setup\" ec2-user\n",
+                "su -l -c \"gem install bundler\" ec2-user\n",
                 "cd railsgoat\n",
                 "cat <<EOF>> config/database.yml\n",
                 "rds:\n",
@@ -134,10 +133,11 @@
                 "  username: railsgoat\n",
                 "  password: dsogoat1\n",
                 "EOF\n",
+                "su -l -c \"cd railsgoat && bundle install && bundle exec rake db:setup\" ec2-user\n",
                 "su -l -c \"cd railsgoat && bundle exec rails server -b 0.0.0.0 -p 8080 &\" ec2-user\n",
-                "cd /opt\n",
-                "timedatectl set-timezone UTC\n",
+                "ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime\n",
                 "yum -y install wget\n",
+                "cd /opt\n",
                 "wget -O splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=6.4.1&product=universalforwarder&filename=splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm&wget=true'\n",
                 "rpm -ivh splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm\n",
                 "echo \"[tcpout]\n",
@@ -151,7 +151,8 @@
                 "sslPassword = password\n",
                 "sslRootCAPath = \\\\$SPLUNK_HOME/etc/auth/cacert.pem\n",
                 "sslVerifyServerCert = false\n",
-                "useACK = false\" | sudo tee /opt/splunkforwarder/etc/system/local/outputs.conf\n",
+                "useACK = false\" >> /opt/splunkforwarder/etc/system/local/outputs.conf\n",
+                "\n",
                 "echo \"[default]\n",
                 "host = \\\\$decideOnStartup\n",
                 "\n",
@@ -159,8 +160,9 @@
                 "recursive=true\n",
                 "\n",
                 "[monitor:///var/log/]\n",
-                "recursive=true\" | sudo tee /opt/splunkforwarder/etc/system/local/inputs.conf\n",
-                "/opt/splunkforwarder/bin/splunk start\n"
+                "recursive=true\" >> /opt/splunkforwarder/etc/system/local/inputs.conf\n",
+                "/opt/splunkforwarder/bin/splunk start --accept-license\n",
+                "/opt/splunkforwarder/bin/splunk enable boot-start\n"
               ]
             ]
           }
@@ -190,9 +192,11 @@
           }
         ],
         "Scheme": "internet-facing",
-        "SecurityGroups": [{
-          "Ref": "ElbSecurityGroups"
-        }],
+        "SecurityGroups": [
+          {
+            "Ref": "ElbSecurityGroups"
+          }
+        ],
         "Subnets": [
           {
             "Ref": "ElbSubnetId"

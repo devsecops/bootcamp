@@ -1,0 +1,10 @@
+---
+StudentId: student1
+KeyName: jg
+AppSubnetId: subnet-ca05a3bc
+ElbSubnetId: subnet-c905a3bf
+VpcId: vpc-a8b03ccc
+InstanceType: m3.medium
+AmiId: ami-775e4f16
+AppSecurityGroup: sg-d469d7b2
+ElbSecurityGroups: sg-2167d947
