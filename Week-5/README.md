@@ -14,19 +14,25 @@ Now that we've learned what not to do and why, it's time to pick things up and f
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## OBJECTIVES
-- Service Oriented Architecture (SOA).
+- Infrastructure as Code (IaC).
 - Automated AWS Deployments with CloudFormation
+- Application Availability
+- AWS Elastic Load Balancer
+- AWS Autoscale
+- Restacker
+- AWS RDS
 
 ## AGENDA
 TIME | TOPIC
 ---|---
-5 PM - 5:50 PM | Rugged AWS Architecture & Secure Coding Practices
-6 PM - 6:45 PM | Lab: CloudFormations
-7 PM - 7:50 PM | Lab: Control-Plane Pattern
-8 PM - 9 PM | Lab: Gauntlt Checks
+6 PM - 6:45PM | Infrastructure as Code
+6:45 PM - 7:15 PM | Lab: CloudFormation
+7:15 PM - 7:45 PM | Lab: Autoscale and ELB 
+8:00 PM - 8:30 PM | Lab: Restacker and RDS
 
 ## BONUS LABS
 - Fix `RailsGoat` vulnerabilities
 
 ## ASSIGNMENTS
-- Write Gauntlt checks
+- Outputs Challenge from Lab 1
+- Userdata Challenge from Lab 3
