@@ -206,9 +206,9 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 5. On the AWS Console select `Services` > `CloudFormation`. Then click `Create Stack`, select `Upload a template to Amazon S3`, click `Browse...` and select your CloudFormation template and click `OK`. Click `Next`.
 
-6. Enter your student ID under `Stack name`. Using the information collected from step 2, fill in the rest of the form fields. Click `Next`, click `Next`, click `Create`.
+6. Enter your student ID under `Stack name`. Using the information collected from step 2, fill in the rest of the form fields. Click `Next`, click `Next`, click `Create`. Wait until your stack deployment is successful (`CREATE_COMPLETE`). If you get a `ROLLBACK_COMPLETE` error, look under the `events` tab in the CloudFormation console to determine what's going on.
 
-7. Go back to `EC2`, look up your new instance, note the public IP address and ssh into the instance. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
+7. Go back to `EC2`, note the public IP address of your new instance, once `Status Checks` pass, ssh into the instance. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
 
 8. Load `http://PUBLIC_IP_ADDRESS:8080` on your browser. Is your application up and running?
 ## Outputs
