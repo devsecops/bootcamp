@@ -58,15 +58,17 @@ $ cat ~/.restacker/restacker.yml
 $ restacker list -l myapp -u student1 -c dso
 ```
 
-Did you get promoted for MFA? Do you know why?
+Did you get promoted for MFA? Do you know why? Look under `~/.restacker/`.
 
 5. Export template configuration.
 
-Use `restacker dump` to dump default parameters into a file. Modify the values in the parameters to match the parameter values you have been passing into the CloudFormation console.
+Stacker expects parameters to be passed in. Use `restacker dump` to dump default parameters into a file. Modify the values in the parameters to match the parameter values you have been passing into the CloudFormation console.
 
 ```
-$ restacker dump -t lab-3.json > parameters.json
+$ restacker dump -t mytemplate.json > parameters.json
 ```
+
+The resulting paramters file should look something like [parameters.json](../scripts/parameters.json).
 
 6. Add Restacker required parameters to your CloudFormation template.
 
@@ -75,22 +77,39 @@ Add `StackCreator` and `TimeStamp` as new parameters of type `String` to your Cl
 7. Deploy your stack using Restacker.
 
 ```
-$ restacker deploy -t lab-3.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+$ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
 ```
 
 ## Integrate RDS
 
 1. Use Restacker to delete previous stack.
 
+E.g.,
+
 ```
-$ restacker remove -n test1-20160622-2311 -c dso -l myapp
+$ restacker remove -n student1-20160622-2349 -l myapp -c dso -u student1
 ```
 
-2. Add functionality to the CloudFormation template to make use of RDS.
+2. Change `RAILS_ENV` to use `rds` instead of `mysql`.
+
+From:
+
+```
+"echo \"export RAILS_ENV=mysql\" >> .bash_profile\n",
+```
+
+To:
+
+```
+"echo \"export RAILS_ENV=rds\" >> .bash_profile\n",
+```
+
+
+3. Add functionality to the CloudFormation template to make use of RDS.
 
 Add RDS configuration into `config/database.yml` before Rails Goat is started (by `bundle exec rails server`).
 
-You can do this by adding the lines below before `bundle exec rails server...` to the `UserData` subsection of the `WebServerInstance` launch configuration resource.
+You can do this by adding the lines below before `...bundle exec rake db:setup...` to the `UserData` subsection of the `WebServerInstance` launch configuration resource.
 
 ```
 "cd railsgoat\n",
@@ -106,22 +125,22 @@ You can do this by adding the lines below before `bundle exec rails server...` t
 "EOF\n",
 ```
 
-3. Deploy your stack using Restacker.
+4. Deploy your stack using Restacker.
+
+E.g.,
 
 ```
-$ restacker deploy -t lab-3.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+$ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
 ```
 
 ## Integrate Logging
 
 For posterity, integrate logging into the CloudFormation template.
 
-## Install and Configure Splunk
-
 1. Add a section in the `UserData` subsection of the `WebServerInstance` launch configuration resource to install Splunk.
 
 ```
-"timedatectl set-timezone UTC\n",
+"ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime\n",
 "yum -y install wget\n",
 "cd /opt\n",
 "wget -O splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=6.4.1&product=universalforwarder&filename=splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm&wget=true'\n",
@@ -130,7 +149,7 @@ For posterity, integrate logging into the CloudFormation template.
 
 2. Add a section in the `UserData` subsection of the `WebServerInstance` launch configuration resource to configure Splunk.
 
- Configure outputs:
+Configure outputs:
 
 
 ```
@@ -145,10 +164,10 @@ For posterity, integrate logging into the CloudFormation template.
 "sslPassword = password\n",
 "sslRootCAPath = \\\\$SPLUNK_HOME/etc/auth/cacert.pem\n",
 "sslVerifyServerCert = false\n",
-"useACK = false\" | sudo tee /opt/splunkforwarder/etc/system/local/outputs.conf\n",
+"useACK = false\" >> /opt/splunkforwarder/etc/system/local/outputs.conf\n",
 ```
 
- Configure inputs:
+Configure inputs:
 
 ```
 "echo \"[default]\n",
@@ -158,18 +177,40 @@ For posterity, integrate logging into the CloudFormation template.
 "recursive=true\n",
 "\n",
 "[monitor:///var/log/]\n",
-"recursive=true\" | sudo tee /opt/splunkforwarder/etc/system/local/inputs.conf\n",
+"recursive=true\" >> /opt/splunkforwarder/etc/system/local/inputs.conf\n",
 ```
 
  Start Splunk:
 
 ```
+"/opt/splunkforwarder/bin/splunk start --accept-license\n",
 "/opt/splunkforwarder/bin/splunk start\n"
 ```
+
+3. Use Restacker to delete previous stack.
+
+E.g.,
+
+```
+$ restacker remove -n student1-20160622-2349 -l myapp -c dso -u student1
+```
+
+4. Deploy your stack using Restacker.
+
+E.g.,
+
+```
+$ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+```
+
+
+** The resulting template should look something like [lab-3.json](../scripts/lab-3.json).
 
 ## Challenge
 
 How would you make this template even better?
+
+Suggestions:
 
 * Remove hardcoded values from UserData
 * Remove Bash code from user data and make it a retrievable script that can be maintained separately
