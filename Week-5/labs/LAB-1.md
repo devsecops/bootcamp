@@ -198,6 +198,7 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
   * VPC ID
   * AMI ID
   * Security Group ID
+  * Key Pair (your key name)
 
 3. **Terminate** your (hand-jammed) instance. You can do this by selecting it in the console, then selecting `Actions` > `Instance State` > `Terminate`.
 

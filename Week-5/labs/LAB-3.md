@@ -7,7 +7,7 @@
 - [Integrate Logging](##integrate-logging)
 - [Challenge](##challenge)
 
-# Application Availability and CloudFormation
+# End-to-end Infrastructure as Code
 
 On this lab we will use automate deployment, migrate to AWS RDS and integrate logging.
 
