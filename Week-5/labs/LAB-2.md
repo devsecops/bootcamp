@@ -52,8 +52,9 @@ Create a new resource named `ScalingGroup` of type `AWS::AutoScaling::AutoScalin
 
 * Min, Max, and Desired capacity of 1.
   * What is the effect of this?
-* Load balancer name matches your student name
+* Load balancer name matches your student ID
 * Subnet should be a passed parameter
+* `Name` tag should be same as your student ID, `PropagateAtLaunch` is `true`
 
 It should look something like:
 
@@ -77,7 +78,16 @@ It should look something like:
     "MinSize": "1",
     "DesiredCapacity": "1",
     "MaxSize": "1"
-  }
+  },
+  "Tags": [
+    {
+      "Key": "Name",
+      "Value": {
+        "Ref": "StudentId"
+      },
+      "PropagateAtLaunch": "true"
+    }
+  ]
 }
 ```
 
@@ -221,6 +231,9 @@ It should look something like:
 }
 ```
 
+** The resulting template should look something like [lab-2.json](../scripts/lab-1.json).
+
+
 ## Launch your Stack
 
 1. Log into the DSO target account.
@@ -236,7 +249,7 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 2. Take note of your instance's configuration and new security groups you created. Also make note of a private subnet (`AppSubnetId`) and a public subnet (`ElbSubnetId`) where your instance and ELBs will run (respectively). **IMPORTANT:** Ensure that the `AppSubnetId` and `ElbSubnetId` are in the same Availability Zone.
 
-3. **Terminate** your stack from Lab 1. You can do this by selecting it in the CloudFormation console, then selecting `Actions` > `Delete Stack`.
+3. **Delete** your stack from Lab 1. You can do this by selecting it in the CloudFormation console, then selecting `Actions` > `Delete Stack`.
 
 4. Using the resources at the top of this lab, verify your CloudFormation template by validating the JSON file.
 
@@ -244,8 +257,12 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 6. Enter your student ID under `Stack name`. Using the information collected from step 2, fill in the rest of the form fields. Click `Next`, click `Next`, click `Create`.
 
-7. Go back to `EC2`, look up your new instance, note the **private** IP address and ssh into the bastion and then onto your instance. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`.
+7. Go back to `EC2`, note the **private** IP address of your instance and the **public** IP address of the bastion instance.
 
-8. Load `http://ELB_DNS_NAME` on your browser. Is your application up and running?
+8. Load your ssh key into memory (e.g., `ssh-add ~/.ssh/id_rsa`)
 
-** The resulting template should look something like [lab-2.json](../scripts/lab-1.json).
+9. SSH into the bastion using the `-A` flag to pass your ssh key, e.g., `ssh -A student1@52.x.x.x`. Verify your ssh key has been passed to the bastion using `ssh-add -l`. If this is the case, then ssh onto your instance, e.g., `ssh ec2-user@10.0.0.x`.
+
+10. Keep an eye on `/var/log/cloud-init.log` to see if any errors occur. You can do this with `tail`, e.g., `tail -f /var/log/cloud-init.log`, to exit `tail` press `ctrl+c`. Wait for the process to finish.
+
+11. Load `http://ELB_DNS_NAME` on your browser. Is your application up and running?
