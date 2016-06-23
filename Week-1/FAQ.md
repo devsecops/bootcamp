@@ -17,7 +17,7 @@ I'm especially curious on attacks involving a third-party CDN.
 ## Q: What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
 * AWS provide documentation on common industry [Best Practices and how to apply them in your use of AWS](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html):
   * [Lock away your AWS account/root access keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials)
-    * You can also use  Split Custody and/or Dual Control to manage access to root account password or access keys
+    * You can also use  Split Custody and/or Dual Control to manage access to root account password or access keys. Better yet, delete the access keys and only have a password backed by MFA.  Manage access the the password and MFA using split custody and/or dual control.
   * [Grant least privilege](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege)
     * Applies to both Human users (IAM Users) and automation (IAM Roles for EC2)
     * Excess privilege creates an easy path for an attacker - don't do it!
