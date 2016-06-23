@@ -160,9 +160,9 @@ Configure outputs:
 "disabled = false\n",
 "dropEventsOnQueueFull = 10\n",
 "server = appliance:9997\n",
-"sslCertPath = \\\\$SPLUNK_HOME/etc/auth/server.pem\n",
+"sslCertPath = \\$SPLUNK_HOME/etc/auth/server.pem\n",
 "sslPassword = password\n",
-"sslRootCAPath = \\\\$SPLUNK_HOME/etc/auth/cacert.pem\n",
+"sslRootCAPath = \\$SPLUNK_HOME/etc/auth/cacert.pem\n",
 "sslVerifyServerCert = false\n",
 "useACK = false\" >> /opt/splunkforwarder/etc/system/local/outputs.conf\n",
 ```
@@ -212,5 +212,6 @@ How would you make this template even better?
 
 Suggestions:
 
-* Remove hardcoded values from UserData
+* Remove hardcoded secrets from UserData
+* Remove other hardcoded values from UserData
 * Remove Bash code from user data and make it a retrievable script that can be maintained separately
