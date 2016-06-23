@@ -29,7 +29,7 @@ I'm especially curious on attacks involving a third-party CDN.
   * [Enable MFA for privileged users](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#enable-mfa-for-privileged-users)
     * Apply to ALL users!
     * MFA - Just use it!
-  * Separation of Duties (http://www.sans.edu/research/security-laboratory/article/it-separation-duties)
+  * [Separation of Duties] (http://www.sans.edu/research/security-laboratory/article/it-separation-duties)
     * Not explicitly on the AWS list, but it should be.  Max Ramsay from AWS discusses considerations fo how to apply Separation of Duties (SoD) (here)(https://blogs.aws.amazon.com/security/post/TxQYSWLSAPYVGT/Guidelines-for-When-to-Use-Accounts-Users-and-Groups)
     * Separation of Duties is an internal controls concept, primarily from financial auditing.  But it is equally applicable in technology.
     * [Another good reference on what SoD is](http://szabo.best.vwh.net/separationofduties.html)
