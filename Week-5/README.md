@@ -30,9 +30,6 @@ TIME | TOPIC
 7:15 PM - 7:45 PM | Lab: Autoscale and ELB 
 8:00 PM - 8:30 PM | Lab: Restacker and RDS
 
-## BONUS LABS
-- Fix `RailsGoat` vulnerabilities
-
 ## ASSIGNMENTS
 - Outputs Challenge from Lab 1
 - Userdata Challenge from Lab 3
