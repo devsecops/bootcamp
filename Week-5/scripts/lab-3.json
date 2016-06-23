@@ -2,6 +2,14 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "DevSecOps Bootcamp CloudFormation Template: Creates a rescilient infrastructure to host a vulnerable application.",
   "Parameters": {
+    "StackCreator": {
+      "Type": "String",
+      "Description": "You, the stack creator, e.g., student1"
+    },
+      "TimeStamp": {
+        "Type": "String",
+        "Description": "Timestamp overwritten by restacker"
+      },
     "StudentId": {
       "Type": "String",
       "Description": "Your student id, e.g., student1"
@@ -113,10 +121,46 @@
                 "echo \"[http]\n    proxy = $http_proxy\" >> .gitconfig\n",
                 "chown ec2-user: .gitconfig\n",
                 "su -l -c \"git clone https://github.com/OWASP/railsgoat.git\" ec2-user\n",
-                "su -l -c \"gem install bundler\" ec2-user\n",
+                "su -l -c \"cd railsgoat && gem install bundler\" ec2-user\n",
                 "su -l -c \"cd railsgoat && bundle install && bundle exec rake db:setup\" ec2-user\n",
+                "cd railsgoat\n",
+                "cat <<EOF>> config/database.yml\n",
+                "rds:\n",
+                "  adapter: mysql2\n",
+                "  database: railsgoatdb\n",
+                "  pool: 5\n",
+                "  timeout: 5000\n",
+                "  host: railsgoatdb.cfkyvk9ybkal.us-west-2.rds.amazonaws.com\n",
+                "  username: railsgoat\n",
+                "  password: dsogoat1\n",
+                "EOF\n",
                 "su -l -c \"cd railsgoat && bundle exec rails server -b 0.0.0.0 -p 8080 &\" ec2-user\n",
-                "\n"
+                "cd /opt\n",
+                "timedatectl set-timezone UTC\n",
+                "yum -y install wget\n",
+                "wget -O splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=6.4.1&product=universalforwarder&filename=splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm&wget=true'\n",
+                "rpm -ivh splunkforwarder-6.4.1-debde650d26e-linux-2.6-x86_64.rpm\n",
+                "echo \"[tcpout]\n",
+                "defaultGroup = dso-autolb-group\n",
+                "\n",
+                "[tcpout:dso-autolb-group]\n",
+                "disabled = false\n",
+                "dropEventsOnQueueFull = 10\n",
+                "server = appliance:9997\n",
+                "sslCertPath = \\\\$SPLUNK_HOME/etc/auth/server.pem\n",
+                "sslPassword = password\n",
+                "sslRootCAPath = \\\\$SPLUNK_HOME/etc/auth/cacert.pem\n",
+                "sslVerifyServerCert = false\n",
+                "useACK = false\" | sudo tee /opt/splunkforwarder/etc/system/local/outputs.conf\n",
+                "echo \"[default]\n",
+                "host = \\\\$decideOnStartup\n",
+                "\n",
+                "[monitor:///home/ec2-user/railsgoat/log/]\n",
+                "recursive=true\n",
+                "\n",
+                "[monitor:///var/log/]\n",
+                "recursive=true\" | sudo tee /opt/splunkforwarder/etc/system/local/inputs.conf\n",
+                "/opt/splunkforwarder/bin/splunk start\n"
               ]
             ]
           }
