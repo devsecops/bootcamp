@@ -29,7 +29,7 @@ AWS_SETUP = <<SCRIPT
   sudo yum install -y epel-release
   # curl -o- https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm > epel7.rpm
   # sudo rpm -Uvh epel7.rpm
-  sudo yum update && sudo yum install -y python-pip
+  sudo yum update -y && sudo yum install -y python-pip
   sudo pip install --upgrade pip
   echo "##################################"
   echo "#### INSTALLING AWS CLI ##########"
