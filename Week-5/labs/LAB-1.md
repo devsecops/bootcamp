@@ -155,7 +155,7 @@ It should look something like:
       "",
       [
         "#!/bin/bash -xe\n",
-        "rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm\n",
+        "rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm\n",
         "yum -y install git git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel\n",
         "yum -y install nodejs mariadb mariadb-server mariadb-devel\n",
         "systemctl enable mariadb.service\n",
