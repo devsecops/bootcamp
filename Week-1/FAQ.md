@@ -15,6 +15,42 @@ Add your questions and answers here.
 I'm especially curious on attacks involving a third-party CDN.
 
 ## Q: What are the best practices regarding users, and how do you help prevent users from being the biggest threat to a system's security?
+* AWS provide documentation on common industry [Best Practices and how to apply them in your use of AWS](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html):
+  * [Lock away your AWS account/root access keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials)
+    * You can also use  Split Custody and/or Dual Control to manage access to root account password or access keys. Better yet, delete the access keys and only have a password backed by MFA.  Manage access the the password and MFA using split custody and/or dual control.
+  * [Grant least privilege](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege)
+    * Applies to both Human users (IAM Users) and automation (IAM Roles for EC2)
+    * Excess privilege creates an easy path for an attacker - don't do it!
+  * [Create individual IAM users](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users)
+    * Individual accountability is critical to successful access management and also in forensic investigations.
+  * [Configure a strong password policy for your users](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#configure-strong-password-policy)
+    * Passwords are almost dead.  A strong password, rotated frequently is nearly impossible to remember, so be sure to use MFA in addition.
+    * Consider using a password manager (KeePass, LastPass, 1Password, etc.), but be mindful of their pitfalls and limitations.
+  * [Enable MFA for privileged users](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#enable-mfa-for-privileged-users)
+    * Apply to ALL users!
+    * MFA - Just use it!
+  * [Separation of Duties] (http://www.sans.edu/research/security-laboratory/article/it-separation-duties)
+    * Not explicitly on the AWS list, but it should be.  Max Ramsay from AWS discusses considerations for how to apply Separation of Duties (SoD) (here)(https://blogs.aws.amazon.com/security/post/TxQYSWLSAPYVGT/Guidelines-for-When-to-Use-Accounts-Users-and-Groups)
+    * Separation of Duties is an internal controls concept, primarily from financial auditing.  But it is equally applicable in technology.
+    * [Another good reference on what SoD is](http://szabo.best.vwh.net/separationofduties.html)
+  * [Use roles for applications that run on Amazon EC2 instances](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-roles-with-ec2)
+    * Don't use long-term credentials (access keys) for EC2 instance access to the AWS API.
+    * Always require an MFA token code with use of long-term credentials (access keys)
+  * [Delegate by using roles instead of by sharing credentials](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#delegate-using-roles)
+    * Don't create or use shared credentials
+    IAM Roles and the `AssumeRole` API call are your friends
+  * [Rotate credentials regularly](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#rotate-credentials)
+    * Change your passwords, access keys, and even MFA/TOTP seed!
+  * [Remove unnecessary credentials](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#remove-credentials)
+    * Audit/Certify the IAM User accounts & credentials
+  * [Use policy conditions for extra security](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-policy-conditions)
+    * Put conditions/constraints on use (i.e. require MFA, require secure transport, etc.)
+  * [Monitor activity in your AWS account](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#keep-a-log)
+    * Keep an eye on use of your stuff!
+  * [Manage API Access Keys](http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html)
+  * Also summarized [here](http://blogs.aws.amazon.com/security/post/Tx2OB7YGHMB7WCM/Adhere-to-IAM-Best-Practices-in-2016) and [here](http://blogs.aws.amazon.com/security/post/TxQYSWLSAPYVGT/Guidelines-for-when-to-use-Accounts-Users-and-Groups)
+  * [Securosis agrees](https://securosis.com/blog/security-best-practices-for-amazon-web-services)
+* Check out the [Control Plane pattern](https://github.com/devsecops/controlplane)
 
 ## Q: How do you balance operational needs and security?
 Security is a balance for creation and maintainance.  Making tradeoffs is part of all decisions that need to be made.  This essentially starts with identifying your workload and understanding its dimensions plus their importance.  Do you need to support usability? trust? In other words, understanding what is important can help with the priority of requirements and how to balance needs.  With relationship to Security, Operations comes from supporting a workload and its security requirements.  Controls must get built into a workload as part of its general constraints along with operational constraints.  Treating the workload for survivability is typically the way to balance these two disciplines.  Security issues happen more frequently than is discussed in the industry.  If you can imagine security as a frailty consideration then it may be easier to consider. As an Operations engineer it would be useful to know how often you are seeing security exploits being attempted and whether the workload is susceptible.  Remember too, there are ways to test for common security problems without ever signaling the operations team or their monitoring.  
@@ -36,12 +72,9 @@ Typical issues to watch out for: bad zoning/blast radius principles, inappropria
 ## Q: What is a common mistake programmers make in their applications that make their software insecure?
 
 ## Q: If I already have an AWS account, can I use it or should I create a new one ?
-* If you have data and services you don't mind loosing, feel free to reuse it. 
+* If you have data and services you don't mind loosing, feel free to reuse it.
 * Ideally, you would create a [separate account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-tasks.html) to minimize the "blast radius".
 
 ## Q: How do you get buy-in from traditional business units so that the practices taught by DevSecOps can be implemented?
 
 ## Q: What are common mistakes programmers make that make their applications less secure?
-
-
-
