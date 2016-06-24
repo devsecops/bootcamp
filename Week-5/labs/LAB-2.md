@@ -231,7 +231,7 @@ It should look something like:
 }
 ```
 
-** The resulting template should look something like [lab-2.json](../scripts/lab-1.json).
+** The resulting template should look something like [lab-2.json](../scripts/lab-2.json).
 
 
 ## Launch your Stack
