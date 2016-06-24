@@ -77,17 +77,17 @@ It should look something like:
     ],
     "MinSize": "1",
     "DesiredCapacity": "1",
-    "MaxSize": "1"
-  },
-  "Tags": [
-    {
-      "Key": "Name",
-      "Value": {
-        "Ref": "StudentId"
-      },
-      "PropagateAtLaunch": "true"
-    }
-  ]
+    "MaxSize": "1",
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": {
+          "Ref": "StudentId"
+        },
+        "PropagateAtLaunch": "true"
+      }
+    ]
+  }
 }
 ```
 
