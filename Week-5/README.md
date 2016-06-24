@@ -4,6 +4,7 @@ Building rugged and secure applications is not trivial. Software Engineers and D
 ## OBJECTIVES
 - Intro to Infrastructure-as-Code
 - Understanding AWS CloudFormation Templates
+- Scaling Infrastructure-as-Code
 
 ## [Infrastructure-as-Code](LESSON-1.md)
 During this lesson, we'll be introduced to the concept "Infrastructure-as-Code". What it is and what benefits it provides us.
