@@ -20,7 +20,7 @@ if [[ -z "$USERNAME" ]]; then
   exit 1
 fi
 
-create user and group
+# create user and group
 aws iam create-user --user-name $USERNAME
 aws iam create-group --group-name $USERNAME
 
