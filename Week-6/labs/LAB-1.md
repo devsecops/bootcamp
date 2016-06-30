@@ -8,7 +8,7 @@
 - [Chaining The Attacks](##Chaining-The-Attacks)
 
 # Web Application Vulnerabilities
-In this lab we will be exploiting a couple of vulnerabilities that may not look too dangerous and then chain them together.
+In this lab we will be exploiting a couple of vulnerabilities that by themselves would be scored as low/medium on a vulnerability scanner. The chaining of these exploits together however make them much more dangerous. This is the kind of exploit chaining an attacker would do to achieve their goals.
 
 ...
 
@@ -40,7 +40,7 @@ Ensure you are logged out of the application. When requesting the login page, en
 
 1. When registering, enter your JavaScript tag such as in the First Name field. Upon login the header navigation bar will echo "Welcome" + your JS code.
 
-Example of JS code:
+Example of XSS JavaScript test code:
 ```
 <script>alert(1)</script>
 ```
