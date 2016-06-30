@@ -18,7 +18,6 @@ In this lab we will be exploiting a couple of vulnerabilities that by themselves
 - [https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))
 - [https://github.com/OWASP/railsgoat/wiki/A10-Unvalidated-Redirects-and-Forwards-(redirect_to)](https://github.com/OWASP/railsgoat/wiki/A10-Unvalidated-Redirects-and-Forwards-(redirect_to))
 - [https://github.com/OWASP/railsgoat/wiki/A3-Cross-Site-Scripting](https://github.com/OWASP/railsgoat/wiki/A3-Cross-Site-Scripting)
-
 - [https://github.com/OWASP/railsgoat/wiki/A3-Cross-Site-Scripting-DOM-Based](https://github.com/OWASP/railsgoat/wiki/A3-Cross-Site-Scripting-DOM-Based))
 ---
 
