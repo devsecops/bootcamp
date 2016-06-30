@@ -5,12 +5,11 @@
 - [Setting up Rails Goat](##Setting-up-Rails-Goat)
 - [Open Redirects](##Open-Redirects)
 - [XSS Attack](##XSS-Attack)
-- [Chaining The Attacks](##Chaining-The-Attacks)
+
 
 # Web Application Vulnerabilities
-In this lab we will be exploiting a couple of vulnerabilities that by themselves would be scored as low/medium on a vulnerability scanner. The chaining of these exploits together however make them much more dangerous. This is the kind of exploit chaining an attacker would do to achieve their goals.
+In this lab we will be exploiting a couple of vulnerabilities that by themselves would be scored as low/medium on a vulnerability scanner.
 
-...
 
 *Resources:*
 
@@ -51,7 +50,3 @@ Example of XSS JavaScript test code:
 ```
 http://127.0.0.1/?url=%2Fdashboard%2Fhome#test=%3Cscript%3Ealert(document.cookie)%3C/script%3E
 ```
-
-## Chaining The Attacks
-
-....
