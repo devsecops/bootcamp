@@ -8,7 +8,7 @@
 - [Exploiting Jenkins with Metasploit](##exploiting-jenkins-with-metasploit)
 - [Pivot/Penetrate](##pivot/penetrate)
 
-# Title
+# Network Penetration
 
 In this lab, we will be exploiting a popular Build Platform and use it to pivot deeper into the network.
 
