@@ -27,7 +27,7 @@ In this lab we will be exploiting a couple of vulnerabilities that by themselves
 First thing you'll have to do is launch your Rails Goat web application.  Use Restacker to do this with the following command you learned from last weeks Lab 3:
 
 ```
-$ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -u $AWS_STUDENT_ID
+$ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -u $AWS_STUDENT_ID -u $AWS_STUDENT_ID
 ```
 
 
