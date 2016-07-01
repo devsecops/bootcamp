@@ -21,6 +21,7 @@ Use Restacker to deploy the template developed on lab 2.
   ```
   git clone https://github.com/devsecops/restacker.git
   cd restacker/source
+  gem install bundler
   bundle install
   gem build restacker.gemspec
   gem install restacker-0.0.11.gem
