@@ -29,3 +29,9 @@ TIME | TOPIC
 
 
 ## ASSIGNMENTS
+
+## Resources
+- [Restacker and options](https://github.com/devsecops/restacker)
+Refer to Week 5 Lab 2 and 3 for refresh of how to use Restacker:
+- [Week 5 Lab 2](../../Week-5/labs/LAB-2.md)
+- [Week 5 Lab 3](../../Week-5/labs/LAB-3.md)
