@@ -20,10 +20,10 @@
 ## AGENDA
 TIME | TOPIC
 ---|---
-5 PM - 5:50 PM |
-6 PM - 6:45 PM |
-7 PM - 7:50 PM |
-8 PM - 9 PM |
+6 PM - 6:50 PM | 
+7 PM - 7:45 PM | Lab 1
+8 PM - 8:50 PM | Lab 2
+8 PM - 9 PM | Lab 3
 
 ## BONUS LABS
 
