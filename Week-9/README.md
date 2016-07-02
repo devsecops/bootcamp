@@ -18,9 +18,9 @@
 ## AGENDA
 TIME | TOPIC
 ---|---
-5 PM - 5:50 PM | Demos
-6 PM - 6:45 PM | Demos
-7 PM - 7:50 PM | Demos
+6 PM - 6:50 PM | Demos
+7 PM - 7:45 PM | Demos
+8 PM - 8:50 PM | Demos
 8 PM - 9 PM | Demos
 
 ## BONUS LABS

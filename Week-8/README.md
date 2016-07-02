@@ -21,10 +21,11 @@ Now that we've accomplished two rounds of DevSecOps and improved our skills sign
 ## AGENDA
 TIME | TOPIC
 ---|---
-5 PM - 5:50 PM | Hack Lab/CTF Rules
-6 PM - 6:45 PM | Lab: CTF
-7 PM - 7:50 PM | Lab: CTF
+6 PM - 6:50 PM | Hack Lab/CTF Rules
+7 PM - 7:45 PM | Lab: CTF
+8 PM - 8:50 PM | Lab: CTF
 8 PM - 9 PM | Lab: CTF
+
 
 ## BONUS LABS
 
