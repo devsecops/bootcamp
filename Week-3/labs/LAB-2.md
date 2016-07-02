@@ -149,7 +149,7 @@ $ export RAILS_ENV=mysql
 $ bundle install
 $ bundle exec rake db:setup
  ```
-** You can download the shell script here: [lab-2-railsgoat.sh](../scripts/lab-2-railsgoat.sh).
+** You can download the shell script to set up Rails Goat here: [lab-2-railsgoat.sh](../scripts/lab-2-railsgoat.sh).
 ## Run Rails Goat
 
 1. Run the app.
