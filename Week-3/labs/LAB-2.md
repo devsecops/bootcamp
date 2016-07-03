@@ -96,6 +96,7 @@ recursive=true
 [monitor:///var/log/]
 recursive=true" | sudo tee /opt/splunkforwarder/etc/system/local/inputs.conf
  ```
+** You can download the shell script to install Splunk here: [lab-2-splunk-config.sh](../scripts/lab-2-splunk-config.sh).
 
  Start Splunk:
  ```
@@ -148,7 +149,7 @@ $ export RAILS_ENV=mysql
 $ bundle install
 $ bundle exec rake db:setup
  ```
-
+** You can download the shell script to set up Rails Goat here: [lab-2-railsgoat.sh](../scripts/lab-2-railsgoat.sh).
 ## Run Rails Goat
 
 1. Run the app.
