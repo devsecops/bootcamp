@@ -77,7 +77,7 @@ Use Restacker to deploy the template developed on lab 2.
 7. Deploy your stack using Restacker.
 
   ```
-  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID -u $AWS_STUDENT_ID
   ```
 
 ## Integrate RDS
@@ -129,7 +129,7 @@ Use Restacker to deploy the template developed on lab 2.
   E.g.,
 
   ```
-  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID -u $AWS_STUDENT_ID
   ```
 
 ## Integrate Logging
@@ -198,7 +198,7 @@ For posterity, integrate logging into the CloudFormation template.
   E.g.,
 
   ```
-  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID
+  $ restacker deploy -t mytemplate.json -P parameters.json -c dso -l myapp -n $AWS_STUDENT_ID -u $AWS_STUDENT_ID
   ```
 
 
