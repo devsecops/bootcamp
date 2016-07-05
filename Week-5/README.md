@@ -1,35 +1,21 @@
-# WEEK 5: Build a Rugged App (Development)
-Now that we've learned what not to do and why, it's time to pick things up and figure out how to build a reliable, resillient and secure application.
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [WEEK 5 OUTLINE](#week-5-outline)
-  - [OBJECTIVES](#objectives)
-  - [AGENDA](#agenda)
-  - [BONUS LABS](#bonus-labs)
-  - [ASSIGNMENTS](#assignments)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+# WEEK 5: Building A Rugged App
+Building rugged and secure applications is not trivial. Software Engineers and DevOps Engineers are responsible, not only for their code base, but for their Infrastructure as well. Cloud Service Providers offer a suite of services and patterns, but it is up to the developers and engineers to understand how to leverage these patterns and services to optimize for security.
 
 ## OBJECTIVES
-- Infrastructure as Code (IaC).
-- Automated AWS Deployments with CloudFormation
-- Application Availability
-- AWS Elastic Load Balancer
-- AWS Autoscale
-- Restacker
-- AWS RDS
+- Intro to Infrastructure-as-Code
+- Understanding AWS CloudFormation Templates
+- Scaling Infrastructure-as-Code
 
-## AGENDA
-TIME | TOPIC
----|---
-6 PM - 6:45PM | Infrastructure as Code
-6:45 PM - 7:15 PM | Lab: CloudFormation
-7:15 PM - 7:45 PM | Lab: Autoscale and ELB 
-8:00 PM - 8:30 PM | Lab: Restacker and RDS
+## [Infrastructure-as-Code](LESSON-1.md)
+During this lesson, we'll be introduced to the concept "Infrastructure-as-Code". What it is and what benefits it provides us.
 
-## ASSIGNMENTS
-- Outputs Challenge from Lab 1
-- Userdata Challenge from Lab 3
+## [Application Availability & CloudFormation](LESSON-2.md)
+Understanding AWS CloudFormation Templates and patterns for safe and secure infrastructure.
+
+## [End-to-End Infrastructure-as-Code](LESSON-3.md)
+Scaling Infrastructure-as-Code.
+
+## Resources
+- [AWS CloudFormation](https://aws.amazon.com/cloudformation/)
+- [Chef.io](https://www.chef.io/)
+- [Puppet](https://puppet.com/)

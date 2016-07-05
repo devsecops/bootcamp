@@ -32,7 +32,7 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 2. Create a new security group named `<STUDENT ID>-app`. This security group should allow connections from `10.0.0.0/21` to TCP ports `8080` and `22`. Note the security group ID.
 
-3. Create a new security group named `<STUDENT ID>-elb`. This security group should allow connection from your IP address to TCP port `80`. Note the security group ID.
+3. Create a new security group named `<STUDENT ID>-elb`. This security group should allow connection from your IP address (`My IP` in the console) to TCP port `80`. Note the security group ID.
 
 4. Copy the CloudFormation template into a new file named `<STUDENT ID>_lab_2.json`.
 
@@ -77,17 +77,17 @@ It should look something like:
     ],
     "MinSize": "1",
     "DesiredCapacity": "1",
-    "MaxSize": "1"
-  },
-  "Tags": [
-    {
-      "Key": "Name",
-      "Value": {
-        "Ref": "StudentId"
-      },
-      "PropagateAtLaunch": "true"
-    }
-  ]
+    "MaxSize": "1",
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": {
+          "Ref": "StudentId"
+        },
+        "PropagateAtLaunch": "true"
+      }
+    ]
+  }
 }
 ```
 
@@ -231,7 +231,7 @@ It should look something like:
 }
 ```
 
-** The resulting template should look something like [lab-2.json](../scripts/lab-1.json).
+** The resulting template should look something like [lab-2.json](../scripts/lab-2.json).
 
 
 ## Launch your Stack
@@ -247,7 +247,14 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
     -o dso -g -u $AWS_USERNAME
   ```
 
-2. Take note of your instance's configuration and new security groups you created. Also make note of a private subnet (`AppSubnetId`) and a public subnet (`ElbSubnetId`) where your instance and ELBs will run (respectively). **IMPORTANT:** Ensure that the `AppSubnetId` and `ElbSubnetId` are in the same Availability Zone.
+2. Take note of your instance's configuration and new security groups you created.
+
+  * VPC ID
+  * AMI ID
+  * Security Group IDs (`<STUDENT ID>-app` & `<STUDENT ID>-elb`)
+  * Key Pair (your key name)
+
+Also make note of a private subnet (`AppSubnetId`) and a public subnet (`ElbSubnetId`) where your instance and ELBs will run (respectively). **IMPORTANT:** Ensure that the `AppSubnetId` and `ElbSubnetId` are in the same Availability Zone (e.g., `us-west-2c`, note the `c`).
 
 3. **Delete** your stack from Lab 1. You can do this by selecting it in the CloudFormation console, then selecting `Actions` > `Delete Stack`.
 
@@ -259,7 +266,7 @@ $ assumer -a 717986480831 -r human/dso/TGT-dso-DeploymentAdmin \
 
 7. Go back to `EC2`, note the **private** IP address of your instance and the **public** IP address of the bastion instance.
 
-8. Load your ssh key into memory (e.g., `ssh-add ~/.ssh/id_rsa`)
+8. Load your ssh key into memory (e.g., `ssh-add ~/.ssh/studentx.pem`). If you get this error: `Could not open a connection to your authentication agent.`, you may need to start your ssh agent, do `ssh-agent -s` and they try the `ssh-add` command again.
 
 9. SSH into the bastion using the `-A` flag to pass your ssh key, e.g., `ssh -A student1@52.x.x.x`. Verify your ssh key has been passed to the bastion using `ssh-add -l`. If this is the case, then ssh onto your instance, e.g., `ssh ec2-user@10.0.0.x`.
 
