@@ -67,7 +67,7 @@ $ aws rds describe-db-instances > db-instances.json
 1. Retrieve IAM User information.
 
   ```
-$ aws iam list-users > list-users.json
+$ aws iam list-users > users.json
   ```
 
   Did this error out? Why?
