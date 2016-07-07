@@ -10,6 +10,10 @@
 
 In this lab we will be taking forensic snapshots of the two hosts that were compromised last week. We will also escrow these snapshots into the forensics account for later analysis.
 
+*Resources:*
+
+- [Creating an Amazon EBS Snapshot](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html)
+
 ## Take Forensic Snapshots
 
 Take forensic snapshots of the two hosts that were compromised last week.
