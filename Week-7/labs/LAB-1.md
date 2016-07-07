@@ -4,6 +4,7 @@
 
 - [Gather Instance Data](##gather-instance-configuration)
 - [Gather IAM Data](##gather-iam-configuration)
+- [Upload Configuration to S3](##upload-configuration-to-s3)
 - [Challenge](##challenge)
 
 # Gathering Forensics Configuration
@@ -15,7 +16,7 @@ In this lab you will be using the AWS CLI to gather data from your account. Data
 - [ec2 Command Line Tools] (http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/command-reference.html)
 - [ec2-describe-instances](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html)
 
-# Gathering Instance Configuration
+# Gather Instance Configuration
 
 Retrieve current configuration information using the AWS CLI,
 
