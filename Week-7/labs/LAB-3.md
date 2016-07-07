@@ -14,6 +14,7 @@
 - [Block Device Mapping](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
 - [Linux Shell Survival Guide](http://digital-forensics.sans.org/media/linux-shell-survival-guide.pdf)
 - [SIFT Cheat Sheet](http://digital-forensics.sans.org/media/sift_cheat_sheet.pdf)
+- [Forensics Wiki](http://forensicswiki.org/wiki/Main_Page)
 
 ## Create Volumes
 
@@ -178,4 +179,5 @@ $ sudo strings /mnt/student1/jboss/home/ec2-user/jboss-5.1.0.GA/server/default/d
 
 ## Challenge
 
-Write a fictitious report of what happened.
+* Perform forensic analysis of your Rails Goat hosts
+* Write a fictitious report of what happened
