@@ -97,7 +97,7 @@ $ ls -a /mnt/<YOUR STUDENT ID>/jenkins/var/lib/jenkins
 4. List all files in the filesystem and their timestamps.
 
   ```
-$ sudo find /mnt/<YOUR STUDENT ID>/jenkins -type f -printf '%T@ %p\n' > all_files.txt
+$ sudo find /mnt/<YOUR STUDENT ID>/jenkins -type f -printf '%T@ %p\n' > jenkins_files.txt
 $ sudo chown <YOUR STUDENT ID>:dso jenkins_files.txt
   ```
 
