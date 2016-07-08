@@ -71,6 +71,9 @@ Vagrant.configure("2") do |config|
   # name this vm devsecops instead of default
   config.vm.define "devsecops" do |devsecops|
   end
+  
+  # set hostname, yinz
+  config.vm.hostname = 'devsecops'
 
   #required plugins for this vagrant. just add a space if need to add more
   required_plugins = %w(vagrant-vbguest)
