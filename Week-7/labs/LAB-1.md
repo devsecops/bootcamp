@@ -111,7 +111,15 @@ $ assumer -a 439426457924 -r human/dso/TGT-dso-IncidentResponse \
     -o dso -g -u $AWS_USERNAME
   ```
 
-2. Copy all configuration files into the forensics bucket.
+2. Load the the AWS credentials into your environment.
+
+  E.g.,
+
+  ```
+$ source '/var/folders/qv/1bbxpqdd5sg2x_my5ndff76hzc5dgp/T/assumer20160706-68010-x7bx75'
+  ```
+  
+3. Copy all configuration files into the forensics bucket.
 
   ```
 $ for FILE in `ls *.json`; do
