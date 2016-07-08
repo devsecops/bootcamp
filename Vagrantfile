@@ -67,7 +67,28 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
   config.vm.box = 'centos/7'
+  
+  # name this vm devsecops instead of default
+  config.vm.define "devsecops" do |devsecops|
+  end
+  
+  # set hostname, yinz
+  config.vm.hostname = 'devsecops'
 
+  #required plugins for this vagrant. just add a space if need to add more
+  required_plugins = %w(vagrant-vbguest)
+
+  #check if its installed. if not, then install them.
+  plugins_to_install = required_plugins.select { |plugin| not Vagrant.has_plugin? plugin }
+  if not plugins_to_install.empty?
+    puts "Installing plugins: #{plugins_to_install.join(' ')}"
+    if system "vagrant plugin install #{plugins_to_install.join(' ')}"
+      exec "vagrant #{ARGV.join(' ')}"
+    else
+      abort "Installation of one or more plugins has failed. Aborting."
+    end
+  end
+  
   # config.vm.provider 'virtualbox' do |v|
   #  v.memory = 2048
   #  v.cpus = 2
@@ -80,12 +101,12 @@ Vagrant.configure("2") do |config|
   # end
   
   # If you want to sync the bootcamp directory between the host and guest VM, you need to install a plugin: "vagrant plugin install vagrant-vbguest"
-  config.vm.synced_folder ".", "/home/vagrant/sync", type: "virtualbox" 
+  # config.vm.synced_folder ".", "/home/vagrant/sync", type: "virtualbox" 
   
   config.vm.provision :shell, inline: BASIC_SETUP,  privileged: false
   config.vm.provision :shell, inline: RUBY_SETUP,   privileged: false
   config.vm.provision :shell, inline: AWS_SETUP,    privileged: false
 
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
 
 end
