@@ -109,6 +109,12 @@ Usage: selfie [options]
 * Control account: `100352119871`
 * Ticket ID: `STDNT-<STUDENT ID NUMBER>`
 
+Remember to unset the old enviroment variables before running selfie.
+
+  ```
+$ unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID
+  ```
+
 ## Challenge
 
 Update Selfie to:
