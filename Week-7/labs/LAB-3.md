@@ -29,7 +29,7 @@ $ assumer -a 439426457924 -r human/dso/TGT-dso-IncidentResponse \
 
 2. From the Snapshots tab in the EC2 console, select your snapshots (JBoss & Jenkins) hosts.
 
-3. For each snapshot, create a volume by selecting `Actions` >  `Create Volyme`. Select `us-west-2c` from the `Availability Zone` pull-down (same as bastion). Click `Create`, note the volume ID and click `Close`.
+3. For each snapshot, create a volume by selecting `Actions` >  `Create Volume`. Select `us-west-2c` from the `Availability Zone` pull-down (same as bastion). Click `Create`, note the volume ID and click `Close`.
 
 4. Navigate to the Volumes tab, for each of the newly created volumes, wait for the volume state to be `available`.
 
@@ -81,7 +81,7 @@ $ sudo cat /mnt/<YOUR STUDENT ID>/jenkins/var/log/auth.log
 2. Find the username for the user that was denied sudo actions.
 
   ```
-$ sudo cat /mnt/<YOUR STUDENT ID>/jenkins/var/log/auth.log |grep sudo
+$ sudo cat /mnt/<YOUR STUDENT ID>/jenkins/var/log/auth.log | grep sudo
   ```
 
   Which user was denied using sudo?
