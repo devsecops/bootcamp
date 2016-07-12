@@ -6,13 +6,13 @@ During Week 4, we'll understand the basics of keeping technology available, hunt
 - Using logging and instrumentation to find attackers
 - Detection & Alerting
 
-## [Getting to know your data](LESSON-1.md)
+## [LESSON 1: Getting to know your data](LESSON-1.md)
 During this lesson, we'll begin to understand basic logging and evaluate how an attacker can access a system from behind the scenes.  In this session, we'll understand some basics for a popular logging system.
 
-## [Create and test alerts](LESSON-2.md)
+## [LESSON 2: Create and test alerts](LESSON-2.md)
 Creating and testing alerts can help you to identify when attacks are happening.  This can help to aid in the strength of protective controls or allow for risks to be evaluated.
 
-## [Creating reports and dashboards](LESSON-3.md)
+## [LESSON 3: Creating reports and dashboards](LESSON-3.md)
 Enabling reporting and dashboards for the blue team to help discover an attacker quickly can make or break an app that depends on quick detection and response.
 
 ## Resources
