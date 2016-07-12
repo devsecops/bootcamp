@@ -1,12 +1,13 @@
-# Lesson 3:  [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-eight-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-8-lesson-3)
+# Lesson 3: Performing Basic Forensics [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-eight-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-8-lesson-3)
 
 ## Agenda
 
 ```
-*
-*
-*
-*
+* Forensic Investigation Basics
+* Enterprise Forensic Analysis
+* Memory
+* Disk
+* Tools
 * Lab 3
 ```
 

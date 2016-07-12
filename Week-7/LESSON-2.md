@@ -1,4 +1,4 @@
-# Lesson 2:  [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-seven-lesson-two.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-7-lesson-2)
+# Lesson 2: Capturing Forensic Images [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-seven-lesson-two.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-7-lesson-2)
 
 ## Agenda
 
