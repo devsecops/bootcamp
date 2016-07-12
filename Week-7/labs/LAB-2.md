@@ -107,6 +107,8 @@ Usage: selfie [options]
 * Target account: `717986480831`
 * Incident response (forensics) account: `439426457924`
 * Control account: `100352119871`
+* Instances: `<INSTANCE IDS>`
+* Username: `student<STUDENT ID NUMBER>`
 * Ticket ID: `STDNT-<STUDENT ID NUMBER>`
 
 Remember to unset the old enviroment variables before running selfie.
