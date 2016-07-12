@@ -1,16 +1,5 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [WEEK 6 OUTLINE](#week-6-outline)
-  - [OBJECTIVES](#objectives)
-  - [AGENDA](#agenda)
-  - [BONUS LABS](#bonus-labs)
-  - [ASSIGNMENTS](#assignments)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # WEEK 6: Rugged Sec
+The Cloud introduces a new attack vector into our environment which needs to be well understood and mitigated. Techniques demonstrated this week will enable awareness to ways infrastructure can be abused by attackers.
 
 ## OBJECTIVES
 - Account Takeovers
@@ -18,15 +7,11 @@
   - Lateral movement
   - Privilege escalation
 
-## AGENDA
-TIME | TOPIC
----|---
-5 PM - 5:50 PM | Thinking Outside the Box
-6 PM - 6:45 PM | Lab: Deploy vulnerable `Jenkins` or `JBOSS` & exploit via Java Deserialization
-7 PM - 7:50 PM | Lab: Advanced cloud hacking techniques
-8 PM - 9 PM | Lab: Advanced cloud hacking techniques
 
-## BONUS LABS
-- Write a Java Deserialization Payload
+## [Lesson 1: Offensive Security](LESSON-1.md)
 
-## ASSIGNMENTS
+## [Lesson 2: Network Attack](LESSON-2.md)
+
+## [Lesson 3: AWS IAM Security](LESSON-3.md)
+
+## Resources

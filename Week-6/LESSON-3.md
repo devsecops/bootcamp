@@ -1,4 +1,4 @@
-# Lesson 3: End-to-end Infrastructure as Code [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-six-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-6-lesson-3)
+# Lesson 3: AWS IAM Security [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-six-lesson-three.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-6-lesson-3)
 
 ## Agenda
 
