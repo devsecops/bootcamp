@@ -6,13 +6,13 @@ Building rugged and secure applications is not trivial. Software Engineers and D
 - Understanding AWS CloudFormation Templates
 - Scaling Infrastructure-as-Code
 
-## [Infrastructure-as-Code](LESSON-1.md)
+## [LESSON 1: Infrastructure-as-Code](LESSON-1.md)
 During this lesson, we'll be introduced to the concept "Infrastructure-as-Code". What it is and what benefits it provides us.
 
-## [Application Availability & CloudFormation](LESSON-2.md)
+## [LESSON 2: Application Availability & CloudFormation](LESSON-2.md)
 Understanding AWS CloudFormation Templates and patterns for safe and secure infrastructure.
 
-## [End-to-End Infrastructure-as-Code](LESSON-3.md)
+## [LESSON 3: End-to-End Infrastructure-as-Code](LESSON-3.md)
 Scaling Infrastructure-as-Code.
 
 ## Resources
