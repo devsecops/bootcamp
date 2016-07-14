@@ -1,4 +1,4 @@
-# Lesson 1: Gathering Forensics Data [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-seven-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-7-lesson-1)
+# Lesson 1: Gathering Forensic Data [![slides](../_images/slides-clean.png)](slides/june-DSO-bootcamp-week-seven-lesson-one.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-7-lesson-1)
 
 ## Agenda
 

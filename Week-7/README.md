@@ -5,7 +5,7 @@ The 90's called, they want their datacenter back. The Cloud is not the datacente
 - Incident Response on the Cloud
 - Cloud Forensics
 
-# Lesson 1: Gathering Forensics Data
+# Lesson 1: Gathering Forensic Data
 
 # Lesson 2: Capturing Forensic Images
 
