@@ -61,7 +61,7 @@ $ bundle exec rake db:migrate
 Run our new app.
 
 ```
-$ bundle exec rails server -b 0.0.0.0
+$ rails server -b 0.0.0.0     #Don't need bundle exec again
 ```
 
 Go to `http://localhost:3000/` on your browser.
@@ -82,7 +82,7 @@ root 'bootcamps#index'
 
 Run the app:
 ```
-$ bundle exec rails server -b 0.0.0.0
+$ rails s -b 0.0.0.0          #dropping server for 's'  
 ```
 
 Go to `http://localhost:3000/` on your browser.

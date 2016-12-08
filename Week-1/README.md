@@ -32,3 +32,4 @@ Now we need to get some hands-on skills so we can provide value and trust to the
 
 * [The Phoenix Project](http://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262509/ref=sr_1_1?ie=UTF8&qid=1463706570&sr=8-1&keywords=the+phoenix+project)
 * [DevOps Culture - Martin Fowler / Thoughtworks Blog](http://martinfowler.com/bliki/DevOpsCulture.html)
+* [How to Work with GitHub and Multiple Accounts](https://youtu.be/fnSRBRiQIU8)
