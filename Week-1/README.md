@@ -10,18 +10,18 @@ Welcome to the DevSecOps Bootcamp! This is Week 1 of 9.  During this session, we
  * Get our lab/development environment set up
 
 
-#[LESSON 1: What is DevSecOps?](LESSON-1.md)
+# [LESSON 1: What is DevSecOps?](LESSON-1.md)
 
 DevOps is a team sport and a culture of collaboration.  Security cannot be an afterthought because it is a vital ingredient to ensure resillient workloads achieve their peak potential. 
 
 Getting to know each other and how we work is essential towards being successful with DevSecOps.  After all, DevSecOps is a team sport. 
 
 
-#[LESSON 2: Think like an Attacker](LESSON-2.md)
+# [LESSON 2: Think like an Attacker](LESSON-2.md)
 
 Monetary incentive to break software abounds.  Attackers achieve gains via the weaknesses implemented in software.  But there are ways to get ahead and its important to understand this concept early in the bootcamp so that it is part of your thinking.  After all, security is a design constraint - albeit an inconvenient one.
 
-#[LESSON 3: Let's get moving!](LESSON-3.md)
+# [LESSON 3: Let's get moving!](LESSON-3.md)
 
 <code>Students.each { &#124;student&#124; student.exec lab_guide_3 }</code>
 
@@ -30,5 +30,5 @@ Now we need to get some hands-on skills so we can provide value and trust to the
 
 # RESOURCES
 
-* [The Phoenix Project](http://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262509/ref=sr_1_1?ie=UTF8&qid=1463706570&sr=8-1&keywords=the+phoenix+project)
-* [DevOps Culture - Martin Fowler / Thoughtworks Blog](http://martinfowler.com/bliki/DevOpsCulture.html)
+* [The Phoenix Project](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592)
+* [DevOps Culture - Martin Fowler / Thoughtworks Blog](https://martinfowler.com/bliki/DevOpsCulture.html)
