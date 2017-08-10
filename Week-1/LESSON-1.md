@@ -4,9 +4,9 @@
 
 ```
 
-* Welcome
-* Introductions
-* Logistics
+* Welcome.
+* Introductions.
+* Logistics.
 
 ```
 
