@@ -1,4 +1,4 @@
-#Lesson 1: What is DevSecOps?
+# Lesson 1: What is DevSecOps?
 
 ## Introductions & Goals [![slides](../_images/slides-clean.png)](slides/may-DSO-bootcamp-week-one-intros.pdf)[![view](../_images/view-clean.png)](https://speakerdeck.com/devsecops/devsecops-bootcamp-week-1-introductions)
 
