@@ -7,7 +7,7 @@
 - [Docker](#docker)
 - [Resources](#resources)
 
-#Mac OS X & Linux
+# Mac OS X & Linux
 
 ---
 
@@ -128,7 +128,7 @@ The expected output looks like this:
   ```
 
 
-#Docker
+# Docker
 If you are comfortable with docker, you may use the docker-image either by building it yourself from the Dockerfile at the root of the bootcamp repository, or using a prebuilt image.
 In the interim: there is a non-official image at [colinross/bootcamp](https://hub.docker.com/r/colinross/bootcamp/)
 
