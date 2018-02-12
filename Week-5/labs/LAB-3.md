@@ -68,7 +68,7 @@ Use Restacker to deploy the template developed on lab 2.
     $ restacker dump -t mytemplate.json > parameters.json
     ```
 
-    The resulting paramters file should look something like [parameters.json](../scripts/parameters.json).
+    The resulting parameters file should look something like [parameters.json](../scripts/parameters.json).
 
 6. Add Restacker required parameters to your CloudFormation template.
 
