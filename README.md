@@ -8,15 +8,15 @@ The DevSecOps Bootcamp is a 36 hour introduction to DevSecOps with the intention
 # Audience
 Our target audience for the DevSecOps bootcamp is:
 
-* DevOps and IT professionals with Development, Security and/or Operations skills  
+* DevOps and IT professionals with Development, Security and/or Operations skills
 * IT Security Professionals looking to transform their skills and remove gatekeeper processes
 * DevOps professionals seeking to understand security
 * IT Professionals seeking to understand the cultural differences of DevOps and Building Security into workloads
 
-# Prerequisites 
+# Prerequisites
 * Previous development experience
-* Familiarty with common IT concepts and technologies
- 
+* Familiarity with common IT concepts and technologies
+
 # Bootcamp Objectives
 Individuals that attend the DevSecOps bootcamp have demonstrated:
 
@@ -32,15 +32,12 @@ Individuals that attend the DevSecOps bootcamp have demonstrated:
 # Curriculum
 You cannot learn the right things to do until you fail a few times.  The DevSecOps Bootcamp is 9 weeks with each week dedicated to a new lesson.  Details: [Curriculum](CURRICULUM.md)
 
-* **Week 1:**  [Getting Started](/Week-1/README.md)       
-* **Week 2:**  [Build a Weak App](/Week-2/README.md)          
-* **Week 3:**  [Attack the Weakling](/Week-3/README.md)               
-* **Week 4:**  [Keeping the Weak alive](/Week-4/README.md)         
-* **Week 5:**  [Build a Rugged App](/Week-5/README.md)          
-* **Week 6:**  [Red for the Win!](/Week-6/README.md)          
-* **Week 7:**  [Hunt the Attacker](/Week-7/README.md)          
-* **Week 8:**  [A Capstone Project](/Week-8/README.md)     
-* **Week 9:**  [Demos!](/Week-9/README.md)  
-
-
-
+* **Week 1:**  [Getting Started](/Week-1/README.md)
+* **Week 2:**  [Build a Weak App](/Week-2/README.md)
+* **Week 3:**  [Attack the Weakling](/Week-3/README.md)
+* **Week 4:**  [Keeping the Weak alive](/Week-4/README.md)
+* **Week 5:**  [Build a Rugged App](/Week-5/README.md)
+* **Week 6:**  [Red for the Win!](/Week-6/README.md)
+* **Week 7:**  [Hunt the Attacker](/Week-7/README.md)
+* **Week 8:**  [A Capstone Project](/Week-8/README.md)
+* **Week 9:**  [Demos!](/Week-9/README.md)
