@@ -175,7 +175,7 @@ $ gem install rails --no-ri --no-rdoc
 Install and run app:
 
 ```
-$ git clone https://github.com/godinezj/myapp.git
+$ rails new myapp
 $ cd myapp
 $ bundle install
 $ bundle exec rake db:create
