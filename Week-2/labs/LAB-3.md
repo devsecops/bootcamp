@@ -22,7 +22,7 @@ The [free tier](https://aws.amazon.com/free/) is free for one year. Remember to 
 Caveat: There are limits 
 
 
-##Setup MFA for the Root User
+## Setup MFA for the Root User
 
 Setup MFA for your root account:
 
@@ -30,7 +30,7 @@ Login to the [AWS Console](https://console.aws.amazon.com/) using your Amazon em
 
 Setup MFA: Select your user name > `Security Credentials` > `Multi-Factor Authentication (MFA)` > `Activate MFA`, select `A virtual MFA device` click `Next Step`. Enter in two consecutive MFA codes (1st in `Authentication Code 1` and second in `Authentication Code 2`) and click `Activate Virtual MFA`.
 
-##Create an IAM User
+## Create an IAM User
 
 1. Select `Services` > `IAM`. Select `Users` > `Create New Users`. Enter a username on the first field, ensure that `Generate an access key for each user` is selected and click `Create`.
 
@@ -110,23 +110,23 @@ Setup MFA: Select your user name > `Security Credentials` > `Multi-Factor Authen
 
 **Question:** What is the difference between the root user and an IAM user?
 
-##Generate an SSH Key
+## Generate an SSH Key
 
 On the AWS Console, select `Services` > `EC2`, make sure you are using the Oregon region, you can do this by selecting the region from the upper right section of the console. Select `Key Pairs` > `Create Key Pair`. Enter in your IAM username for the `Key pair name` and click `Create`. Save the file to a secure location.
 
-##Create a Security Group
+## Create a Security Group
 
 Select `Security Groups` from the AWS Console. Click `Create Security Group`, enter `bootcamp-web-ports` for `Security group name` and `Web Ports for App` for `Description`. Under security group rules, click `Add Rule` and add a rule for SSH and another for HTTP. Under source, select `My IP`.
 
 Note: never use `0.0.0.0/0` or `Anywhere` for the source setting.
 
-##Launch an Instance
+## Launch an Instance
 
 Using the AWS Web Console launch a t1.micro RHEL instance. Use the Oregon region (us-west-2), you can do this by selecting the region from the upper right section of the console. 
 
 From the AWS Console, select `Services` > `EC2`. Click `Launch Instance`. Select `Red Hat Enterprise Linux 7.2 (HVM)`, select `t2.micro` > click `Next: Configure Instance Details` > `Next: Add Storage` > `Next: Tag Instance` (tag it with a fancy name) > `Next: Configure Security Group`. Select existing security group, choose the security group you created above. Click Review and Launch, click Launch, select the key pair you created above and click `Launch Instance`.
 
-##Deploy your App
+## Deploy your App
 
 SSH into AWS host:
 
@@ -187,7 +187,7 @@ On your browser open [http://54.x.x.x:3000/](http://54.x.x.x:3000/).
 
 Can you connect? If not, why not? You may need to open TCP port 3000.
 
-##Clean Up
+## Clean Up
 
 1. Turn off your instance
 2. Protect your credentials
