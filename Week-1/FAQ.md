@@ -78,3 +78,5 @@ Typical issues to watch out for: bad zoning/blast radius principles, inappropria
 ## Q: How do you get buy-in from traditional business units so that the practices taught by DevSecOps can be implemented?
 
 ## Q: What are common mistakes programmers make that make their applications less secure?
+
+## Q: How can DevSecOps practices be effectively integrated into GitHub workflows to enhance security in software development? 
